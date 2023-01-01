@@ -1,0 +1,26 @@
+@media (500px <= width <= 700px) {
+    .contentLeftBlack{
+        margin-left: 1rem;
+    }
+
+    .contentRightBlack{
+        margin: 0rem;
+    }
+
+    .productHeader{
+        justify-content: center;
+        display: block;
+    }
+
+    .productHeader img{
+        width: 100%;
+    }
+
+    .productHead img{
+        width: 150px;
+    }
+
+    .productHeadText{
+        max-width: 25rem;
+    }
+}

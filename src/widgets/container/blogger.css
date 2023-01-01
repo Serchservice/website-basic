@@ -1,0 +1,139 @@
+@import url(../../config/colors/colors.css);
+
+.posts{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 1rem 0rem 3rem 0rem;
+    justify-content: space-around;
+}
+
+.bloggerCover{
+    max-width: 20rem;
+    max-height: 25rem;
+    position: relative;
+    display: block;
+    margin: 1rem 1rem;
+    background-color: var(--serch-white-bg);
+    border-radius: 0.3rem;
+    z-index: 1;
+    box-shadow: var(--serch-box-shadow);
+}
+
+/* .bloggerCover::after, .bloggerCover::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: auto;
+    height: calc(60% + 35px);
+    background-color: var(--serch-black-bg);
+    transition: transform .5s .25s ease-in;
+    z-index: -1;
+}
+
+.bloggerCover::before{
+    top: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 45%, 0% 100%);
+    transform: translateY(-100%);
+}
+
+.bloggerCover::after{
+    bottom: 0;
+    clip-path: polygon(0 55%, 100% 0, 100% 100%, 0% 100%);
+    transform: translateY(100%);
+}
+
+.bloggerCover:hover::after, .bloggerCover:hover::before{
+    transform: translateY(0);
+} */
+
+.bloggerCover::after, .bloggerCover::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.bloggerCover::before{
+    border-style: none;
+    border-width: 0 0 50px 50px;
+    transition: border .25s;
+    border-color: transparent transparent var(--serch-link-hover) transparent;
+}
+
+.bloggerCover::after{
+    content: 'Learn more';
+    opacity: 0;
+    color: var(--serch-black-bg);
+    bottom: 15px;
+    right: 15px;
+    font-size: 1rem;
+}
+
+.bloggerCover::before{
+    border-width: 0 0 100px 100px;
+}
+
+.bloggerCover:hover::after{
+    opacity: 1;
+    transition: opacity .5s;
+}
+
+.bloggerImage{
+    width: 100%;
+    height: 10rem;
+    border-radius: 0.3rem 0.3rem 0rem 0rem;
+}
+
+.bloggerHeader{
+    padding: 1rem;
+    align-items: flex-start;
+}
+
+.bloggerDate{
+    margin-top: 0.8rem;
+}
+
+.bloggerDept{
+    margin-bottom: 1rem;
+}
+
+.bloggerTopic{
+    font-size: 1rem;
+}
+
+.bloggerEnd{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.signupUser, .signupProvider{
+    margin: 1rem 1rem;
+    max-width: 25rem;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    box-shadow: var(--serch-box-shadow);
+}
+
+.signupUser{
+    background-color: var(--serch-logo-shadow);
+}
+
+.signupProvider{
+    background-color: var(--serch-virgo-color);
+}
+
+.signupProvider p, .signupUser p{
+    color: var(--serch-white-bg);
+    font-size: 1.2rem;
+}
+
+.signupProvider .boxLink a, .signupUser .boxLink a{
+    color: var(--serch-white-bg);
+}
+
+.signupProvider .boxLink a::after, .signupUser .boxLink a::after{
+    background-color: var(--serch-white-bg);
+}

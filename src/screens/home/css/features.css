@@ -1,0 +1,50 @@
+@import url(../../../config/colors/colors.css);
+
+.features{
+    padding: 5rem 1rem;
+    width: 100%;
+    margin: 2rem 0rem;
+}
+
+.featureheader {
+    text-align: center;
+    border-bottom: 2px solid var(--serch-bg-color);
+    margin-bottom: 1rem;
+}
+
+.featureheader h2{
+    letter-spacing: 0.05rem;
+    margin: 0.5rem 0rem;
+}
+
+.featureheader p{
+    color: var(--serch-light-p);
+    margin: 0rem 0rem 0.5rem 0rem;
+}
+
+.featurecontents{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.featurecontent{
+    background-color: var(--serch-black-bg);
+    margin: 0.3rem 0.5rem;
+    padding: 0.5rem;
+    border-radius: .5rem;
+}
+
+.featurecontent p{
+    color: var(--serch-light-text);
+    margin: .5rem;
+    font-size: 1rem;
+}
+
+.featurecontent strong{
+    color: var(--serch-light-strong);
+    font-style: italic;
+    margin-bottom: .5rem;
+}

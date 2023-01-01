@@ -1,0 +1,22 @@
+@import url(../../config/colors/colors.css);
+
+.header{
+    background-color: var(--serch-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 0.9rem;
+}
+
+.headerlinks {
+    justify-content: space-between;
+}
+
+.headerlinks a{
+    color: var(--serch-light-link);
+    margin: 0.5rem;
+}
+
+.headerlinks a:hover {
+    color: #2c2c2c;
+}

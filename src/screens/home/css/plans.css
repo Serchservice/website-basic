@@ -1,0 +1,83 @@
+@import url(../../../config/colors/colors.css);
+
+.plans{
+    padding: 3rem 1rem;
+    width: 100%;
+    margin: 0rem;
+}
+
+.planheader h2{
+    letter-spacing: 0.05rem;
+    margin: 0.5rem 0rem;
+}
+
+.planheader p{
+    color: var(--serch-light-p);
+    margin: 0rem 0rem 0.5rem 0rem;
+}
+
+.plancontents{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.plan{
+    border: 2px solid var(--serch-purple-deep);
+    border-radius: 0.5rem;
+    margin: 0.5rem 0.5rem;
+    padding: .5rem;
+}
+
+.plan p{
+    text-align: center;
+}
+
+.planHeader{
+    padding: 1rem 0rem;
+    display: flex;
+    align-items: center;
+}
+
+.planHeader strong{
+    font-size: 1.3rem;
+}
+
+.planHeader h2{
+    margin-left: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.aries{
+    color: var(--serch-aries-color);
+}
+
+.libra{
+    color: var(--serch-libra-color);
+}
+
+.aqua{
+    color: var(--serch-aqua-color);
+}
+
+.virgo{
+    color: var(--serch-virgo-color);
+}
+
+.planDetail{
+    color: var(--serch-black-bg);
+    border: 2px solid var(--serch-purple-deep);
+    text-align: center;
+    display: block;
+    margin: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    transition: all .5s;
+}
+
+.planDetail:hover{
+    color: var(--serch-white-bg);
+    background-color: var(--serch-purple-deep);
+    border: none;
+}

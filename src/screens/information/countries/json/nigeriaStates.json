@@ -1,0 +1,38 @@
+[
+    {
+        "id": "1",
+        "name": "Anambra"
+    },
+    {
+        "id": "2",
+        "name": "Enugu"
+    },
+    {
+        "id": "3",
+        "name": "Owerri"
+    },
+    {
+        "id": "4",
+        "name": "Kaduna"
+    },
+    {
+        "id": "5",
+        "name": "Delta"
+    },
+    {
+        "id": "6",
+        "name": "Akwa-Ibom"
+    },
+    {
+        "id": "7",
+        "name": "Cross-River"
+    },
+    {
+        "id": "8",
+        "name": "Calabar"
+    },
+    {
+        "id": "9",
+        "name": "Abia"
+    }
+]

@@ -1,0 +1,95 @@
+@import url(../../config/colors/colors.css);
+
+.about_us{
+    background: url(../../assets/others/people5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    padding: 5rem;
+}
+
+.about_services{
+    background: url(../../assets/others/repair.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    color: var(--serch-light-text);
+    display: flex;
+    align-items: center;
+    padding: 5rem;
+}
+
+.about_services h2{
+    color: var(--serch-white-bg);
+}
+
+.about_users{
+    background: url(../../assets/others/people2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    color: var(--serch-light-text);
+    display: flex;
+    align-items: center;
+    padding: 5rem;
+}
+
+.about_users h2{
+    color: var(--serch-bg-color);
+}
+
+.about_us h2{
+    color: var(--serch-bg-color);
+    letter-spacing: 0.05rem;
+}
+
+.about_text{
+    line-height: 1.5rem;
+}
+
+.about_text h2{
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.about_text p{
+    text-align: justify;
+}
+
+.about_providers{
+    padding: 3rem;
+    margin: 2rem 0rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.statements{
+    margin: 3rem 0rem;
+}
+
+.statementContents{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2rem;
+}
+
+.statement{
+    max-width: 20rem;
+    max-height: 20rem;
+    position: relative;
+    display: block;
+    margin: 1rem 1rem;
+    padding: 1rem;
+    text-align: center;
+    background-color: var(--serch-white-bg);
+    border-radius: 0.3rem;
+    z-index: 1;
+    box-shadow: var(--serch-box-shadow);
+}

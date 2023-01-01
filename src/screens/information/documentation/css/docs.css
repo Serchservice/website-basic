@@ -1,0 +1,85 @@
+@import url('../../../../config/colors/colors.css');
+
+.docs{
+    display: grid;
+    grid-template-columns: 20rem auto;
+    /* grid-template-rows: 50px 1fr 1fr 50px; */
+    /* grid-template-areas:
+    "header header"
+    "sidebar main"
+    "sidebar main"
+    "sidebar footer"; */
+    gap: 10px;
+}
+
+.table_of_contents{
+    border-top: 3rem solid var(--serch-lighter);
+    border-bottom: 3rem solid var(--serch-lighter);
+    margin-bottom: 2rem;
+}
+
+.docsList{
+    background-color: var(--serch-white-bg);
+    width: auto;
+    border-right: 0.1rem solid var(--serch-light-textTwo);
+    padding: 1rem;
+    /* grid-area: sidebar; */
+}
+
+.docsSection{
+    border-bottom: 1px solid var(--serch-light-textTwo);
+}
+
+.docsList a{
+    color: var(--serch-black-bg);
+}
+
+.docsBody{
+    background-color: var(--serch-white-bg);
+    border: 1px solid var(--serch-light-textTwo);
+    border-radius: 1rem 0rem 0rem 1rem;
+    width: auto;
+    /* grid-area: main; */
+    /* max-height: 80rem;
+    overflow-y: auto; */
+    margin: 1rem 1rem;
+    padding: 1rem;
+}
+
+.docsBody::-webkit-scrollbar{
+    width: 0.4rem;
+}
+
+.docsBody::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+.docsBody::-webkit-scrollbar-thumb{
+    background-color: blueviolet;
+    border-radius: 1rem;
+}
+
+.docsHeading{
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.docsIcon:hover{
+    cursor: pointer;
+}
+
+.docsSubHeadings{
+    padding: 0rem 0rem 0rem 3rem;
+    display: block;
+}
+
+.docsSubHeading a{
+    display: block;
+    padding-bottom: 1rem;
+}
+
+.emptied{
+    display: none;
+}

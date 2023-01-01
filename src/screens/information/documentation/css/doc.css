@@ -1,0 +1,55 @@
+@import url('../../../../config/colors/colors.css');
+
+.subHeading{
+    padding-left: 1.5rem;
+}
+
+.subHeaders{
+    padding-left: 2rem;
+}
+
+.docContents{
+    text-align: justify;
+    padding: 0rem 1.5rem;
+}
+
+.subDocContents{
+    padding: 0rem 3rem;
+}
+
+.docContents h4{
+    text-align: center;
+}
+
+.noteBold{
+    color: var(--serch-libra-color);
+    font-weight: bold;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.yellow{
+    color: var(--serch-yellow);
+    font-weight: bold;
+}
+
+.green{
+    color: var(--serch-green);
+    font-weight: bold;
+}
+
+.blue{
+    color: var(--serch-blue);
+    font-weight: bold;
+}
+
+.red{
+    color: var(--serch-red);
+    font-weight: bold;
+}
+
+ol{
+    padding-left: 3rem;
+}

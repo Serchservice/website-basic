@@ -1,0 +1,42 @@
+@import url(../../config/colors/colors.css);
+
+.latest{
+    padding: 2rem;
+    background-color: var(--serch-white-bg);
+}
+
+.latest h2{
+    color: var(--serch-black-bg);
+}
+
+.latestNews{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.5rem;
+    min-height: 5rem;
+    position: relative;
+    min-width: 10rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--serch-box-shadow);
+    transition: all 1s;
+}
+
+.latestNews:hover{
+    box-shadow: var(--serch-light-textTwo) 0px 2px 6px 0px;
+}
+
+.latestNews img{
+    margin-right: 1rem;
+    width: 10rem;
+    height: auto;
+}
+
+.latestContent{
+    display: block;
+}
+
+.latest .boxLink a{
+    display: block;
+    font-size: 1rem;
+    text-align: flex-end;
+}

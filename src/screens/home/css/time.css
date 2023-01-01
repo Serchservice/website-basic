@@ -1,0 +1,27 @@
+@import url(../../../config/colors/colors.css);
+
+.time{
+    background:url(../../../assets/others/clock.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:left;
+    height: 300px;
+    display: flex;
+    align-items: center;
+}
+
+.timetext{
+    width: 30%;
+    padding: 1rem;
+}
+
+.timetext h2{
+    color: var(--serch-light-link);
+    text-align: left;
+}
+
+.timetext p{
+    color: var(--serch-light-strong);
+    width: 70%;
+    margin-top: 0.8rem;
+}

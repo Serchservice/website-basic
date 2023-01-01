@@ -1,0 +1,5 @@
+@media (700px <= width <= 799px){
+    .productHeadText{
+        max-width: 25rem;
+    }
+}
