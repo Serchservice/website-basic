@@ -75,8 +75,8 @@ export const Footer = () => {
             </div>
             <div className='footerbottom'>
                 <div className='policy'>
-                    <Link to={ LegalLinks.privacyPolicy } className="pageLink">Privacy Policy</Link>
-                    <Link to={ LegalLinks.termsAndConditions } className="pageLink">Terms of Service</Link>
+                    <Link to={ LegalLinks.privacyPolicy } className="pageLink">Privacy </Link>
+                    <Link to={ LegalLinks.termsAndConditions } className="pageLink">Terms</Link>
                     <Link to={ LegalLinks.accessibility } className="pageLink">Accessibility</Link>
                 </div>
                 <div className='bottom'>

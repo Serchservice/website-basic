@@ -17,3 +17,8 @@
 .safetyGuide .boxNoWidth{
     max-width: 30rem;
 }
+@media screen and (max-width: 768px){
+    /* .safetyGuide{
+        flex-direction: column;
+    } */
+}

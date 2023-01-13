@@ -40,3 +40,9 @@
 .payBody .boxWithDataContent h4{
     color: var(--serch-white-bg);
 }
+@media screen and (max-width:768px) {
+    .planDemoCenter{
+        flex-direction: column;
+    }
+    
+}
