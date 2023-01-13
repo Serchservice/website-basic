@@ -81,3 +81,10 @@
     background-color: var(--serch-purple-deep);
     border: none;
 }
+
+@media screen and (max-width:768px) {
+    .contentLeftBlack, .contentRightBlack{
+        text-align: justify;
+    }
+    
+}

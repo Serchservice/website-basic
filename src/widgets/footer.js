@@ -24,23 +24,11 @@ export const Footer = () => {
         <footer className="footer">
             <div className="logo">
                 <div className="greeting">
-                    <h3>{`${getGreeting()}`}</h3>
+                    <h3  style={{color:"white"}}>{`${getGreeting()}`}</h3>
                 </div>
                 <Link to={ MainLinks.home }><img alt='' src={ Images.serchLogoName } /></Link>
             </div>
-            <div className='footerlinks'>
-                <div className='app'>
-                    <a href={AppLinks.playStore}><img alt='' src={ Images.playStore } /> </a>
-                    <a href={AppLinks.appleStore}><img alt='' src={ Images.appleStore } /> </a>
-                </div>
-                <div className='socialmedia'>
-                    <a href={ SocialLinks.twitter }><img alt='' src={ Images.twitter } /> </a>
-                    <a href={ SocialLinks.facebook }><img alt='' src={ Images.facebook } /> </a>
-                    <a href={ Emails.help }><img alt='' src={ Images.gmail } /> </a>
-                    <a href={ SocialLinks.instagram }><img alt='' src={ Images.instagram } /> </a>
-                    <a href={ SocialLinks.linkedIn }><img alt='' src={ Images.linkedIn } /> </a>
-                </div>
-            </div>
+           
             <div className='footerlist'>
                 <div className='company'>
                     <h2>Company</h2>
@@ -70,6 +58,19 @@ export const Footer = () => {
                     <Link to={ SupportLinks.support } className="pageLink">Support Hub</Link>
                     <a href={ Emails.improve } className="pageLink">Improve our services</a>
                     <a href={ Emails.report } className="pageLink">Report a broken feature</a>
+                </div>
+            </div>
+            <div className='footerlinks'>
+                <div className='app'>
+                    <a href={AppLinks.playStore}><img alt='' src={ Images.playStore } /> </a>
+                    <a href={AppLinks.appleStore}><img alt='' src={ Images.appleStore } /> </a>
+                </div>
+                <div className='socialmedia'>
+                    <a href={ SocialLinks.twitter }><img alt='' src={ Images.twitter } /> </a>
+                    <a href={ SocialLinks.facebook }><img alt='' src={ Images.facebook } /> </a>
+                    <a href={ Emails.help }><img alt='' src={ Images.gmail } /> </a>
+                    <a href={ SocialLinks.instagram }><img alt='' src={ Images.instagram } /> </a>
+                    <a href={ SocialLinks.linkedIn }><img alt='' src={ Images.linkedIn } /> </a>
                 </div>
             </div>
             <div className='footerbottom'>

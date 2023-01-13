@@ -81,3 +81,46 @@
     padding: 0.5rem 1rem;
     margin: 0rem 1rem;
 }
+
+@media screen and (max-width:768px) {
+    
+.end{
+    padding: 4rem 2rem;
+}
+.emailBox{
+    width: auto;
+
+}
+.emailUs{
+    margin: 0;
+    width: 20rem;
+}
+.endSection{
+        flex-direction: column;
+    }
+    a{ 
+        font-size: 0.8rem;
+       
+      }
+      
+      h1{
+        font-size: 1.5rem;
+      }
+      
+      h2{
+        font-size: 1.0rem;
+      }
+      
+      h3{
+        font-size: 0.9rem;
+      }
+      
+      h4{
+        font-size: 0.8rem;
+      }
+      
+      h5{
+        font-size: 0.77rem;
+      }
+    
+}

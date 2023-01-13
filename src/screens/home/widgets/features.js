@@ -155,6 +155,7 @@ export const Plans = () => {
                 </div>
             </div>
             <div className='productHeader'>
+            <img alt='' src={ HelpImages.keys } width={ 400 } />
                 <div className="contentRightBlack">
                     <h2>Keys to the City</h2>
                     <p>Inasmuch as we protect our users and providers, we still leave everything to their own preference.
@@ -162,7 +163,6 @@ export const Plans = () => {
                         By letting us in throught SWM and the connect toggle, we stay with them throughout the journey.
                     </p>
                 </div>
-                <img alt='' src={ HelpImages.keys } width={ 400 } />
             </div>
             <div className='productHeading'>
                 <img alt='' src={ HelpImages.target } width={ 300 } />

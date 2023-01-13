@@ -62,3 +62,28 @@
     padding: 2rem;
     text-align: justify;
 }
+@media screen and (max-width: 768px) {
+    .keyHeader{
+        flex-direction: column-reverse;
+        
+    }
+    .serchhub{
+        display: none;
+    }
+    .planheader {
+        text-align: center;
+        border-bottom: 2px solid var(--serch-bg-color);
+        margin: 0;
+        /* testing for mobile */
+        /* background-color: red; */
+    }
+    .welcometext{
+        display: none;
+    }
+        
+    .keyArrowBack{
+        display: none;
+    
+    }
+    
+}
