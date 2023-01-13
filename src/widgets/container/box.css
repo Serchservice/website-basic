@@ -196,3 +196,9 @@
 .boxLink a:hover{
     border-bottom: none;
 }
+@media screen and (max-width:768px){
+    .boxCenter{
+        width: 20rem;
+        
+    }
+}
