@@ -31,3 +31,15 @@
     margin-left: 1rem;
     margin-right: 1rem;
 }
+@media screen and (max-width:768px) {
+    .countryHeader{
+        padding: 4rem 1rem 0rem 1rem;
+        flex-direction: column;
+       
+    } 
+    .countryHeader img{
+        width: 15rem;
+        margin-left: 0;
+       
+    }
+}

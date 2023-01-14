@@ -45,3 +45,19 @@
     justify-content: space-around;
     background-color: var(--serch-light-textTwo);
 }
+@media screen and (max-width:80rem) {
+    .career{
+        padding: 0.5rem;
+    }
+    .careerOne{
+        flex-direction: column;
+    }
+    .careerOneContent{
+        /* text-align: ; */
+        margin-left: 0rem;
+    }
+    .careerTwoContent{
+        /* text-align: left; */
+        margin-left: 0rem;
+    }
+}
