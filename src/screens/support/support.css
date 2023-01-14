@@ -85,5 +85,13 @@
         display: none;
     
     }
-    
+    .support_content{
+        padding: 0;
+        width: 100px;
+        /* background-color: blue; */
+        /* text-align: justify; */
+    }
+    .animLink{
+       width: 18rem !important;
+    }
 }

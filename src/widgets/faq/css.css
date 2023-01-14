@@ -63,11 +63,12 @@
 }
 @media screen and (max-width:768px) {
     .faq{
-        height: 8.0rem;
+        height: 5.5rem;
     }
-    .faqHeader{
-        /* background-color: blue; */
-       
+    .faqHeader h3 {
+        font-size: 0.8rem
+
+        /* flex-direction: column-reverse;        */
     }
     .activeFA{
         /* background-color: red; */

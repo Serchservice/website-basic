@@ -17,7 +17,7 @@ export const LegalBody = () => {
                 our legal documents. When such is done, we notify all our users on such updates.
             </h3>
             <div className="support_content">
-                <Link to={LegalLinks.communityGuidelines} className="animLink">
+                <Link to={LegalLinks.communityGuidelines} className="animLink" style={{with:"15rem"}}>
                     <h3>Serch Community Guidelines</h3>
                     <img alt="" src={ Icons.arrowRight } width={20} />
                 </Link>
