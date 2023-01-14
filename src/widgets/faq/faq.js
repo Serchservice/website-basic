@@ -37,7 +37,7 @@ const FAQ = ({
                 <h2>{ header }</h2>
                 <p>{ subHeader }</p>
             </div>
-            <div className={ openOne ? 'activeFAQ' : 'faq' } onClick={ openFAQOne }>
+            <div className={`'faqContainer' ${openOne ? 'activeFAQ' : 'faq' }`} onClick={ openFAQOne }>
                 <div className='faqHeader'>
                     <h3> { faqOneQuestion } </h3>
                     {

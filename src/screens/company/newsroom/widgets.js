@@ -2,6 +2,7 @@ import { NewsroomImages } from "../../../config/images/companyImages";
 import { KeyImages } from "../../../config/images/key";
 import { NewsMaker, LatestNewsMaker } from "../../../widgets/container/blogNews";
 import { News, NewsRecent } from "./newsData";
+import styles from './css.css'
 
 export const RecentNews = ({recent}) => {
     return(
