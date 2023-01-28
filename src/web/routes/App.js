@@ -1,18 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import '../../screens/css/keyframes.css';
-import { CompanyLinks, InformationLinks, LegalLinks, MainLinks, ProductLinks, SupportLinks } from "../../config/custom/links";
-import { CountriesInSerch, Documentation, PricingAndPayment, SafetyGuideline } from "../pages/information";
+import { CompanyLinks, InformationLinks, MainLinks, ProductLinks, SupportLinks } from "../../config/custom/links";
+import { CountriesInSerch, PricingAndPayment, SafetyGuideline } from "../pages/information";
 import { Home, NoPage, Support } from "../pages/main";
 import { LegalHub, SupportHub } from "../pages/support";
 import { Business, Provide, Request } from "../pages/product";
 import { About, Blog, Career, MarketPlace, Newsroom } from "../pages/company";
 import { BlogPost, NewsPost } from "../pages/posts";
-import { FeedBackPolicy, NonDiscriminationPolicy, ZeroTolerancePolicy } from "../../screens/support/legalHub/docs/feedDiscriZero";
-import { CommunityGuidelines } from "../../screens/support/legalHub/docs/community";
-import { CookiePolicy, GlobalAdvertisingPolicy, UserGeneratedContentPolicy } from "../../screens/support/legalHub/docs/cookieGlobalUser";
-import { PrivacyPolicy } from "../../screens/support/legalHub/docs/privacyPolicy";
-import { ReferralProgramme } from "../../screens/support/legalHub/docs/referral";
-import { TermsAndConditions } from "../../screens/support/legalHub/docs/termsConditions";
+import { LegalBodyDocument, LegalBodyIndex } from "../../screens/support/legalHub/widgets";
 
 function App() {
   return (
@@ -45,8 +40,6 @@ function App() {
         <Route path={"/product/providers"} element={<Provide />} />
         <Route path={ ProductLinks.provide } element={<Provide />} />
 
-        <Route path={"/information/docs"} element={<Documentation />} />
-        <Route path={ InformationLinks.docs } element={<Documentation />} />
         <Route path='/information/pricing-and-payment' element={<PricingAndPayment />} />
         <Route path={ InformationLinks.payment } element={<PricingAndPayment />} />
         <Route path='/information/serch-and-countries' element={<CountriesInSerch />} />
@@ -56,18 +49,14 @@ function App() {
 
         <Route path='/support' element={<Support />} />
         <Route path={ MainLinks.helpAndSupport } element={<Support />} />
-        <Route path="/legal" element={<LegalHub />} />
-        <Route path={ SupportLinks.legal } element={<LegalHub />} />
-        <Route path={ LegalLinks.feedbackPolicy } element={<FeedBackPolicy />} />
-        <Route path={ LegalLinks.discriminationPolicy } element={<NonDiscriminationPolicy />} />
-        <Route path={ LegalLinks.zeroPolicy } element={<ZeroTolerancePolicy />} />
-        <Route path={ LegalLinks.communityGuidelines } element={<CommunityGuidelines />} />
-        <Route path={ LegalLinks.cookiePolicy } element={<CookiePolicy />} />
-        <Route path={ LegalLinks.userContent } element={<UserGeneratedContentPolicy />} />
-        <Route path={ LegalLinks.advertPolicy } element={<GlobalAdvertisingPolicy />} />
-        <Route path={ LegalLinks.privacyPolicy } element={<PrivacyPolicy />} />
-        <Route path={ LegalLinks.referralProgramme } element={<ReferralProgramme />} />
-        <Route path={ LegalLinks.termsAndConditions } element={<TermsAndConditions />} />
+        <Route path="/legal" element={<LegalHub />}>
+          <Route index element={<LegalBodyIndex />} />
+          <Route path={ SupportLinks.legalSub } element={<LegalBodyDocument />} />
+        </Route>
+        <Route path={ SupportLinks.legal } element={<LegalHub />}>
+          <Route index element={<LegalBodyIndex />} />
+          <Route path={ SupportLinks.legalSub } element={<LegalBodyDocument />} />
+        </Route>
         <Route path='/support/hub' element={<SupportHub />} />
         <Route path={ SupportLinks.support } element={<SupportHub />} />
       </Routes>

@@ -1,0 +1,48 @@
+.background{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;
+}
+
+.electrician{
+    background-image: url(../../assets/others/electrician.jpg);
+}
+
+.plumber{
+    background-image: url(../../assets/others/plumbing.jpg);
+}
+
+.mechanic{
+    background-image: url(../../assets/others/mechanic.jpg);
+}
+
+.barber{
+    background-image: url(../../assets/others/shopping.jpg);
+}
+
+.time{
+    background-image: url(../../assets/others/clock.jpg);
+}
+
+.aboutHeader{
+    background-image: url(../../assets/others/people5.jpg);
+}
+
+.aboutService{
+    background-image: url(../../assets/others/repair.jpg);
+}
+
+.aboutHappy{
+    background-image: url(../../assets/others/people2.jpg);
+}
+
+.provide{
+    background-image: url(../../assets/products/provider/provide.png);
+}
+
+@media screen and (max-width: 768px) {
+    .background{
+        height: 300px;
+    }
+}

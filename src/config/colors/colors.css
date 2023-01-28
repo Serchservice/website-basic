@@ -37,3 +37,61 @@
 :root{
     --delay: 0s;
 }
+
+/* Roboto
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Open Sans */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+/* Nunito Sans */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;1,700&display=swap');
+
+/* :root{
+     --regular: 400;
+     --bold: 700;
+     
+     --font-roboto:'Roboto', sans-serif;
+     --font-open-sans:'Open Sans', sans-serif;
+     --font-nunito-sans: 'Nunito Sans', sans-serif;
+} */
+
+/* Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Open Sans */
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap'); */
+
+/* Nunito Sans */
+/* @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;1,700&display=swap'); */
+
+/* :root{
+     --color-primary: #007bff;
+     --color-secondary: #6c757d;
+     --color-success: #28a745;
+     --color-danger: #dc3545;
+     --color-warning: #ffc107;
+     --color-info: #17a2b8;
+     --color-light: #f8f9fa;
+     --color-dark: #343a40;
+     --color-white: #ffffff;
+    
+     --regular: 400;
+     --bold: 700;
+     
+     --font-roboto:'Roboto', sans-serif;
+     --font-open-sans:'Open Sans', sans-serif;
+     --font-nunito-sans: 'Nunito Sans', sans-serif;
+} */
+
+/* :root{
+     --color-primary: #007bff;
+     --color-secondary: #6c757d;
+     --color-success: #28a745;
+     --color-danger: #dc3545;
+     --color-warning: #ffc107;
+     --color-info: #17a2b8;
+     --color-light: #f8f9fa;
+     --color-dark: #343a40;
+     --color-white: #ffffff;
+} */

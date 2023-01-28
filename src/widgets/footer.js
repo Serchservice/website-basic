@@ -28,7 +28,6 @@ export const Footer = () => {
                 </div>
                 <Link to={ MainLinks.home }><img alt='' src={ Images.serchLogoName } /></Link>
             </div>
-           
             <div className='footerlist'>
                 <div className='company'>
                     <h2>Company</h2>
@@ -46,7 +45,6 @@ export const Footer = () => {
                 </div>
                 <div className='pricing'>
                     <h2>Information</h2>
-                    <Link to={ InformationLinks.docs } className="pageLink">Documentation</Link>
                     <Link to={ InformationLinks.safety } className="pageLink">Safety guidelines</Link>
                     <Link to={ InformationLinks.payment } className="pageLink">Pricing &  Payment Methods</Link>
                     <Link to={ InformationLinks.countries } className="pageLink">Countries in Serch</Link>

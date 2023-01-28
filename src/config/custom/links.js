@@ -1,9 +1,9 @@
 export const MainLinks = {
     home: '/',
-    company: '/company/',
-    product: '/product/',
-    information: '/information/',
-    helpAndSupport: '/support/'
+    company: '/company',
+    product: '/product',
+    information: '/information',
+    helpAndSupport: '/support'
 }
 
 export const AppLinks = {
@@ -17,6 +17,28 @@ export const AppLinks = {
     loginUser: '/'
 }
 
+export const ProviderAppLinkJson = [
+    {
+        name: "Download the provider app for android",
+        link: AppLinks.providerPlayStore
+    },
+    {
+        name: "Download the provider app for iOS",
+        link: AppLinks.providerAppleStore
+    },
+]
+
+export const UserAppLinkJson = [
+    {
+        name: "Download the user app for android",
+        link: AppLinks.playStore
+    },
+    {
+        name: "Download the user app for iOS",
+        link: AppLinks.appleStore
+    },
+]
+
 export const CompanyLinks = {
     about: '/company/about/',
     blog: '/company/blogs/',
@@ -28,36 +50,37 @@ export const CompanyLinks = {
 }
 
 export const ProductLinks = {
-    business: '/business/',
-    request: '/product/request/',
-    provide: '/product/provide/'
+    business: '/business',
+    request: '/product/request',
+    provide: '/product/provide'
 }
 
 export const InformationLinks = {
-    docs: '/information/docs/',
-    safety: '/information/safety-guidelines/',
-    payment: '/information/pricing-and-payment-methods/',
-    countries: '/information/serch-and-countries/'
+    // docs: '/information/docs/',
+    safety: '/information/safety-guidelines',
+    payment: '/information/pricing-and-payment-methods',
+    countries: '/information/serch-and-countries'
 }
 
 export const SupportLinks = {
-    legal: '/legal/',
-    support: '/support/hub/',
+    legal: '/legal',
+    legalSub: 'document/:id',
+    support: '/support/hub',
     help: 'https://help.serchservice.com',
 }
 
 export const LegalLinks = {
-    communityGuidelines: '/legal/document/community-guidelines/',
-    cookiePolicy: '/legal/document/cookie-policy/',
-    feedbackPolicy: '/legal/document/feedback-policy/',
-    advertPolicy: '/legal/document/global-advertising-content-policy/',
-    discriminationPolicy: '/legal/document/non-discrimination-policy/',
-    privacyPolicy: '/legal/document/privacy-policy/',
-    referralProgramme: '/legal/document/referral-programme/',
-    termsAndConditions: '/legal/document/terms-and-conditions/',
-    userContent: '/legal/document/user-generated-content/',
-    zeroPolicy: '/legal/document/zero-tolerance-policy/',
-    accessibility: '/legal/document/accessibility-policy/'
+    communityGuidelines: 'community-guidelines',
+    cookiePolicy: 'cookie-policy',
+    feedbackPolicy: 'feedback-policy',
+    advertPolicy: 'global-advertising-content-policy',
+    discriminationPolicy: 'non-discrimination-policy',
+    privacyPolicy: 'privacy-policy',
+    referralProgramme: 'referral-programme',
+    termsAndConditions: 'terms-and-conditions',
+    userContent: 'user-generated-content',
+    zeroPolicy: 'zero-tolerance-policy',
+    accessibility: 'accessibility-policy'
 }
 
 export const HelpLinks = {}

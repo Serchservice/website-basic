@@ -1,62 +1,105 @@
+import { Link } from "react-router-dom";
+import { ProviderAppLinkJson, UserAppLinkJson } from "../../../config/custom/links";
 import { BlogImages } from "../../../config/images/companyImages";
-import { Blogger, LatestBlogger, SignupProvider, SignupUser } from "../../../widgets/container/blogNews";
-import { Blogs, RecentBlogs } from "./blogData";
-
-export const RecentBlog = ({recent}) => {
-    return(
-        <div className="serch">
-            {recent.map((blog, index) => <LatestBlogger data={blog} key={index} />)}
-        </div>
-    );
-}
-
-export const BlogMap = ({blogs}) => {
-    return(
-        <div className="posts">
-            {blogs.map((blog, index) => <Blogger data={blog} key={index} />)}
-        </div>
-    );
-}
+import { InformationBox, LatestInformationBox, SerchAppBox } from "../../../widgets/container/boxes";
+import { ContainerForLatestInformation, ContainerRightImage } from "../../../widgets/container/containers";
+import { Blogs } from "./blogData";
 
 export const BlogHeader = () => {
-    return (
-        <div className="blogHeader">
-            <div className="productHeader">
-                <div className='productHeaderText'>
-                    <h2>A global move</h2>
-                    <p>Much to do and much to service. Much to make easy.</p>
-                </div>
-                <img alt='' src={ BlogImages.header } width={600} />
-            </div>
-            <div className="productHeader">
-                <img alt='' src={ BlogImages.folderGif } width={600} />
-                <div className='productHeaderText'>
-                    <h2>Much to be uncovered from a box</h2>
-                    <p>Curiousity will get you more interested.</p>
-                    <p>Open up any that you find interesting and read more about it.</p>
-                </div>
-            </div>
-        </div>
-    );
+    return <ContainerRightImage
+        image={BlogImages.header}
+        widthSize={600}
+        props={
+            <>
+                <h2>A global move</h2>
+                <p>Much to do and much to service. Much to make easy.</p>
+            </>
+        }
+    />
 }
 
 export const BlogBody = () => {
+    const style = {
+        display: "flex",
+        flexWrap: "wrap",
+        alignItems: "center",
+        margin: "1rem 0rem 3rem 0rem",
+        justifyContent: "space-around",
+    }
+
     return(
-        <div className="serch">
-            <BlogMap blogs={ Blogs } />
-            <div className="latest">
-                <h2>Latest Serch Blogs</h2>
-                <RecentBlog recent={ RecentBlogs }/>
-            </div>
-        </div>
+        <>
+            <div style={style}>{
+                Blogs.map((blog, index) => {
+                    return <InformationBox
+                        img={blog.img}
+                        imgAlt={blog.imgAlt}
+                        key={index}
+                        dept={blog.dept}
+                        date={blog.date}
+                        topic={blog.topic}
+                        link={`/company/blogs/blog/${blog.id}`}
+                    />
+                })
+            }</div>
+            <ContainerRightImage
+                image={BlogImages.folderGif}
+                widthSize={400}
+                props={
+                    <>
+                        <h2>Much to be uncovered from a box</h2>
+                        <p>Curiousity will get you more interested.</p>
+                        <p>Open up any that you find interesting and read more about it.</p>
+                    </>
+                }
+            />
+            <ContainerForLatestInformation
+                header={"Latest Serch Blogs"}
+                props={
+                    Blogs.map((link, index) => {
+                        return <LatestInformationBox
+                            image={link.img}
+                            key={index}
+                            imgAlt={link.imgAlt}
+                            topic={link.topic}
+                            date={link.date}
+                            link={`/company/blogs/blog/${link.id}`}
+                        />
+                    })
+                }
+            />
+        </>
     );
 }
 
 export const BlogEnd = () => {
+    const style = {
+        display: "flex",
+        flexWrap: "wrap",
+        alignItems: "center",
+        justifyContent: "space-between",
+    }
+
     return (
-        <div className="bloggerEnd">
-            <SignupProvider />
-            <SignupUser />
+        <div style={style}>
+            <SerchAppBox
+                color="#2c0f0c"
+                header="Earn extra money providing the service you know how to"
+                links={
+                    ProviderAppLinkJson.map((link, index) => {
+                        return <Link to={link.link} key={index} style={{color: "#FAFAFA"}}>{link.name}</Link>
+                    })
+                }
+            />
+            <SerchAppBox
+                color="#000342"
+                header="Get the service/help/assist you need across the world."
+                links={
+                    UserAppLinkJson.map((link, index) => {
+                        return <Link to={link.link} key={index} style={{color: "#FAFAFA"}}>{link.name}</Link>
+                    })
+                }
+            />
         </div>
     );
 }

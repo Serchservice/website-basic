@@ -1,0 +1,215 @@
+@import url(../../config/colors/colors.css);
+
+.linkBox a{
+    font-size: 14px;
+    margin: 2rem 0rem;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0.5rem 0rem 0rem;
+    color: var(--serch-black-bg);
+    width: -moz-fit-content;
+    width: fit-content;
+    font-weight: bold;
+    border-bottom: 2px solid var(--serch-black-bg);
+}
+
+.linkBox a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--serch-black-bg);
+    transform: scaleX(0);
+    transition: all 1s;
+}
+
+.linkBox a::after{
+    bottom: -2px;
+    transform-origin: left;
+}
+
+.linkBox a:hover::after{
+    transform: scaleX(1);
+}
+
+.linkBox a:hover{
+    border-bottom: none;
+}
+
+.infoBox::after, .infoBox::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.infoBox::before{
+    border-style: none;
+    border-width: 0 0 50px 50px;
+    transition: border .25s;
+    border-color: transparent transparent var(--serch-link-hover) transparent;
+}
+
+.infoBox::after{
+    content: 'Learn more';
+    opacity: 0;
+    color: var(--serch-black-bg);
+    bottom: 15px;
+    right: 15px;
+    font-size: 1rem;
+}
+
+.infoBox::before{
+    border-width: 0 0 100px 100px;
+}
+
+.infoBox:hover::after{
+    opacity: 1;
+    transition: opacity .5s;
+}
+
+.faqBox{
+    padding: 4rem;
+}
+
+/* .planContainer{
+    position: relative;
+    display: flex;
+    padding: 80px 40px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 80px;
+}
+
+.planContainerCard{
+    position: relative;
+    width: 350px;
+    height: 350px;
+    background: #FFFFFF;
+    transition: 0.5s;
+}
+
+.planContainerCard:hover{
+    height: 450px;
+}
+
+.planContainerCard .lines{
+    position: absolute;
+    inset: 0;
+    background: #000000;
+    overflow: hidden;
+}
+
+.planContainerCard .lines::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 120px;
+    background: linear-gradient(transparent, #45f3ff, #45f3ff, #45f3ff, transparent);
+    animation: animate 4s linear infinite;
+    animation-play-state: paused;
+}
+
+.planContainerCard .lines:after{
+    content: "";
+    position: absolute;
+    inset: 3px;
+    background: #292929;
+}
+
+.planContainerCard:hover .lines::before{
+    animation-play-state: running;
+}
+
+@keyframes animate {
+    0%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.planContainerCard .planContainerImage{
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    transform: translateX(-50%);
+    background: #000;
+    z-index: 10;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.planContainerCard:hover .planContainerImage{
+    top: 25px;
+    width: 250px;
+    height: 250px;
+}
+
+.planContainerCard .planContainerImage::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 150px;
+    background: linear-gradient(transparent, #ff3c7b, #ff3c7b, #ff3c7b, transparent);
+    animation: animate2 6s linear infinite;
+    animation-play-state: paused;
+}
+
+.planContainerCard:hover .planContainerImage::before{
+    animation-play-state: running;
+}
+
+.planContainerCard .planContainerImage:after{
+    content: "";
+    position: absolute;
+    inset: 3px;
+    background: #292929;
+}
+
+@keyframes animate {
+    0%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+
+    100%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+
+.planContainerCard .planContainerImage img{
+    position: absolute;
+    width: 100px;
+    z-index: 1;
+    filter: invert(1);
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+.planContainerCard:hover .planContainerImage img{
+    opacity: 1;
+}
+
+.planContainerCard .planContainerContent{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+} */

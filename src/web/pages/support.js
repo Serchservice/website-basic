@@ -7,22 +7,22 @@ import { Header } from "../../widgets/header";
 export const LegalHub = () => {
     Title("Serch || Legal Hub");
     return (
-        <div className="serch">
+        <>
             <Header />
             <LegalBody />
             <Footer />
-        </div>
+        </>
     );
 }
 
 export const SupportHub = () => {
     Title("Serch || Support Hub");
     return (
-        <div className="serch">
+        <>
             <Header />
             <SupportBody />
             <SupportEnd />
             <Footer />
-        </div>
+        </>
     );
 }

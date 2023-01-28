@@ -1,24 +1,45 @@
 import { Emails } from "../../../config/custom/emails";
 import { MainLinks } from "../../../config/custom/links";
 import { Icons } from "../../../config/images/icons";
-import "./widgets.css";
-import "../support.css";
+import { ContainerLeftImage } from "../../../widgets/container/containers";
+import { Link } from "react-router-dom";
 
 export const SupportBody = () => {
+    const linkStyle = {
+        justifyContent: "center",
+        alignItems: "center",
+        position: "relative",
+        color: "#030001",
+        borderBottom: "2px solid #030001",
+    }
+
+    const headStyle = {
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+    }
+
+    const bg = {
+        backgroundColor: "#2c0f0c",
+        color: "#FAFAFA",
+        borderRadius: "0.3rem",
+        fontWeight: "normal",
+    }
+
     return (
-        <div className="support_section">
-            <div className="keyHeader">
+        <div className="cover">
+            <div style={headStyle} className="cover-header">
                 <h2>Serch Support Hub</h2>
-                <a href={MainLinks.helpAndSupport} className="keyArrowBack">
-                    <img alt="" src={ Icons.arrowLeft } width={30} />
+                <Link to={MainLinks.helpAndSupport} className="link-arrow" style={linkStyle}>
+                    <img alt="back" src={ Icons.arrowLeft } width={30} />
                     <h3>Back to Help and Support</h3>
-                </a>
+                </Link>
             </div>
-            <h3>
+            <h3 style={bg} className="note">
                 Feeling like contacting Serch on any matter? Go through our support hub and talk to the right Serch team.
                 It's much easier to talk to the right people and get things sorted out quickly.
             </h3>
-            <div className="support_content">
+            <div className="cover-content">
                 <p>
                     Having issues like logging into your account, creating an account, authenticating your account or deleting your account?
                     Contact us here <a href={ Emails.account }>account@serchservice.com</a>.
@@ -59,22 +80,68 @@ export const SupportBody = () => {
 }
 
 export const SupportEnd = () => {
-    return (
-        <div className="end">
-            <h2>Don't feel like going to your mail box?</h2>
-            <div className="endSection">
-                <img alt="" src={ Icons.techSupport } width={300}/>
-                <div className="emailUs">
-                    <h3>Send us an email here...</h3>
-                    <form className="emailBox">
-                        <label>Problem</label>
-                        <textarea name="message" className="problemInput"/>
-                        <input type="Text" placeholder="Name" className="emailInput"/>
-                        <input type="mail" placeholder="Email" className="emailInput"/>
-                        <button> Submit </button>
-                    </form>
-                </div>
+    const emailStyle = {
+        borderRadius: "0.5rem",
+        boxShadow: "rgba(0, 0, 0, 0.16) 0px 2px 6px 0px",
+        display: "flex",
+        backgroundColor: "#030001",
+        flexDirection: "column",
+        justifyContent: "space-evenly",
+        alignSelf: "center",
+        marginTop: "2rem",
+        height: "auto",
+    }
+
+    const emailBox = {
+        width: "auto",
+        display: "flex",
+        marginTop: "1rem",
+        flexDirection: "column",
+        justifyContent: "center",
+    }
+
+    const emailInput = {
+        backgroundColor: "#FAFAFA",
+        padding: "1rem 1rem",
+        borderRadius: "0.5rem",
+        fontSize: "16px",
+        width: "auto",
+        margin: "0rem 0rem 1rem 0rem",
+    }
+
+    const emailButton = {
+        padding: "0.5rem 1rem",
+        backgroundColor: "#FAFAFA",
+        color: "#030001",
+        alignSelf: "flex-end",
+    }
+
+    return <ContainerLeftImage
+        header={"Don't feel like going to your mail box?"}
+        image={Icons.techSupport}
+        widthSize={300}
+        imageAlt={""}
+        color={"#FAFAFA"}
+        flex={"wrap"}
+        props={
+            <div className="emailUs" style={emailStyle}>
+                <h3 style={{color: "#FAFAFA"}}>Send us an email from here...</h3>
+                <form style={emailBox}>
+                    <label style={{color: "#FAFAFA", marginTop: "1rem"}}>Problem</label>
+                    <textarea name="message" style={{
+                        backgroundColor: "#FAFAFA",
+                        padding: "0.5rem 1rem",
+                        borderRadius: "0.5rem",
+                        fontSize: "16px",
+                        width: "auto",
+                        height: "8rem",
+                        margin: "0.5rem 0rem 1rem 0rem"
+                    }}/>
+                    <input type="Text" placeholder="Name" style={emailInput}/>
+                    <input type="mail" placeholder="Email" style={emailInput}/>
+                    <button style={emailButton}> Submit </button>
+                </form>
             </div>
-        </div>
-    );
+        }
+    />
 }

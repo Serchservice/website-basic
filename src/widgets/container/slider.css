@@ -1,0 +1,19 @@
+@import url(../../config/colors/colors.css);
+
+.slide-indicator-active{
+    background-color: #0009b8;
+}
+
+.slide-indicator{
+    background-color: #bdbdbd;
+}
+
+.prev, .next{
+    width: 50px;
+}
+
+@media screen and (max-width: 768px) {
+    .prev, .next{
+        width: 40px;
+    }
+}

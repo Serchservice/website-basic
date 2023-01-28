@@ -1,5 +1,4 @@
 import Price from '../../assets/plans/dollar.png';
-import './box.css';
 
 export const PaymentMethodBox = ({ data, title }) => {
     return (

@@ -1,6 +1,7 @@
 export const Icons = {
     arrowLeft: require('../../assets/icons/arrow-left.png'),
     arrowRight: require('../../assets/icons/arrow-right.png'),
+    next: require('../../assets/icons/next.png'),
     searchIcon: require('../../assets/icons/searchIcon.png'),
     openFolder: require('../../assets/icons/openFolder.png'),
     closeFolder: require('../../assets/icons/closeFolder.png'),

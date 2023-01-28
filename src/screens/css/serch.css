@@ -1,95 +1,152 @@
 @import url(../../config/colors/colors.css);
+@import url(./backgrounds.css);
 
-.about_us{
-    background: url(../../assets/others/people5.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 400px;
-    display: flex;
-    align-items: center;
-    padding: 5rem;
+.plans{
+    padding: 3rem 1rem;
+    width: 100%;
+    margin: 0rem;
 }
 
-.about_services{
-    background: url(../../assets/others/repair.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 400px;
-    color: var(--serch-light-text);
-    display: flex;
-    align-items: center;
-    padding: 5rem;
+.aries{
+    color: var(--serch-aries-color);
 }
 
-.about_services h2{
+.libra{
+    color: var(--serch-libra-color);
+}
+
+.aqua{
+    color: var(--serch-aqua-color);
+}
+
+.virgo{
+    color: var(--serch-virgo-color);
+}
+
+.planDetail{
+    color: #030001,
+}
+
+.planDetail:hover{
     color: var(--serch-white-bg);
+    background-color: var(--serch-purple-deep);
+    border: none;
 }
 
-.about_users{
-    background: url(../../assets/others/people2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 400px;
-    color: var(--serch-light-text);
+.link-arrow{
     display: flex;
-    align-items: center;
-    padding: 5rem;
 }
 
-.about_users h2{
-    color: var(--serch-bg-color);
-}
-
-.about_us h2{
-    color: var(--serch-bg-color);
-    letter-spacing: 0.05rem;
-}
-
-.about_text{
-    line-height: 1.5rem;
-}
-
-.about_text h2{
-    margin-bottom: 1rem;
-    font-weight: bold;
-}
-
-.about_text p{
-    text-align: justify;
-}
-
-.about_providers{
-    padding: 3rem;
-    margin: 2rem 0rem;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.statements{
-    margin: 3rem 0rem;
-}
-
-.statementContents{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
+.emailUs{
     padding: 2rem;
 }
 
-.statement{
-    max-width: 20rem;
-    max-height: 20rem;
-    position: relative;
-    display: block;
-    margin: 1rem 1rem;
-    padding: 1rem;
-    text-align: center;
+.note{
+    padding: 2rem;
+}
+
+.cover{
+    padding: 2rem;
     background-color: var(--serch-white-bg);
-    border-radius: 0.3rem;
-    z-index: 1;
-    box-shadow: var(--serch-box-shadow);
+}
+
+.animLink{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0rem 0rem 0rem;
+    color: var(--serch-black-bg);
+    max-width: 21rem;
+    /* width: -moz-fit-content;
+    width: fit-content; */
+    font-weight: bold;
+    border-bottom: 2px solid var(--serch-black-bg);
+}
+
+.animLink img{
+    display: none;
+    transition: all 5s;
+}
+
+.animLink::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--serch-black-bg);
+    transform: scaleX(0);
+    transition: all 1s;
+}
+
+.animLink::after{
+    bottom: -2px;
+    transform-origin: left;
+}
+
+.animLink:hover::after{
+    transform: scaleX(1);
+}
+
+.animLink:hover{
+    border-bottom: none;
+}
+
+.animLink:hover img{
+    display: block;
+}
+
+.tabButtons{
+    max-width: 70%;
+}
+
+.tabButton{
+    width: 50%;
+}
+
+.active-tab{
+    border-bottom: 2px solid var(--serch-border-bottom);
+}
+
+.tabContent{
+    display: none;
+}
+
+.active-tabContent{
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .emailUs{
+        padding: 1rem;
+    }
+
+    .tabButtons{
+        flex-direction: column;
+    }
+
+    .tabButton{
+        width: 100%;
+    }
+
+    .cover-header{
+        flex-direction: column-reverse;
+    }
+
+    .faqBox{
+        padding: 1rem;
+    }
+
+    .link-arrow{
+        display: none;
+    }
+
+    .note{
+        padding: 1rem;
+    }
+
+    .cover{
+        padding: 1rem;
+    }
 }

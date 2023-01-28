@@ -1,5 +1,5 @@
 import { Title } from "../../config/custom/titleheader";
-import { AboutBody, AboutEnd, AboutHeader, Statement } from "../../screens/company/about/widgets";
+import { AboutBody, AboutHeader, Statement } from "../../screens/company/about/widgets";
 import { BlogBody, BlogEnd, BlogHeader } from "../../screens/company/blog/widgets";
 import {
     CareerFooter, CareerFromSerch, CareerHeader, CareerInnovation, CareerLife, CareerRoles
@@ -12,60 +12,59 @@ import { Header } from "../../widgets/header";
 export const About = () => {
     Title("Serch || About Us");
     return (
-        <div className="serch">
+        <>
             <Header />
             <AboutHeader />
             <Statement />
             <AboutBody />
-            <AboutEnd />
             <Footer />
-    </div>
+    </>
     );
 }
 
 export const Blog = () => {
     Title("Serch || Blogs");
     return (
-        <div className="serch">
+        <>
             <Header />
             <BlogHeader />
             <BlogBody />
             <BlogEnd />
             <Footer />
-        </div>
+        </>
     );
 }
 
 export const Newsroom = () => {
     Title("Serch || Newsroom");
     return (
-        <div className="serch">
+        <>
             <Header />
             <NewsroomHeader />
             <NewsroomBody />
             <NewsroomFooter />
             <Footer />
-        </div>
+        </>
     );
 }
 
 export const MarketPlace = () => {
     Title("Serch || Marketplace Platform");
     return(
-        <div className='serch'>
+        <>
             <Header />
             <MarketplaceHeader />
             <MarketplaceBody />
             <MarketplaceFooter />
             <Footer />
-        </div>
+        </>
     );
 }
 
 export const Career = () => {
     Title("Serch || Career");
     return (
-        <div className='serch'>
+        <>
             <Header />
             <CareerHeader />
             <CareerRoles />
@@ -74,6 +73,6 @@ export const Career = () => {
             <CareerInnovation />
             <CareerFooter />
             <Footer />
-        </div>
+        </>
     )
 }

@@ -1,33 +1,3 @@
-export const RecentBlogs = [
-    {
-        id: "launching-serch-in-Nigeria",
-        topic: "Launching Serch in Nigeria: Find out what states",
-        date: "December 24 || Serch",
-        section: "Blogs",
-        img: "",
-        imgAlt: "",
-        desc: ""
-    },
-    {
-        id: "categories-serch-service-cuts-through",
-        topic: "Business or Individual? Serch's got your back",
-        date: "December 20 || Serch",
-        section: "Blogs",
-        img: "",
-        imgAlt: "",
-        desc: ""
-    },
-    {
-        id: "serch-introduces-its-service-offering",
-        topic: "Serch || Service Made Easy: Introduction to Serch Services",
-        date: "November 18 || Serch",
-        section: "Blogs",
-        img: "",
-        imgAlt: "",
-        desc: ""
-    }
-]
-
 export const Blogs = [
     {
         id: "launching-serch-in-Nigeria",
