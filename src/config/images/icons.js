@@ -6,6 +6,10 @@ export const Icons = {
     openFolder: require('../../assets/icons/openFolder.png'),
     closeFolder: require('../../assets/icons/closeFolder.png'),
 
+    checked: require('../../assets/icons/checked.png'),
+
+    download: require('../../assets/icons/download.png'),
+
     closeDoc: require('../../assets/icons/closedoc.png'),
     openDoc: require('../../assets/icons/opendoc.png'),
     openBlog: require('../../assets/icons/plus.png'),

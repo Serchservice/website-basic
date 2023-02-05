@@ -1,0 +1,118 @@
+@import url(../config/colors/colors.css);
+
+blockquote ol li a{
+    font-size: 1.1rem;
+    color: var(--serch-black-bg);
+    width: -moz-fit-content;
+    width: fit-content;
+    padding-right: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--serch-black-bg);
+}
+
+.cover p a, .link{
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 0.2rem 0rem 0rem;
+    color: var(--serch-black-bg);
+    width: -moz-fit-content;
+    width: fit-content;
+    border-bottom: 2px solid var(--serch-black-bg);
+}
+
+.cover p a::after, .link::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--serch-black-bg);
+    transform: scaleX(0);
+    transition: all 1s;
+}
+
+.cover p a::after, .link::after{
+    bottom: -2px;
+    transform-origin: left;
+}
+
+.cover p a:hover::after, .link:hover::after{
+    transform: scaleX(1);
+}
+
+.cover p a:hover, .link:hover{
+    border-bottom: none;
+}
+
+.cover p a, .link{
+    font-size: 1rem;
+}
+
+blockquote{
+    background-color: #FAFAFA;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+blockquote ol{
+    list-style: none;
+}
+
+blockquote ol li{
+    margin: 0.8rem 0rem;
+    position: relative;
+}
+
+blockquote ol li a::before{
+    content: "";
+    position: absolute;
+    background-color: var(--serch-black-bg);
+    width: 8px;
+    top: 15%;
+    left: -1rem;
+    height: 25px;
+    border-radius: 0rem 1rem 1rem 0rem;
+}
+
+ul, ol{
+    margin-inline-start: 2em;
+}
+
+blockquote ol{
+    margin-inline-start: 0em;
+}
+
+ul li{
+    margin: 0.5rem 0rem;
+}
+
+.cover table, .cover th, .cover td{
+    border: 2px solid var(--serch-black-bg);
+    padding: 0.5rem;
+}
+
+.cover th, .cover td{
+    min-width: 150px;
+}
+
+.cover table{
+    border-collapse: collapse;
+}
+
+@media screen and (max-width: 768px) {
+    blockquote{
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
+
+    .cover th, .cover td{
+        min-width: 0px;
+    }
+}
+
+@media screen and (max-width: 326px) {
+    .cover table{
+        display: none;
+    }
+}

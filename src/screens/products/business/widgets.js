@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { AppLinks, InformationLinks, LegalLinks, SupportLinks,} from "../../../config/custom/links";
+import { Emails } from "../../../config/custom/emails";
+import { AppLinks, SupportLinks,} from "../../../config/custom/links";
 import { LegalIcons } from "../../../config/images/icons";
 import Images from "../../../config/images/images";
 import { KeyImages } from "../../../config/images/key";
@@ -26,14 +27,14 @@ export const BusinessBody = () => {
         {
             title: "Community Guidelines",
             subtitle: `There are things we abhor and things we encourage for businesses that make use of Serch for Business platform.`,
-            link: LegalLinks.communityGuidelines,
+            link: "/legal/document/community-guidelines",
             linkText: "Learn more here",
             image: LegalIcons.agree,
             imageAlt: "community guideline"
         },{
             title: "Terms and Conditions",
             subtitle: `We stand with our rules and an understanding that our users and service providers agree with our policy`,
-            link: LegalLinks.termsAndConditions,
+            link: "/legal/document/terms-and-conditions",
             linkText: "Look into our T&C",
             image: LegalIcons.agree,
             imageAlt: "serch terms and conditions"
@@ -41,7 +42,7 @@ export const BusinessBody = () => {
             title: "Non-discriminatory",
             subtitle: `We are invested in making the use of our platforms accessible, fun and non-discriminatory. We also want
             businesses that make use of our platform to keep that in mind.`,
-            link: LegalLinks.discriminationPolicy,
+            link: "/legal/document/non-discrimination-policy",
             linkText: "Learn more here",
             image: LegalIcons.failed,
             imageAlt: "serch non-discrimination"
@@ -59,7 +60,7 @@ export const BusinessBody = () => {
                         <h2>Service that problem faster</h2>
                         <p>
                             Look past the time when your business depended on a particular provider or artisan. Serch makes it possible
-                            for your business to evade problems comming from your business provider and your utilities. Serch lets you
+                            for your business to evade problems coming from your business provider and your utilities. Serch lets you
                             focus on work while you are taken care of.
                         </p>
                     </>
@@ -144,10 +145,11 @@ export const BusinessFooter = () => {
         },
         {
             question: "What offer does my business account have?",
-            answer: `We offer every business account owners the possibility of choosing two different subscription models. Just like
-            an individual account, a business account can choose the best subscription model better for them.`,
-            link: InformationLinks.payment,
-            linkText: "Learn more about Serch's offering to businesses."
+            answer: `We are making waves on differentiating how businesses request for service providers using the Serch Marketplace
+            platform. Soon, there will be major changes, however, we would love your suggestions, they can go a long way for the 
+            betterment of our services.`,
+            link: Emails.improve,
+            linkText: "Talk to Serch Product Improvement team"
         },
         {
             question: "How do I get started?",

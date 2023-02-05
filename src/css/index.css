@@ -1,4 +1,5 @@
 @import url(../config/colors/colors.css);
+@import url(./markdown.css);
 
 body {
   margin: 0;
@@ -30,7 +31,6 @@ code {
   outline: 0;
   border: 0;
   padding: 0;
-  list-style: none;
   appearance: none;
   box-sizing: border-box;
 }
@@ -86,7 +86,7 @@ p{
 }
 
 li{
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--serch-black-bg);
 }
 
@@ -102,32 +102,6 @@ button{
   transition: all .5s;
   background-color: var(--serch-black-bg);
 }
-
-/* button::after{
-  content: '';
-  position: absolute;
-  top: 0;
-  width: 50%;
-  height: 100%;
-  background-color: var(--serch-light-p);
-  transform: scaleX(0);
-  z-index: -1;
-  transition: all 5s cubic-bezier(.785, .135, .15, .86);
-}
-
-button::after{
-  right: 0;
-  transform-origin: right;
-}
-
-button:hover::after{
-  transform: scaleX(1);
-}
-
-button:hover{
-  color: var(--serch-white-bg);
-  transition-delay: .5s;
-} */
 
 .button{
   padding: 1rem;

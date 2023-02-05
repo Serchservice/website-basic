@@ -1,8 +1,7 @@
 import { Title } from "../../config/custom/titleheader";
 import { LegalBody } from "../../screens/support/legalHub/widgets";
 import { SupportBody, SupportEnd } from "../../screens/support/supportHub/widgets";
-import { Footer } from "../../widgets/footer";
-import { Header } from "../../widgets/header";
+import { Header, Footer } from "../../widgets/pageWidget";
 
 export const LegalHub = () => {
     Title("Serch || Legal Hub");

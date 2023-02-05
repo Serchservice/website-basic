@@ -6,14 +6,16 @@ import {
 } from "../../screens/company/careers/widgets";
 import { MarketplaceBody, MarketplaceFooter, MarketplaceHeader } from "../../screens/company/marketplace/widgets";
 import { NewsroomBody, NewsroomFooter, NewsroomHeader } from "../../screens/company/newsroom/widgets";
-import { Footer } from "../../widgets/footer";
-import { Header } from "../../widgets/header";
+import { Header, Footer } from "../../widgets/pageWidget";
 
 export const About = () => {
     Title("Serch || About Us");
     return (
         <>
-            <Header />
+            <Header
+                pagetitle={"About Serch"}
+                pagedescription="Information about Serch as a company"
+            />
             <AboutHeader />
             <Statement />
             <AboutBody />
@@ -26,7 +28,10 @@ export const Blog = () => {
     Title("Serch || Blogs");
     return (
         <>
-            <Header />
+            <Header
+                pagetitle={"Serch BlogHub"}
+                pagedescription="Where the fun is documented!"
+            />
             <BlogHeader />
             <BlogBody />
             <BlogEnd />
@@ -39,7 +44,10 @@ export const Newsroom = () => {
     Title("Serch || Newsroom");
     return (
         <>
-            <Header />
+            <Header
+                pagetitle={"Serch Newsroom"}
+                pagedescription="Update on Serch happenings, stay here"
+            />
             <NewsroomHeader />
             <NewsroomBody />
             <NewsroomFooter />
@@ -52,7 +60,10 @@ export const MarketPlace = () => {
     Title("Serch || Marketplace Platform");
     return(
         <>
-            <Header />
+            <Header
+                pagetitle={"Serch MarketPlace"}
+                pagedescription="Understand and shop all Serch products"
+            />
             <MarketplaceHeader />
             <MarketplaceBody />
             <MarketplaceFooter />
@@ -65,7 +76,10 @@ export const Career = () => {
     Title("Serch || Career");
     return (
         <>
-            <Header />
+            <Header
+                pagetitle={"Careers in Serch"}
+                pagedescription="Find out what Serch needs to grow more"
+            />
             <CareerHeader />
             <CareerRoles />
             <CareerLife />

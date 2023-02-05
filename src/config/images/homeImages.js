@@ -17,10 +17,3 @@ export const HelpImages = {
     keys: require('../../assets/helpcentre/keys.jpg'),
     fingerprint: require('../../assets/helpcentre/fingerprint.gif')
 }
-
-export const PlanImages = {
-    aries: require('../../assets/plans/aries.png'),
-    libra: require('../../assets/plans/libra.png'),
-    aqua: require('../../assets/plans/aqua.png'),
-    virgo: require('../../assets/plans/virgo.png'),
-}

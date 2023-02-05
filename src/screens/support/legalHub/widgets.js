@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, Outlet, useParams } from "react-router-dom";
-import { MainLinks, LegalLinks } from "../../../config/custom/links";
+import { MainLinks, LegalLinks, SupportLinks } from "../../../config/custom/links";
 import { Icons } from "../../../config/images/icons";
 import { LegalShimmer } from "../../../widgets/container/shimmer";
 import Markdown from 'markdown-to-jsx';
@@ -159,7 +159,7 @@ export const LegalBodyDocument = () => {
         return <>
             <div className="cover-header" style={headStyle}>
                 <h2>{legal.linkText}</h2>
-                <Link to={ "/legal" } className="link-arrow" style={linkStyle}>
+                <Link to={ SupportLinks.legal } className="link-arrow" style={linkStyle}>
                     <img alt="" src={ Icons.arrowLeft } width={30} />
                     <h3>Back to Legal</h3>
                 </Link>

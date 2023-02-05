@@ -1,20 +1,24 @@
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Icons } from '../../config/images/icons';
 import './containers.css';
 
-export const ContainerLeftImage = ({color, image, props, imageAlt, widthSize, heightSize, header, flex}) => {
+export const ContainerLeftImage = ({color, image, props, imageAlt, widthSize, heightSize, header, flex, padding, subHeader}) => {
     const style = {
         backgroundColor: color ?? "#FAFAFA",
     }
 
     const firstStyle = {
         backgroundColor: color ?? "",
-        padding: "4rem 2rem",
+        padding: padding ?? "2rem",
     }
 
     return(
         header != null ? <div style={firstStyle}>
-            <h2>{header ?? null}</h2>
+            <h2 style={{color: "#0300001"}}>{header}</h2>
+            {
+                subHeader ? <p style={{color: "#0300001"}}>{subHeader}</p> : null
+            }
             <div className="container" style={{backgroundColor: color ?? "#FAFAFA", padding: "0rem", flexWrap: flex ?? ""}}>
                 <img alt={imageAlt ?? "serch"} src={image} width={widthSize ?? 500} height={heightSize} />
                 <div className="containerChild">{props}</div>
@@ -141,11 +145,10 @@ export const ContainerWithFlexedContents = ({props, header, subHeader}) => {
 
 export const ContainerForLatestInformation = ({header, color, subHeader, props, textColor}) => {
     const latestContainer = {
-        padding: "2rem",
         backgroundColor: color ?? "#FFFFFF",
     }
 
-    return <div style={latestContainer}>
+    return <div style={latestContainer} className="container-for-latest-information">
         <h2 style={{color: textColor ?? "#030001"}}>{header}</h2>
         {
             subHeader ? <p>{subHeader}</p> : null
@@ -154,12 +157,7 @@ export const ContainerForLatestInformation = ({header, color, subHeader, props, 
     </div>
 }
 
-export const ContainerForPost = ({section, link, sectionRoom, publishDate, publishTopic, publishDocument}) => {
-    const bodyStyle = {
-        padding: "2rem",
-        backgroundColor: "#FFFFFF",
-    }
-
+export const ContainerForPost = ({section, link, sectionRoom, publishDocument, publishedBy}) => {
     const headStyle = {
         display: "flex",
         justifyContent: "space-between",
@@ -167,7 +165,6 @@ export const ContainerForPost = ({section, link, sectionRoom, publishDate, publi
     }
 
     const linkStyle = {
-        display: "flex",
         justifyContent: "center",
         alignItems: "center",
         position: "relative",
@@ -176,17 +173,116 @@ export const ContainerForPost = ({section, link, sectionRoom, publishDate, publi
     }
 
     return(
-        <div style={bodyStyle} className="post-container">
-            <div style={headStyle}>
+        <div style={{backgroundColor: "#FFFFFF",}} className="container-for-post">
+            <div style={headStyle} className="blog-header">
                 <h2>Serch || {section}</h2>
                 <Link to={link} className="link-arrow" style={linkStyle}>
                     <img alt="" src={ Icons.arrowLeft } width={30} />
                     <h3 style={{marginLeft: "0.4rem",}}>Back to Serch {sectionRoom}</h3>
                 </Link>
             </div>
-            <p>Published {publishDate}</p>
-            <h2> { publishTopic } </h2>
             <>{publishDocument}</>
+            {
+                publishedBy ? <div style={{display: "flex", flexDirection: "row", justifyContent: "space-between"}}>
+                    <div></div>
+                    <div style={{
+                        padding: "0rem 0rem 0rem 1rem", borderTop: "1px solid #030001", borderBottom: "1px solid #030001",
+                        alignItems: "end", textAlign: "end"
+                    }} className="published-by">
+                        <p>{publishedBy}</p>
+                        <p style={{fontStyle: "italic"}}>Serch Team</p>
+                    </div>
+                </div> : null
+            }
+        </div>
+    )
+}
+
+export const SlideContainer = ({data}) => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [playing, setPlaying] = useState(false)
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            next();
+            setPlaying(true);
+        }, 3000);
+        return () => clearInterval(interval);
+    })
+
+    const previous = () => {
+        setPlaying(false)
+        if(currentIndex === 0){
+            setCurrentIndex(data.length - 1)
+        } else {
+            setCurrentIndex(currentIndex - 1)
+        }
+    }
+
+    const next = () => {
+        setPlaying(false)
+        if(currentIndex === data.length - 1){
+            setCurrentIndex(0)
+        } else {
+            setCurrentIndex(currentIndex + 1)
+        }
+    }
+
+    // const pageClick = (index) => {
+    //     setCurrentIndex(index)
+    // }
+
+    const slideContainer = {
+        width: "auto",
+        margin: "0 auto",
+        position: "relative",
+        textAlign: "center",
+    }
+
+    const slideContent = {
+        width: "100%",
+        zIndex: "999"
+    }
+
+    const prev = {
+        position: "absolute",
+        marginLeft: "1rem",
+        top: "50%",
+        left: "0",
+        zIndex: "999999",
+        transform: "translateY(-50%) rotate(180deg)",
+        cursor: "pointer"
+    }
+
+    const nxt = {
+        position: "absolute",
+        marginRight: "1rem",
+        top: "50%",
+        right: "0",
+        zIndex: "999999",
+        transform: "translateY(-50%)",
+        cursor: "pointer"
+    }
+
+    const indicator = {
+        borderRadius: "0.5rem",
+        margin: "0.2rem",
+        width: "2rem",
+        height: "0.3rem",
+    }
+    // &bull;
+
+    return(
+        <div style={slideContainer}>
+            <img className="prev" onClick={previous} style={prev} alt="" src={Icons.next} />
+            <div className={`${playing ? 'slide-active' : 'slide'}`} style={slideContent}>{data[currentIndex]}</div>
+            <img className="next" onClick={next} style={nxt} alt="" src={Icons.next} />
+            <div style={{display: "flex", flexDirection: "row", justifyContent: "flex-end", margin: "0rem 1rem 1rem 0rem"}}>{
+                data.map((item, index) => (
+                    <div key={index} className={`${currentIndex === index ? "slide-indicator-active" : 'slide-indicator'}`}
+                    style={indicator}></div>
+                ))
+            }</div>
         </div>
     )
 }

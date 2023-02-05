@@ -3,26 +3,32 @@ import { Link } from "react-router-dom"
 import { Icons } from '../../config/images/icons';
 import { useState } from 'react';
 import { InformationLinks } from '../../config/custom/links';
+import Price from '../../assets/plans/dollar.png';
 
-export const SerchShortPlanBox = ({image, classname, planName, imageAlt}) => {
+export const CategoryBox = ({category, onClick, cursor}) => {
+    return(
+        <p style={{
+            color: "#030001", padding: "0.5rem", borderRadius: "0.2rem", backgroundColor: "#F2F2F2",
+            alignSelf: "center", margin: "0rem 0.5rem 0rem 0rem", cursor: cursor
+        }} onClick={onClick} className="category-box">{category}</p>
+    )
+}
+
+export const SerchShortPlanBox = ({image, planCategory, planName, imageAlt}) => {
     return (
         <div className="plan" style={{
             border:" 2px solid var(--serch-purple-deep)",
             borderRadius: "0.5rem",
             margin: "0.5rem 0.5rem",
-            padding: ".5rem"
+            padding: ".5rem",
+            width: "15rem"
+            // backgroundColor: "#090909"
         }}>
-            <div className="planHeader" style={{
-                padding: "1rem 0rem",
-                display: "flex",
-                alignItems: "center"
-            }}>
+            <div className="planHeader" style={{padding: "1rem 0rem 0rem 0rem", display: "flex", alignItems: "center"}}>
                 <img alt={imageAlt} src={ image } width={ 40 } />
-                <h2 style={{
-                    marginLeft: "0.5rem",
-                    fontSize: "1.3rem",
-                }}>Plan <strong className={classname } style={{fontSize: "1.3rem"}}>{ planName }</strong></h2>
+                <h2 style={{marginLeft: "0.5rem", fontSize: "1.3rem"}}>{ planName }</h2>
             </div>
+            <p style={{marginLeft: "0.5rem", color: "#030001"}}>{ planCategory }</p>
             <Link to={ InformationLinks.payment } className="planDetail" style={{
                 border: "2px solid var(--serch-purple-deep)",
                 textAlign: "center",
@@ -94,12 +100,12 @@ export const LinkBox = ({
     </div>
 }
 
-export const LatestInformationBox = ({imgAlt, image, topic, section, date, link }) => {
+export const LatestInformationBox = ({imgAlt, image, topic, section, date, link, position }) => {
     const latestInfoBox = {
         minHeight: "5rem",
-        position: "relative",
+        position: position ?? "relative",
         display: "flex",
-        flexWrap: "wrap",
+        // flexWrap: "wrap",
         padding: "0.5rem",
         margin: "1rem 0rem",
         backgroundColor: "#FFFFFF",
@@ -117,7 +123,7 @@ export const LatestInformationBox = ({imgAlt, image, topic, section, date, link 
     }
 
     return(
-        <Link style={latestInfoBox} to={link}>
+        <Link style={latestInfoBox} to={link} className="latest-info-box">
             <img alt={imgAlt} src={ image } style={latestInfoImg}/>
             <div style={latestInfoContent}>
                 <p> {section} </p>
@@ -128,27 +134,27 @@ export const LatestInformationBox = ({imgAlt, image, topic, section, date, link 
     );
 }
 
-export const InformationBox = ({ link, imgAlt, img, dept, topic, date }) => {
+export const InformationBox = ({ link, imgAlt, img, dept, topic, date, zIndex, height}) => {
     const infoBox = {
-        maxWidth: "20rem",
-        maxHeight: "25rem",
+        width: "20rem",
+        height: height ?? "23rem",
         position: "relative",
         display: "block",
-        margin: "1rem 1rem",
+        margin: "0.5rem",
         backgroundColor: "#FFFFFF",
         borderRadius: "0.3rem",
-        zIndex: "1",
+        zIndex: zIndex ?? "1",
         boxShadow: "rgba(0, 0, 0, 0.16) 0px 2px 6px 0px",
     }
 
     const infoBoxImage = {
         width: "100%",
-        height: "10rem",
+        height: "12rem",
         borderRadius: "0.3rem 0.3rem 0rem 0rem",
     }
 
     const infoBoxHeader = {
-        padding: "1rem",
+        padding: "0.2rem 1rem",
         alignItems: "flex-start",
     }
 
@@ -157,7 +163,7 @@ export const InformationBox = ({ link, imgAlt, img, dept, topic, date }) => {
             <img alt={ imgAlt } src={ img } style={infoBoxImage}/>
             <div style={infoBoxHeader}>
                 <p> { dept } </p>
-                <h2 style={{fontSize: "1rem",}}> { topic } </h2>
+                <h2 style={{fontSize: "1rem", textOverflow: "ellipsis"}}> { topic } </h2>
                 <p> { date } </p>
             </div>
         </Link>
@@ -192,8 +198,8 @@ export const FAQBox = ({data, header, subHeader, boxSizing}) => {
     }
 
     const faq = {
-        margin: "4rem 0rem 0rem 0rem",
-        padding: "1rem 2rem",
+        margin: "1rem 0rem 0rem 0rem",
+        padding: "1rem",
         borderRadius: "0.2rem",
         color: "#030001",
         height: "auto",
@@ -202,8 +208,8 @@ export const FAQBox = ({data, header, subHeader, boxSizing}) => {
     }
 
     const activeFAQ = {
-        margin: "4rem 0rem 0rem 0rem",
-        padding: "2rem",
+        margin: "1rem 0rem 0rem 0rem",
+        padding: "1rem",
         color: "#030001",
         height: "auto",
         transition: "all 300ms ease-in",
@@ -234,10 +240,14 @@ export const FAQBox = ({data, header, subHeader, boxSizing}) => {
                         open && currentIndex === index ? <div style={activeFAQ} onClick={() => openFAQ(index) } key={index}>
                             <div style={faqHeader}>
                                 <h3 style={{fontSize: "1rem", display: "flex", flexDirection: "row"}}> { item.question } </h3>
-                                <img alt='' src={ Icons.closeFolder } width={20} />
+                                <img alt='' src={ Icons.openFolder } width={20} />
                             </div>
                             <p style={{fontSize: "1rem"}}> { item.answer } </p>
-                            <Link to={ item.link ?? "" } style={{color: "#006da4", fontSize: "1rem"}}> { item.linkText ?? "" } </Link>
+                            {
+                                item.link ? <Link to={ item.link } className="link">{
+                                    item.linkText
+                                } </Link> : null
+                            }
                         </div> : <div style={faq} onClick={() => openFAQ(index) } key={index}>
                             <div style={{
                                 display: "flex",
@@ -248,7 +258,7 @@ export const FAQBox = ({data, header, subHeader, boxSizing}) => {
                                 boxSizing: boxSizing,
                             }}>
                                 <h3 style={{fontSize: "1rem", display: "flex", flexDirection: "row"}}> { item.question } </h3>
-                                <img alt='' src={ Icons.openFolder } width={20} />
+                                <img alt='' src={ Icons.closeFolder } width={20} />
                             </div>
                         </div>
                     )
@@ -258,36 +268,87 @@ export const FAQBox = ({data, header, subHeader, boxSizing}) => {
     )
 }
 
-// export const SerchPlans = ({data}) => {
-//     const AquaLineStyle = {
-//         color: "#FFFFFF",
-//     }
+export const SerchBox = ({imgAlt, img, header, content, zIndex, link}) => {
+    return(
+        <Link style={{
+            backgroundColor: "#FAFAFA",
+            zIndex: zIndex ?? "1",
+            borderRadius: "0.1rem",
+            padding: "1rem",
+            margin: "0.5rem",
+        }} className="serch-box" to={link}>
+            <img alt={imgAlt} src={img} />
+            <div className="serch-box-content">
+                <h3 style={{fontSize: "1.2rem"}}>{header}</h3>
+                <p>{content}</p>
+            </div>
+        </Link>
+    )
+}
 
-//     const LibraLineStyle = {
-//         color: "#FFFFFF",
-//     }
+export const PaymentMethodBox = ({ data, title }) => {
+    return (
+        <div style={{
+            padding: "0.8rem", alignItems: "flex-start", border: "1px solid #3B043B"
+        }}>
+            <h3 style={{color: "#FAFAFA"}}> { title } </h3>
+            <div style={{display: "flex", justifyContent: "flex-start", flexWrap: "wrap"}}>{
+                data.map((item, index) => {
+                    return <div style={{margin: "0rem 0.5rem 0rem 0rem"}}>
+                        <div key={index} style={{width: "5rem", height: "5rem"}}>
+                            <img alt="serch" src={ item.type } width={ item.width } style={{
+                                width: "100%", height: "100%", objectFit: "contain"
+                            }}/>
+                        </div>
+                        <h4 style={{
+                            color: "#dfdfdf9e", marginBlockStart: "0rem", marginBlockEnd: "0rem",
+                            textAlign: "center"
+                        }}> { item.name } </h4>
+                    </div>
+                })
+            }</div>
+        </div>
+    );
+}
 
-//     const AriesLineStyle = {
-//         color: "#FFFFFF",
-//     }
-
-//     const VirgoLineStyle = {
-//         color: "#FFFFFF",
-//     }
-
-//     return(
-//         <Link className="planContainer">
-//             <div className='planContainerCard'>
-//                 <div className="lines"></div>
-//                 <div className="planContainerImage">
-//                     {
-//                         data.map((elements, index) => {
-//                             return <img src={elements.image} key={index} alt={elements.alt}/>
-//                         })
-//                     }
-//                 </div>
-//                 <div className="planContainerContent"></div>
-//             </div>
-//         </Link>
-//     );
-// }
+export const SerchPlanBox = ({ data, imageAlt, image, title, category, strikeThrough, subtitle, duration }) => {
+    return(
+        <div style={{
+            padding: "1rem", borderRadius: "0.4rem", backgroundColor: "#090909", maxWidth: "17rem",
+            display: "flex", flexDirection: "column", justifyContent: "center", margin: "1rem"
+        }}>
+            <h4 style={{color: "#BDBDBD", textAlign: "left"}}>{category}</h4>
+            <img alt={imageAlt} src={image} style={{margin: "0 auto", width: "50%"}}/>
+            <h3 style={{color: "#BDBDBD", marginBlockEnd: "0em", textAlign: "center"}}>{title}</h3>
+            <div style={{
+                display: "flex", flexDirection: "row", flexWrap: strikeThrough ? "wrap" : "", alignItems: "center",
+                justifyContent: "center"
+            }}>
+                <img alt="" src={ Price } width={30} height={35} />{
+                    strikeThrough ? <p style={{
+                        color: "#BDBDBD", marginLeft: "0.2rem"
+                    }}>&#x20A6;{subtitle} <s style={{textDecoration: "line-through"}}>&#x20A6;{strikeThrough}</s></p>
+                    : <p style={{color: "#BDBDBD", marginLeft: "0.2rem"}}>{subtitle}</p>
+                }
+            </div>
+            <div style={{
+                backgroundColor: "#FAFAFA", padding: "0.8rem", borderRadius: "0.3rem",
+            }}>{
+                data.map((value, index) => {
+                    return <div key={index} style={{
+                        display: "flex", alignItems: "flex-start", justifyContent: "flex-start",
+                    }}>
+                        <img alt="" src={Icons.checked} width={15} height={15} style={{marginRight: "0.5rem", marginTop: "0.2rem"}}/>
+                        <p style={{color: "#030001", marginBlockStart: "0em", marginBlockEnd: "0.2em",}}>{value}</p>
+                    </div>
+                })
+            }{
+                duration ? <p style={{
+                    color: "#030001", marginBlockStart: "0.5em", marginBlockEnd: "0.2em", fontSize: "0.9rem", fontWeight: "500"
+                }}>{duration}</p> : null
+            }<Link to={"/legal/document/terms-and-conditions"} className="link" style={{
+                fontSize: "0.8rem"
+            }}>Terms and conditions apply</Link></div>
+        </div>
+    )
+}

@@ -1,0 +1,41 @@
+@import url(../../config/colors/colors.css);
+
+.assets-page{
+    padding: 2rem;
+}
+
+.assets-page h1{
+    font-size: 5rem;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+}
+
+.assets-page article{
+    background-color: var(--serch-purple-deep);
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 0.1rem 1rem;
+    border-radius: 0.3rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.asset-link:hover{
+    box-shadow: var(--serch-box-shadow);
+}
+
+
+.asset-header, .asset-box{
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+@media screen and (max-width: 768px){
+    .assets-page{
+        padding: 1rem;
+    }
+
+    .assets-page h1{
+        font-size: 3rem;
+    }
+}

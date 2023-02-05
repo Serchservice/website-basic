@@ -1,6 +1,5 @@
 import { CareerImages } from "../../../config/images/companyImages";
-import { ContainerForLatestInformation, ContainerLeftImage, ContainerRightImage } from "../../../widgets/container/containers";
-import { SlideContainer } from "../../../widgets/container/sliders";
+import { ContainerForLatestInformation, ContainerLeftImage, ContainerRightImage, SlideContainer } from "../../../widgets/container/containers";
 import { Box } from "../../../widgets/container/boxes";
 
 export const CareerHeader = () => {

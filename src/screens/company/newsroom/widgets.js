@@ -1,8 +1,10 @@
 import { NewsroomImages } from "../../../config/images/companyImages";
 import { KeyImages } from "../../../config/images/key";
 import { News } from "./newsData";
-import { InformationBox, LatestInformationBox } from "../../../widgets/container/boxes";
+import { InformationBox, LatestInformationBox, SerchBox } from "../../../widgets/container/boxes";
 import { ContainerForLatestInformation, ContainerLeftImage } from "../../../widgets/container/containers";
+import { CompanyLinks } from "../../../config/custom/links";
+import { NewsImage } from "../../../config/images/blogImages";
 
 export const NewsroomHeader = () => {
     return <ContainerLeftImage
@@ -57,7 +59,7 @@ export const NewsroomFooter = () => {
     }
 
     return <ContainerLeftImage
-        header={"Want to stay ahead of others and recieve information about us firsthand?"}
+        header={"Want to stay ahead others and receive information about us firsthand?"}
         image={KeyImages.serch}
         widthSize={400}
         imageAlt={""}
@@ -77,6 +79,8 @@ export const NewsroomFooter = () => {
 }
 
 export const NewsroomBody = () => {
+    const shortNews = News.slice(0, 4)
+
     const style = {
         display: "flex",
         flexWrap: "wrap",
@@ -84,6 +88,26 @@ export const NewsroomBody = () => {
         margin: "1rem 0rem 3rem 0rem",
         justifyContent: "space-around",
     }
+
+    const serchContent = [{
+        imgAlt: "Serch Leadership Board",
+        img: NewsImage.leaderboard,
+        header: "Leadership Board",
+        link: "/company/newsroom/news/serch-leadership-board-with-its-best-in-team",
+        content: "Learn more about our best-in-class team"
+    },{
+        imgAlt: "Serch Company Info",
+        img: NewsImage.info,
+        header: "Company Info",
+        link: CompanyLinks.about,
+        content: "Learn more about our history and some key milestones"
+    },{
+        imgAlt: "Serch Media Assets",
+        img: NewsImage.assets,
+        header: "Media Assets",
+        link: CompanyLinks.assets,
+        content: "Download official Serch photos, logos and assets"
+    }]
 
     return (
         <>
@@ -93,7 +117,8 @@ export const NewsroomBody = () => {
                         img={blog.img}
                         imgAlt={blog.imgAlt}
                         key={index}
-                        dept={blog.dept}
+                        height="20rem"
+                        // dept={blog.dept}
                         date={blog.date}
                         topic={blog.topic}
                         link={`/company/newsroom/news/${blog.id}`}
@@ -103,7 +128,7 @@ export const NewsroomBody = () => {
             <ContainerForLatestInformation
                 header={"Latest Serch News"}
                 props={
-                    News.map((link, index) => {
+                    shortNews.map((link, index) => {
                         return <LatestInformationBox
                             image={link.img}
                             key={index}
@@ -115,6 +140,18 @@ export const NewsroomBody = () => {
                     })
                 }
             />
+            <div className="serch-boxes">{
+                serchContent.map((item, index) => {
+                    return <SerchBox
+                        key={index}
+                        link={item.link}
+                        img={item.img}
+                        imgAlt={item.imgAlt}
+                        header={item.header}
+                        content={item.content}
+                    />
+                })
+            }</div>
         </>
     );
 }

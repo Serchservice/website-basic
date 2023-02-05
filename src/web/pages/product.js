@@ -5,14 +5,16 @@ import { ProvideBody, ProvideEnd, ProvideHeader } from "../../screens/products/p
 import { RequestBody } from "../../screens/products/request/body";
 import { ProductSafety, RequestApp, RequestFAQ, RequestHeader } from "../../screens/products/request/widgets";
 import { FAQBox } from "../../widgets/container/boxes";
-import { Footer } from "../../widgets/footer";
-import { Header } from "../../widgets/header";
+import { Header, Footer } from "../../widgets/pageWidget";
 
 export const Business = () => {
     Title("Serch || Business");
     return (
         <>
-            <Header />
+            <Header
+                pagetitle={"Serch for Business"}
+                pagedescription="Understand what Serch does for your business"
+            />
             <BusinessHeader />
             <BusinessBody />
             <BusinessFooter />
@@ -25,7 +27,10 @@ export const Request = () => {
     Title("Serch || Request for Providers");
     return (
         <>
-            <Header />
+            <Header
+                pagetitle={"Serch for Individual"}
+                pagedescription="Understand what Serch does for you as a user"
+            />
             <RequestHeader />
             <RequestBody />
             <ProductSafety />
@@ -39,31 +44,30 @@ export const Request = () => {
 export const Provide = () => {
     Title("Serch || Providers");
 
-    const faq = [
-        {
-            question: "Can I become a provider in my city?",
-            answer: "Defintely. We are dedicated to bringing Serch to the world entirely.",
-            link: InformationLinks.countries,
-            linkText: "However, check our countries in Serch list."
-        },
-        {
-            question: "What are the requirements to become a provider?",
-            answer: "You must have the skill you are signing up for, have a valid ID, be transportable and have a Serch plan",
-            link: "/provider_requirements",
-            linkText: "See other requirements."
-        },
-        {
-            question: "Am I safe in Serch?",
-            answer: `It is one of our tasks to protect both the user and the provider at all times. Our GPS tracking and other phone
-            anonymization help us do all that.`,
-            link: InformationLinks.safety,
-            linkText: "Learn more about our safety tips"
-        },
-    ]
+    const faq = [{
+        question: "Can I become a provider in my city?",
+        answer: "Defintely. We are dedicated to bringing Serch to the world entirely.",
+        link: InformationLinks.countries,
+        linkText: "However, check our countries in Serch list."
+    },{
+        question: "What are the requirements in becoming a provider?",
+        answer: "You must have the skill you are signing up for, have a valid ID, be transportable and have a Serch plan",
+        link: "/provider_requirements",
+        linkText: "See other requirements."
+    },{
+        question: "Am I safe in Serch?",
+        answer: `It is one of our tasks to protect both the user and the provider at all times. Our GPS tracking and other phone
+        anonymization help us do all that.`,
+        link: InformationLinks.safety,
+        linkText: "Learn more about our safety tips"
+    }]
 
     return (
         <>
-            <Header />
+            <Header
+                pagetitle={"Serch for Providers"}
+                pagedescription="Learn how to start making money with your providing skill"
+            />
             <ProvideHeader />
             <ProvideBody />
             <ProvideEnd />

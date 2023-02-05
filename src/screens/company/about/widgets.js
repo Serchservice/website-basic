@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import { AboutImages } from "../../../config/images/companyImages";
-import Images from "../../../config/images/images";
 import { Icons, LegalIcons } from "../../../config/images/icons";
 import '../../css/serch.css';
 import { CompanyLinks, InformationLinks } from '../../../config/custom/links';
-import { ContainerBackgroundImage, ContainerRightImage, ContainerWithFlexedContents, ContainerWithUnderlinedHeader } from '../../../widgets/container/containers';
+import { ContainerBackgroundImage, ContainerLeftImage, ContainerRightImage, ContainerWithFlexedContents, ContainerWithUnderlinedHeader } from '../../../widgets/container/containers';
 import { Box, LinkBox } from '../../../widgets/container/boxes';
+import { TeamImages } from "../../../config/images/key";
 
 export const AboutHeader = () => {
     return <ContainerBackgroundImage
@@ -133,20 +133,16 @@ export const AboutBody = () => {
             />
             <div style={{display: "flex", flexWrap: "wrap", justifyContent: "space-around", padding: "3rem 1rem"}}>
                 {
-                    description.map(doc => {
+                    description.map((doc, index) => {
                         return <Box
                             header={doc.header}
-                            key={doc.id}
+                            key={index}
                             content={doc.content}
                             secondContent={doc.secondContent}
                             maxWidth={"30rem"}
                         />
                     })
                 }
-            </div>
-            <div className="about_providers">
-                <h2>Dedicated service providers</h2>
-                <img alt="" src={ Images.mechanic } />
             </div>
             <ContainerBackgroundImage
                 className="aboutHappy"
@@ -176,6 +172,31 @@ export const AboutBody = () => {
                     })
                 }
             />
+            <ContainerLeftImage
+                image={TeamImages.landscapeMervo}
+                widthSize={500}
+                color="#030001"
+                props={
+                    <>
+                        <h2 style={{color: "#FAFAFA"}}>Letter from our CEO</h2>
+                        <p style={{color: "#FAFAFA"}}>
+                            In Serch, our dedication to the work we do is aimed at providing comfortability to both home owners,
+                            office workers, car owners, and so many persons who need the services we provide. This is why we so much
+                            dwell on <em><strong>service made easy</strong></em>.
+                            <br /><br />
+                            We work towards bringing that service provider to your place of issue/problem, no matter the distance, area
+                            and time. Every one of our team members, helps to support our effort in fostering an <em>inclusive </em>
+                            workplace. We are an all-inclusive community, prone to diversity in all its forms.
+                            <br /><br />
+                            Our main priority is building a company that represents the communities we serve, and ensuring that each
+                            user/client, service provider/artisan, employee of Serch, enjoys a wonderful experience in Serch, at all
+                            times. <em><strong>Happy building!, Happy experience!</strong></em>
+                            <br /><br />
+                            <strong>~ Evaristus Adimonyemma</strong>
+                        </p>
+                    </>
+                }
+            />
             <ContainerRightImage
                 image={AboutImages.motto}
                 props={
@@ -185,7 +206,7 @@ export const AboutBody = () => {
                     </>
                 }
             />
-            <ContainerRightImage
+            <ContainerLeftImage
                 image={Icons.career}
                 widthSize={350}
                 color="#bdbdbd"

@@ -1,9 +1,11 @@
 import { useState } from "react";
-import { HomeImages, PlanImages, HelpImages } from "../../config/images/homeImages";
+import { HomeImages, HelpImages } from "../../config/images/homeImages";
 import { ContainerBackgroundImage, ContainerLeftImage, ContainerRightImage, ContainerStaticImage,
     ContainerWithUnderlinedHeader, RightContainerDismissibleImage } from '../../widgets/container/containers';
 import { Box, SerchShortPlanBox } from "../../widgets/container/boxes";
 import { Link } from "react-router-dom";
+import { MainLinks } from "../../config/custom/links";
+import { SerchPlans } from "../information/payment/data";
 
 export const Features = () => {
     return <ContainerWithUnderlinedHeader
@@ -116,65 +118,49 @@ export const Services = () => {
         service: "Electrician",
         className: "electrician",
         links: [{
-            link: "/",
+            link: MainLinks.yetToLaunch,
             text: "Learn more"
         }, {
-            link: "/",
+            link: MainLinks.yetToLaunch,
             text: "Signup as an electrician"
         }, {
-            link: "/",
+            link: MainLinks.yetToLaunch,
             text: "Login as an electrician"
         }, {
-            link: "/",
+            link: MainLinks.yetToLaunch,
             text: "Request an electrician"
         }]
     }, {
         service: "Plumber",
         className: "plumber",
         links: [{
-            link: "/",
+            link: MainLinks.yetToLaunch,
             text: "Learn more"
         }, {
-            link: "/",
+            link: MainLinks.yetToLaunch,
             text: "Signup as a plumber"
         }, {
-            link: "/",
+            link: MainLinks.yetToLaunch,
             text: "Login as a plumber"
         }, {
-            link: "/",
+            link: MainLinks.yetToLaunch,
             text: "Request a plumber"
         }]
     }, {
         service: "Mechanic",
         className: "mechanic",
         links: [{
-            link: "/",
+            link: MainLinks.yetToLaunch,
             text: "Learn more"
         }, {
-            link: "/",
+            link: MainLinks.yetToLaunch,
             text: "Signup as a mechanic"
         }, {
-            link: "/",
+            link: MainLinks.yetToLaunch,
             text: "Login as a mechanic"
         }, {
-            link: "/",
+            link: MainLinks.yetToLaunch,
             text: "Request a mechanic"
-        }]
-    }, {
-        service: "Barber",
-        className: "barber",
-        links: [{
-            link: "/",
-            text: "Learn more"
-        }, {
-            link: "/",
-            text: "Signup as a barber"
-        }, {
-            link: "/",
-            text: "Login as a barber"
-        }, {
-            link: "/",
-            text: "Request a barber"
         }]
     }]
 
@@ -229,28 +215,6 @@ export const Services = () => {
 }
 
 export const Plans = () => {
-    const plans = [{
-        planName: "Aries",
-        className: "aries",
-        image: PlanImages.aries,
-        imageAlt: "Serch Aries Plan"
-    },{
-        planName: "Libra",
-        className: "libra",
-        image: PlanImages.libra,
-        imageAlt: "Serch Libra Plan"
-    },{
-        planName: "Aqua",
-        className: "aqua",
-        image: PlanImages.aqua,
-        imageAlt: "Serch Aqua Plan"
-    },{
-        planName: "Virgo",
-        className: "virgo",
-        image: PlanImages.virgo,
-        imageAlt: "Serch Virgo Plan"
-    }]
-
     return (
         <>
             <ContainerLeftImage
@@ -270,12 +234,12 @@ export const Plans = () => {
                 subHeader="What we offer to ease your services"
                 justifyContent={"space-around"}
                 props={
-                    plans.map((plan, index) => {
+                    SerchPlans.map((plan, index) => {
                         return <SerchShortPlanBox
-                            planName={plan.planName}
-                            classname={plan.className}
+                            planName={plan.title}
                             image={plan.image}
                             imageAlt={plan.imageAlt}
+                            planCategory={plan.category}
                             key={index}
                         />
                     })

@@ -3,6 +3,7 @@ import { MainLinks } from "../../../config/custom/links";
 import { Icons } from "../../../config/images/icons";
 import { ContainerLeftImage } from "../../../widgets/container/containers";
 import { Link } from "react-router-dom";
+import TawkMessengerReact from '@tawk.to/tawk-messenger-react';
 
 export const SupportBody = () => {
     const linkStyle = {
@@ -80,68 +81,22 @@ export const SupportBody = () => {
 }
 
 export const SupportEnd = () => {
-    const emailStyle = {
-        borderRadius: "0.5rem",
-        boxShadow: "rgba(0, 0, 0, 0.16) 0px 2px 6px 0px",
-        display: "flex",
-        backgroundColor: "#030001",
-        flexDirection: "column",
-        justifyContent: "space-evenly",
-        alignSelf: "center",
-        marginTop: "2rem",
-        height: "auto",
-    }
-
-    const emailBox = {
-        width: "auto",
-        display: "flex",
-        marginTop: "1rem",
-        flexDirection: "column",
-        justifyContent: "center",
-    }
-
-    const emailInput = {
-        backgroundColor: "#FAFAFA",
-        padding: "1rem 1rem",
-        borderRadius: "0.5rem",
-        fontSize: "16px",
-        width: "auto",
-        margin: "0rem 0rem 1rem 0rem",
-    }
-
-    const emailButton = {
-        padding: "0.5rem 1rem",
-        backgroundColor: "#FAFAFA",
-        color: "#030001",
-        alignSelf: "flex-end",
-    }
-
     return <ContainerLeftImage
-        header={"Don't feel like going to your mail box?"}
         image={Icons.techSupport}
         widthSize={300}
-        imageAlt={""}
+        imageAlt={"Serch support"}
+        padding="2rem"
         color={"#FAFAFA"}
         flex={"wrap"}
         props={
-            <div className="emailUs" style={emailStyle}>
-                <h3 style={{color: "#FAFAFA"}}>Send us an email from here...</h3>
-                <form style={emailBox}>
-                    <label style={{color: "#FAFAFA", marginTop: "1rem"}}>Problem</label>
-                    <textarea name="message" style={{
-                        backgroundColor: "#FAFAFA",
-                        padding: "0.5rem 1rem",
-                        borderRadius: "0.5rem",
-                        fontSize: "16px",
-                        width: "auto",
-                        height: "8rem",
-                        margin: "0.5rem 0rem 1rem 0rem"
-                    }}/>
-                    <input type="Text" placeholder="Name" style={emailInput}/>
-                    <input type="mail" placeholder="Email" style={emailInput}/>
-                    <button style={emailButton}> Submit </button>
-                </form>
-            </div>
+            <>
+                <TawkMessengerReact
+                    propertyId="63d7d4cfc2f1ac1e20305f52"
+                    widgetId="1go4iiv92"
+                />
+                <h2>Don't feel like going to your mail box?</h2>
+                <p>Chat with Serch Support team by clicking the floating chat button</p>
+            </>
         }
     />
 }

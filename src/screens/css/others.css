@@ -1,0 +1,20 @@
+@import url(../../config/colors/colors.css);
+
+.pay-options{
+    padding: 4rem;
+}
+
+.payment-boxes{
+    align-items: center;
+    justify-content: space-around;
+}
+
+@media screen and (max-width:768px) {
+    .payment-boxes{
+        justify-content: space-between;
+    }
+
+    .pay-options{
+        padding: 1rem;
+    }
+}

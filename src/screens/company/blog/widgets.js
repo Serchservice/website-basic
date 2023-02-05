@@ -19,6 +19,8 @@ export const BlogHeader = () => {
 }
 
 export const BlogBody = () => {
+    const shortBlogs = Blogs.slice(0, 4);
+    const longBlogs = Blogs.slice(5, 12);
     const style = {
         display: "flex",
         flexWrap: "wrap",
@@ -30,12 +32,12 @@ export const BlogBody = () => {
     return(
         <>
             <div style={style}>{
-                Blogs.map((blog, index) => {
+                longBlogs.map((blog, index) => {
                     return <InformationBox
                         img={blog.img}
                         imgAlt={blog.imgAlt}
                         key={index}
-                        dept={blog.dept}
+                        dept={blog.category}
                         date={blog.date}
                         topic={blog.topic}
                         link={`/company/blogs/blog/${blog.id}`}
@@ -56,7 +58,7 @@ export const BlogBody = () => {
             <ContainerForLatestInformation
                 header={"Latest Serch Blogs"}
                 props={
-                    Blogs.map((link, index) => {
+                    shortBlogs.map((link, index) => {
                         return <LatestInformationBox
                             image={link.img}
                             key={index}

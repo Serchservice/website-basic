@@ -53,3 +53,48 @@ export const LegalShimmer = () => {
         </div>
     );
 }
+
+
+export const PostsShimmer = () => {
+    return(
+        <div style={{
+            width: "auto", margin: "1rem 1rem", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-around"
+        }}>
+            <div className="shimmerContainer">
+                <div className="shimmerBox" style={{
+                    width: "20rem", height: "20rem", borderRadius: "10px", margin: "0.5rem"
+                }}></div>
+            </div>
+            <div className="shimmerContainer">
+                <div className="shimmerBox" style={{
+                    width: "20rem", height: "20rem", borderRadius: "10px", margin: "0.5rem"
+                }}></div>
+            </div>
+            <div className="shimmerContainer">
+                <div className="shimmerBox" style={{
+                    width: "20rem", height: "20rem", borderRadius: "10px", margin: "0.5rem"
+                }}></div>
+            </div>
+            <div className="shimmerContainer">
+                <div className="shimmerBox" style={{
+                    width: "20rem", height: "20rem", borderRadius: "10px", margin: "0.5rem"
+                }}></div>
+            </div>
+            <div className="shimmerContainer">
+                <div className="shimmerBox" style={{
+                    width: "20rem", height: "20rem", borderRadius: "10px", margin: "0.5rem"
+                }}></div>
+            </div>
+            <div className="shimmerContainer">
+                <div className="shimmerBox" style={{
+                    width: "20rem", height: "20rem", borderRadius: "10px", margin: "0.5rem"
+                }}></div>
+            </div>
+            <div className="shimmerContainer">
+                <div className="shimmerBox" style={{
+                    width: "20rem", height: "20rem", borderRadius: "10px", margin: "0.5rem"
+                }}></div>
+            </div>
+        </div>
+    );
+}

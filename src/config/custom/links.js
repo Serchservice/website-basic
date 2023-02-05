@@ -1,20 +1,22 @@
 export const MainLinks = {
     home: '/',
-    company: '/company',
-    product: '/product',
-    information: '/information',
-    helpAndSupport: '/support'
+    company: '/company/',
+    product: '/product/',
+    information: '/information/',
+    helpAndSupport: '/support/',
+    yetToLaunch: '/yet-to-launch/',
+    waitlist: '/waitlist-programme/'
 }
 
 export const AppLinks = {
-    playStore: '/',
-    appleStore: '/',
-    providerPlayStore: '/',
-    providerAppleStore: '/',
-    signupProvider: '/',
-    loginProvider: '/',
-    signupUser: '/',
-    loginUser: '/'
+    playStore: MainLinks.yetToLaunch,
+    appleStore: MainLinks.yetToLaunch,
+    providerPlayStore: MainLinks.yetToLaunch,
+    providerAppleStore: MainLinks.yetToLaunch,
+    signupProvider: MainLinks.yetToLaunch,
+    loginProvider: MainLinks.yetToLaunch,
+    signupUser: MainLinks.yetToLaunch,
+    loginUser: MainLinks.yetToLaunch
 }
 
 export const ProviderAppLinkJson = [
@@ -42,30 +44,34 @@ export const UserAppLinkJson = [
 export const CompanyLinks = {
     about: '/company/about/',
     blog: '/company/blogs/',
-    blogs: '/company/blogs/blog/:id/',
+    blogs: '/company/blogs/blog/',
+    blogPost: ':id',
+    blogCategory: 'category/:category',
     newsroom: '/newsroom/',
     news: '/company/newsroom/news/:id/',
+    assets: '/assets/',
+    assetsDownload: '/assets/download/:link',
     marketplace: '/marketplace/',
     careers: '/company/careers/'
 }
 
 export const ProductLinks = {
-    business: '/business',
-    request: '/product/request',
-    provide: '/product/provide'
+    business: '/business/',
+    request: '/product/request/',
+    provide: '/product/provide/'
 }
 
 export const InformationLinks = {
     // docs: '/information/docs/',
-    safety: '/information/safety-guidelines',
-    payment: '/information/pricing-and-payment-methods',
-    countries: '/information/serch-and-countries'
+    safety: '/information/safety-guidelines/',
+    payment: '/information/pricing-and-payment-methods/',
+    countries: '/information/serch-and-countries/'
 }
 
 export const SupportLinks = {
     legal: '/legal',
     legalSub: 'document/:id',
-    support: '/support/hub',
+    support: '/support/hub/',
     help: 'https://help.serchservice.com',
 }
 

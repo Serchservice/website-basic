@@ -1,7 +1,6 @@
 import { GifIcons, Icons } from "../../../config/images/icons";
 import SafetyImages from "../../../config/images/safetyImages";
 import { Emails } from "../../../config/custom/emails";
-import { LegalLinks } from "../../../config/custom/links";
 import { ContainerLeftImage, ContainerRightImage, ContainerWithFlexedContents } from "../../../widgets/container/containers";
 import { FAQBox, LinkBox } from "../../../widgets/container/boxes";
 
@@ -72,13 +71,13 @@ export const SafetyGuidelineBody = () => {
     const content = [
         {
             title: "Dear Provider, (SWM)",
-            subtitle: `We advice providers to always use this feature in order to enable others track their
+            subtitle: `We advise providers to always use this feature in order to enable others track their
             journey anywhere they are. Having a second eye isn't such a bad idea.`,
             image: Icons.provider,
             imageAlt: "service provider"
         },{
             title: "Dear User, (CTG)",
-            subtitle: `We advice users to toggle on this connect feature before their requested providers come over.
+            subtitle: `We advise users to toggle on this connect feature before their requested providers come over.
             This will enable the user to track the providers' journey incase they should send the provider on an errand.`,
             image: Icons.user,
             imageAlt: "artisan user"
@@ -102,12 +101,12 @@ export const SafetyGuidelineBody = () => {
             title: "Connect-To-Go (CTG)",
             subtitle: `By enabling this feature, the user is able to see the provider's movement from the moment the
             provider accepts any request from the user.`,
-            image: Icons.colorTp,
+            image: Icons.colorTP,
             imageAlt: "connect to go for artisans"
         },{
-            title: "",
+            title: "Two-Way Rating",
             image: Icons.colorRate,
-            imageAlt: "",
+            imageAlt: "Rating in Serch",
             subtitle: `Our rating features enable both users and providers to rate and be rated. This helps in
             filtering both users and providers from our system.`
         }
@@ -175,7 +174,7 @@ export const SafetyGuidelineEnd = () => {
             question: "Is there any guideline governing Serch community?",
             answer: `We have our community guideline which governs everyone, whether an anonymous, known member and anyone at all.
             We take serious attention to our guidelines.`,
-            link: LegalLinks.communityGuidelines,
+            link: "/legal/document/community-guidelines",
             linkText: "Read our community guideline."
         }
     ]

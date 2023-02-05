@@ -1,9 +1,8 @@
 const Images = {
     serchLogo: require('../../assets/logo/Logowhite.png'),
-    serchLogoName: require('../../assets/logo/serchblack1.jpg'),
-
-    //Artisan Images
-    mechanic: require('../../assets/animation/mechanics.png'),
+    serchBlack: require('../../assets/logo/logoBlack300.png'),
+    serchLogoName: require('../../assets/logo/logoAndName.png'),
+    serchTagline: require('../../assets/logo/taglineWhite.png'),
 
     //Page Header Images
     paymentHeader: require('../../assets/pay/subscriptio.png'),

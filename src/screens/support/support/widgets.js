@@ -100,7 +100,20 @@ export const KeySupportEnd = () => {
         subHeader="We hope you read everything to help you going."
         props={
             contents.map((item, index) => {
-                return <LinkBox
+                if(index === 1 || item.linkText.includes("Go to help")){
+                    return <LinkBox
+                        image={item.image}
+                        key={index}
+                        imageAlt={item.imageAlt}
+                        title={item.title}
+                        subtitle={item.subtitle}
+                        props={
+                            <a href={item.link} target="_blank" rel="noopener noreferrer">{item.linkText}</a>
+                        }
+                        width={40}
+                    />
+                } else {
+                    return <LinkBox
                     image={item.image}
                     key={index}
                     imageAlt={item.imageAlt}
@@ -110,6 +123,7 @@ export const KeySupportEnd = () => {
                     linkText={item.linkText}
                     width={40}
                 />
+                }
             })
         }
     />

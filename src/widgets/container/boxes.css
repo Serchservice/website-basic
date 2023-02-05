@@ -1,5 +1,26 @@
 @import url(../../config/colors/colors.css);
 
+.category-box{
+    text-align: center;
+}
+
+.serch-box{
+    display: block;
+    width: 15rem;
+}
+
+.serch-box:hover{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 6px 0px;
+}
+
+.serch-boxes{
+    padding: 2rem;
+}
+
+.serch-box img{
+    height: 3rem;
+}
+
 .linkBox a{
     font-size: 14px;
     margin: 2rem 0rem;
@@ -56,7 +77,8 @@
 .infoBox::after{
     content: 'Learn more';
     opacity: 0;
-    color: var(--serch-black-bg);
+    color: var(--serch-purple-deep);
+    font-weight: 600;
     bottom: 15px;
     right: 15px;
     font-size: 1rem;
@@ -73,6 +95,48 @@
 
 .faqBox{
     padding: 4rem;
+}
+
+@media screen and (max-width: 768px) {
+    .category-box{
+        text-align: left;
+    }
+
+    .serch-box{
+        display: flex;
+        flex-direction: row;
+        width: auto;
+    }
+
+    .serch-box-content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .serch-boxes{
+        padding: 1rem;
+    }
+
+    .serch-box-content p{
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+    }
+
+    .serch-box-content h3{
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+    }
+
+    .serch-box img{
+        margin-right: 0.8rem;
+        width: 3rem;
+        height: 3rem;
+        margin-bottom: 0rem;;
+    }
+
+    .latest-info-box img{
+        display: none;
+    }
 }
 
 /* .planContainer{

@@ -21,3 +21,7 @@ export const Image404 = {
     heading: require('../../assets/404/heading.jpg'),
     side: require('../../assets/404/folders.gif')
 }
+
+export const TeamImages = {
+    landscapeMervo: require('../../assets/team/landscapeMervo.JPG'),
+}

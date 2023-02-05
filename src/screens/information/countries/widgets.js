@@ -72,6 +72,10 @@ export const CountryBody = () => {
         justifyContent: "flex-start",
     }
 
+    const submitNewsletter = event => {
+        event.preventDefault()
+    }
+
     return <>
         <div style={countryListStyle}>
             {
@@ -95,7 +99,7 @@ export const CountryBody = () => {
                     <form style={emailBox}>
                         <input type="Text" placeholder="Name" style={emailInput}/>
                         <input type="mail" placeholder="Email" style={emailInput}/>
-                        <button style={emailButton}> Submit </button>
+                        <button style={emailButton} onClick={submitNewsletter}> Submit </button>
                     </form>
                 </div>
             }

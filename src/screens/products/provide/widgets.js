@@ -1,4 +1,5 @@
-import { AppLinks } from "../../../config/custom/links";
+import { Link } from "react-router-dom";
+import { AppLinks, MainLinks } from "../../../config/custom/links";
 import Images from "../../../config/images/images";
 import ProductImages from "../../../config/images/productImages";
 import { LinkBox } from "../../../widgets/container/boxes";
@@ -12,7 +13,7 @@ export const ProvideHeader = () => {
             <>
                 <h2>An extra source of income would be nice</h2>
                 <p>We stand by you to increase your skill appreciation and money increment.</p>
-                <button>Signup today</button>
+                <Link className="button" to={MainLinks.yetToLaunch}>Signup today</Link>
             </>
         }
     />
@@ -28,8 +29,8 @@ export const ProvideEnd = () => {
             imageAlt: "serch"
         },{
             title: "Call Support",
-            subtitle: `You can always talk to us anytime, anywhere. Our support team will be fully ready to attend to you and
-            whatever is the case.`,
+            subtitle: `You can always talk to us anytime, anywhere. Our support team will be fully ready to attend to you,
+            whatever be the case.`,
             image: ProductImages.callCenter,
             imageAlt: "serch call support"
         },{
@@ -83,7 +84,7 @@ export const ProvideBody = () => {
     const info = [
         {
             title: "Have the skill you want to provide",
-            subtitle: `Having the skillset which you want to become a provider of, is important here. Ratings can get you ousted with
+            subtitle: `Having the skillset which you want to provide with, is important here. Ratings can get you ousted with
             immediate effect.`,
             image: ProductImages.skills,
             imageAlt: "service provider"
