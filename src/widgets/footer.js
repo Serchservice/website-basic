@@ -23,10 +23,11 @@ export const Footer = () => {
     return (
         <footer className="footer">
             <div className="logo">
+        
+                <Link to={ MainLinks.home }><img alt='' src={ Images.serchLogoName } /></Link>
                 <div className="greeting">
                     <h3  style={{color:"white"}}>{`${getGreeting()}`}</h3>
                 </div>
-                <Link to={ MainLinks.home }><img alt='' src={ Images.serchLogoName } /></Link>
             </div>
            
             <div className='footerlist'>
