@@ -112,6 +112,14 @@
 }
 
 @media screen and (max-width:768px){
+   
+    .logo  img{
+       
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        
+    }
 
     .footer {
        
@@ -130,8 +138,8 @@
   
     
     .app img {
-        width: 120px;
-        height: 70px;
+        width: 7.5rem;
+        height: 3.125rem;
         padding: 0.2rem;
         margin: 0;
     }
@@ -167,9 +175,18 @@
 } 
 @media screen and (max-width:768px){
 
-.logo img{
+/* .logo img{
+    
     /* flex-direction: column; */
     /* width: 10px; */
     /* height: auto; */
+/* }  */
+ 
+.logo  img{
+       
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    
 }
 }
