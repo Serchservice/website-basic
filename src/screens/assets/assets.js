@@ -12,19 +12,21 @@ export const AssetBoxes = [{
     title: "Serch Logo",
     link: "logo",
     images: LogoAsset
-},{
-    image: Images.serchBlack,
-    imageAlt: "Serch Logo, Name, Tagline",
-    title: "Tag & Others",
-    link: "others",
-    images: LogoAsset
-},{
-    image: Images.serchBlack,
-    imageAlt: "Serch GIF",
-    title: "Serch Media",
-    link: "gif",
-    images: LogoAsset
-}]
+},
+// {
+//     image: Images.serchBlack,
+//     imageAlt: "Serch Logo, Name, Tagline",
+//     title: "Tag & Others",
+//     link: "others",
+//     images: LogoAsset
+// },{
+//     image: Images.serchBlack,
+//     imageAlt: "Serch GIF",
+//     title: "Serch Media",
+//     link: "gif",
+//     images: LogoAsset
+// }
+]
 
 export const AssetsPage = () => {
     Title("Assets || Serch Media Room")
@@ -67,7 +69,7 @@ export const AssetsPage = () => {
 
 export const AssetBox = ({imageAlt, image, title, link}) => {
     return(
-        <Link to={`/assets/download/${link ?? `/`}`} style={{
+        <Link to={`/assets/download/${link ?? ``}`} style={{
             backgroundColor: "#030001", padding: "1rem 0rem 1rem 1rem", borderRadius: "0.2rem", margin: "0.4rem", width: "12rem"
         }} className="asset-link">
             <div style={{
