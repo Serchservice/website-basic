@@ -1,6 +1,6 @@
 import { CareerImages } from "../../../config/images/companyImages";
 import { ContainerForLatestInformation, ContainerLeftImage, ContainerRightImage, SlideContainer } from "../../../widgets/container/containers";
-import { Box } from "../../../widgets/container/boxes";
+import { BoxImage } from "../../../widgets/container/boxes";
 
 export const CareerHeader = () => {
     return <ContainerRightImage
@@ -125,26 +125,32 @@ export const CareerInnovation = () => {
 }
 
 export const CareerFromSerch = () => {
-    const data = [
-        {
-            image: "",
-            bgColor: "#E3E3E3",
-            header: "Serch",
-            content: ""
-        },
-        {
-            image: "",
-            bgColor: "#030001",
-            header: "Father",
-            content: ""
-        },
-    ]
+    const data = [{
+        image: "../../../../assets/career/teamworking.jpg",
+        bgColor: "#FFFFFF",
+        header: "Team work is what we stan for",
+        className: "teamwork"
+    }, {
+        bgColor: "#FFFFFF",
+        header: "Serch Team is a global network",
+        className: "global"
+    }, {
+        bgColor: "#FFFFFF",
+        header: "Team Serch is an all-inclusive team",
+        className: "inclusive"
+    }, {
+        bgColor: "#FFFFFF",
+        header: "Serch knows when to have team fun",
+        className: "fun"
+    }]
+
     return <SlideContainer
         data={
             data.map((item, index) => {
-                return <Box
+                return <BoxImage
                     header={item.header}
-                    color={item.bgColor}
+                    textColor={item.bgColor}
+                    className={item.className}
                     key={index}
                 />
             })

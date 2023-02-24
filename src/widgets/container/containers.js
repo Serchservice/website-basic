@@ -234,7 +234,7 @@ export const SlideContainer = ({data}) => {
 
     const slideContainer = {
         width: "auto",
-        margin: "0 auto",
+        margin: "1rem auto",
         position: "relative",
         textAlign: "center",
     }
@@ -247,7 +247,7 @@ export const SlideContainer = ({data}) => {
     const prev = {
         position: "absolute",
         marginLeft: "1rem",
-        top: "50%",
+        top: "80%",
         left: "0",
         zIndex: "999999",
         transform: "translateY(-50%) rotate(180deg)",
@@ -257,7 +257,7 @@ export const SlideContainer = ({data}) => {
     const nxt = {
         position: "absolute",
         marginRight: "1rem",
-        top: "50%",
+        top: "80%",
         right: "0",
         zIndex: "999999",
         transform: "translateY(-50%)",

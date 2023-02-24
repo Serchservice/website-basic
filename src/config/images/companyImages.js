@@ -20,5 +20,10 @@ export const CareerImages = {
     innovate: require("../../assets/career/team.jpg"),
     toDo: require("../../assets/career/todo.jpg"),
     board: require("../../assets/career/board.jpg"),
+
+    teamworking: require("../../assets/career/teamworking.jpg"),
+    inclusive: require("../../assets/career/inclusive.jpg"),
+    fun: require("../../assets/career/fun.jpg"),
+    global: require("../../assets/career/global.jpg"),
 }
 

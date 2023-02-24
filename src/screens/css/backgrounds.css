@@ -41,6 +41,23 @@
     background-image: url(../../assets/products/provider/provide.png);
 }
 
+
+.teamwork{
+    background-image: url(../../assets/career/teamworking.jpg);
+}
+
+.inclusive{
+    background-image: url(../../assets/career/inclusive.jpg);
+}
+
+.fun{
+    background-image: url(../../assets/career/fun.jpg);
+}
+
+.global{
+    background-image: url(../../assets/career/global.jpg);
+}
+
 @media screen and (max-width: 768px) {
     .background{
         height: 300px;

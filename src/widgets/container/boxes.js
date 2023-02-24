@@ -69,6 +69,38 @@ export const Box = ({
     )
 }
 
+export const BoxImage = ({
+    header, content, textColor, color, quote, quoteColor, textAlign, fontSize, contentFontSize, maxWidth, secondContent,
+    className
+}) => {
+    const style = {
+        maxWidth: maxWidth ?? "20rem",
+        // maxHeight: "20rem",
+        position: "relative",
+        display: "block",
+        margin: "1rem 1rem",
+        padding: "1rem",
+        textAlign: textAlign ?? "left",
+        backgroundColor: color ?? "#030001",
+        borderRadius: "0.3rem",
+        zIndex: "1",
+        boxShadow: "rgba(0, 0, 0, 0.16) 0px 2px 6px 0px",
+    }
+
+    return(
+        <div className={`${className} background`} style={{
+            display: "flex", flexDirection: "row", justifyContent: "flex-start", alignItems: "center", position: "relative"
+        }}>
+            <div style={style}>
+                <h2 style={{color: textColor ?? "#3B043B", fontSize: fontSize ?? "20px"}}>{header}</h2>
+                <p style={{color: textColor ?? "#030001", textAlign: "justify", fontSize: contentFontSize}}>{content}</p>
+                <p style={{color: textColor ?? "#030001", textAlign: "justify", fontSize: contentFontSize}}>{secondContent}</p>
+                <strong style={{color: quoteColor ?? "#030001", fontStyle: "italic"}}>{quote ?? ""}</strong>
+            </div>
+        </div>
+    )
+}
+
 export const LinkBox = ({
     image, width, title, subtitle, props, imageAlt, boxShadow, borderRadius, padding, height, link, linkText
 }) => {
