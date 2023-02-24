@@ -109,7 +109,7 @@ export const ServiceTab = ({service, props, className}) => {
 }
 
 export const Services = () => {
-    const [toggleState, setToggleState] = useState(1);
+    const [toggleState, setToggleState] = useState(0);
     const toggleTab = (index) => {
         setToggleState(index);
     }
