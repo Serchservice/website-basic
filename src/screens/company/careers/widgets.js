@@ -18,7 +18,7 @@ export const CareerHeader = () => {
 
 export const CareerRoles = () => {
     return (
-        <div className="productHeader">
+        <div className="productHeader" style={{padding: "1rem"}}>
             <h2>We don't have any open roles at the moment. We will update this page once any opens up.</h2>
         </div>
     );
