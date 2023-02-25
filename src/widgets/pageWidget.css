@@ -4,6 +4,10 @@
     color: var(--serch-light-link);
 }
 
+.header-widget h2, .header-widget p{
+    color: #FAFAFA;
+}
+
 .headerlinks a:hover {
     color: var(--serch-purple-deep);
 }

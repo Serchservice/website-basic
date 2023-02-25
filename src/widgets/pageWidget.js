@@ -8,7 +8,7 @@ import { FooterDocumentLinks, FooterLinks, SerchAppDownloadLinks, SocialMediaLin
 
 export const Header = ({pagetitle, pagedescription}) => {
     return (
-        <header style={{backgroundColor: "#030001", padding: pagetitle ? "0.8rem 0.9rem" : ""}}>
+        <header style={{backgroundColor: "#030001", padding: pagetitle ? "0.8rem 0.9rem" : ""}} className="header-widget">
             <div style={{
                 display: "flex", alignItems: "center", justifyContent: "space-between", padding: pagetitle ? "" : "0.8rem 0.9rem"
             }}>
@@ -22,8 +22,8 @@ export const Header = ({pagetitle, pagedescription}) => {
             </div>
             {
                 pagetitle ? <>
-                    <h2 style={{color: "#FAFAFA"}}>{pagetitle}</h2>
-                    <p style={{color: "#FAFAFA"}}>{pagedescription}</p>
+                    <h2>{pagetitle}</h2>
+                    <p>{pagedescription}</p>
                 </> : null
             }
         </header>

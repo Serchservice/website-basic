@@ -207,7 +207,7 @@ export const SerchAppBox = ({header, links, color}) => {
 
     return <div style={style}>
         <p style={{color: "#FAFAFA", fontSize: "1.2rem"}}>{header}</p>
-        <div className="linkBox">{links}</div>
+        <div className="linking">{links}</div>
     </div>
 }
 

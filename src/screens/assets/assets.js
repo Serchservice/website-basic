@@ -29,9 +29,21 @@ export const AssetBoxes = [{
 ]
 
 export const AssetsPage = () => {
+    const [clicked, setClicked] = useState(false)
+    const downloadImage = (src) => {
+        const link = document.createElement('a');
+        link.download = src;
+        link.href = src;
+        link.click()
+        setClicked(true)
+        setTimeout(() => {
+            setClicked(false)
+        }, 1000)
+    }
+
     Title("Assets || Serch Media Room")
     return(
-        <div style={{height: "100vh", width: "100%", backgroundColor: "#FFF",}}>
+        <div style={{width: "100%", backgroundColor: "#FFF", position: clicked ? "relative" : "",}}>
             <div style={{
                 backgroundColor: "#030001",
             }} className="assets-page">
@@ -49,10 +61,11 @@ export const AssetsPage = () => {
                     }}/>
                 </article>
             </div>
+            { clicked ? <Notification success={true} clicked={true} /> : null }
             <div style={{
-                backgroundColor: "#FFF", display: "flex", alignItems: "center", justifyContent: "center",
-                width: "auto", margin: "auto", padding: "1rem", flexWrap: "wrap"
-            }}>{
+                backgroundColor: "#FFF", display: "flex", width: "auto", margin: "auto", padding: "1rem", flexWrap: "wrap"
+            }}>
+            {/* {
                 AssetBoxes.map((item, index) => {
                     return <AssetBox
                         image={item.image}
@@ -62,7 +75,43 @@ export const AssetsPage = () => {
                         link={item.link}
                     />
                 })
-            }</div>
+            } */}
+                <div style={{padding: "1rem",}}>{
+                    LogoAsset.map((item, index) => {
+                        return(
+                            <div key={index}>
+                                <h3 style={{
+                                    padding: "0.4rem 1rem 0.4rem 0.2rem", backgroundColor: "#030001", color: "#FAFAFA"
+                                }} className="asset-header">{item.title}</h3>
+                                <div style={{display: "flex", flexWrap: "wrap", justifyContent: "flex-start"}}>{
+                                    item.images.map((item, index) => {
+                                        return(
+                                            <div style={{
+                                                display: "block", width: '8rem', margin: "0.5rem 0.5rem 0.5rem 0rem"
+                                            }} key={index}>
+                                                <div className="asset-box" style={{
+                                                    padding: "0.8rem", position: "relative",
+                                                    backgroundColor: item.imageAlt.includes("White") ? "#030001" : "#FAFAFA",
+                                                    width: '8rem', height: "8rem", cursor: "pointer"
+                                                }} key={index} onClick={() => downloadImage(item.image)}>
+                                                    <img src={item.image} alt={item.imageAlt ?? "Serch Logo"} style={{
+                                                        width: "100%", height: "100%", objectFit: "contain"
+                                                    }}/>
+                                                    <img src={Icons.download} alt="download" width={30} height={30} style={{
+                                                        backgroundColor: "#FAFAFA", borderRadius: "50%", padding: "0.5rem",
+                                                        position: "absolute", right: "0", bottom: "0", margin: "0.3rem",
+                                                    }}/>
+                                                </div>
+                                                <p style={{color: "#030001", textAlign: "center"}}>{item.description}</p>
+                                            </div>
+                                        )
+                                    })
+                                }</div>
+                            </div>
+                        )
+                    })
+                }</div>
+            </div>
         </div>
     )
 }

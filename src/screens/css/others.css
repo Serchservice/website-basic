@@ -9,6 +9,10 @@
     justify-content: space-around;
 }
 
+.webAuth{
+    justify-content: space-around;
+}
+
 @media screen and (max-width:768px) {
     .payment-boxes{
         justify-content: center;
@@ -20,6 +24,10 @@
 
     .pay-options{
         padding: 1rem;
+    }
+
+    .webAuth{
+        justify-content: space-between;
     }
 }
 

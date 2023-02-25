@@ -150,7 +150,7 @@ export const AboutBody = () => {
                 props={
                     <>
                         <h1 style={{
-                            color: "#030001", marginLeft: "2rem"
+                            color: "#FAFAFA", marginLeft: "2rem"
                         }}>Happy services lead to happy users!</h1>
                     </>
                 }

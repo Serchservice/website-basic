@@ -91,16 +91,15 @@ export const Time = () => {
     />
 }
 
-export const ServiceTab = ({service, props, className}) => {
+export const ServiceTab = ({service, props, className, word}) => {
     return (
         <div style={{margin: "2rem 0rem"}}>
             <div style={{margin: "2rem 1rem"}}>
-                <h2 style={{color: "#00021e"}}>Connect with {service} within your location. Get the services you want</h2>
+                <h2 style={{color: "#00021e"}}>Connect with {word} {service} within your location. Get the services you want</h2>
                 <div className="webAuth" style={{
                     display: "flex",
                     flexWrap: "wrap",
                     alignItems: "flex-start",
-                    justifyContent: "space-around",
                 }}>{props}</div>
             </div>
             <div className={`${className} background`}></div>
@@ -192,7 +191,8 @@ export const Services = () => {
                     }} key={index}>
                         <ServiceTab
                             className={service.className}
-                            service={service.service}
+                            service={service.service.toLowerCase()}
+                            word={service.service.includes("Electrician") ? "an" : "a"}
                             props={
                                 service.links.map((link, index) => {
                                     return <Link to={link.link} key={index} style={{
