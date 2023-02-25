@@ -12,13 +12,18 @@ import { BlogCategories, Blogs } from "./blogData";
 import { BlogEnd } from "./widgets";
 
 export const BlogPost = () => {
-    const shortBlogs = Blogs.slice(0, 4);
+    const { id } = useParams();
+    const sortedBlogs = Blogs.sort((a, b) => {
+        const [dayA, monthA, yearA] = a.date.split(" ")[0].split("/");
+        const [dayB, monthB, yearB] = b.date.split(" ")[0].split("/");
+        return new Date(yearA, monthA - 1, dayA) - new Date(yearB, monthB - 1, dayB);
+    });
+    const newBlogs = sortedBlogs.sort((a, b) => new Date(a.date) - new Date(b.date)).filter((blogs) => blogs.id !== id);
+    const recentBlogs = newBlogs.slice(-4);
     const [fixed, setFixed] = useState(false)
     const [open, setOpen] = useState(false)
 
-    const openCategory = () => {
-        setOpen(!open)
-    }
+    const openCategory = () => setOpen(!open)
 
     useEffect(() => {
         const handleScroll = () => {
@@ -79,7 +84,7 @@ export const BlogPost = () => {
         <ContainerForLatestInformation
             header={"Latest Serch Blogs"}
             props={
-                shortBlogs.map((link, index) => {
+                recentBlogs.map((link, index) => {
                     return <LatestInformationBox
                         image={link.img}
                         key={index}

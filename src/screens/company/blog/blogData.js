@@ -8,7 +8,7 @@ import yourFiveRating from './documents/stories/yourFiveRating.md';
 import abujaEnuguDelta from './documents/stories/abujaEnuguDelta.md';
 import newBeginning from './documents/stories/newBeginning.md';
 import unstoppable from './documents/promotion/unstoppable.md';
-import promoCode from './documents/promotion/promoCode.md';
+// import promoCode from './documents/promotion/promoCode.md';
 import fiveStarUser from './documents/promotion/fiveStarUser.md';
 import subscriptionPlans from './documents/products/subscriptionPlans.md';
 import requestingRS from './documents/products/requestingRS.md';
@@ -135,16 +135,18 @@ export const Blogs = [{
     imgAlt: "Five star rating for users in Serch",
     blog: fiveStarUser,
     publisher: "Serch Media Team"
-},{
-    id: "stips=how-to-add-a-promo-code",
-    topic: "#STips || How to add a promo code",
-    date: "December 30, 2022 || Serch",
-    category: "Promotions",
-    img: BlogsImage.promo,
-    imgAlt: "Promo Code Serch",
-    blog: promoCode,
-    publisher: "Serch Media Team"
-},{
+},
+// {
+//     id: "stips=how-to-add-a-promo-code",
+//     topic: "#STips || How to add a promo code",
+//     date: "December 30, 2022 || Serch",
+//     category: "Promotions",
+//     img: BlogsImage.promo,
+//     imgAlt: "Promo Code Serch",
+//     blog: promoCode,
+//     publisher: "Serch Media Team"
+// },
+{
     id: "unstoppable-movement",
     topic: "No-Stoppage: Unstoppable movement with Serch",
     date: "October 20, 2022 || Serch",

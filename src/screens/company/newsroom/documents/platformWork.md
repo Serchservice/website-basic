@@ -22,4 +22,4 @@ Additionally, the platform approach to service providing has created a new econo
 
 In summary, the platform approach to service providing has disrupted the traditional way of offering services, creating new opportunities for both providers and customers. Serch is at the forefront of this shift, providing a platform that connects providers with customers, and creating a new economy that benefits everyone involved. As the gig economy continues to expand, more people are turning to online platforms to find work, including service providers. And Serch, is the perfect platform for such providing services.
 
-Read more about requestSharing [here](../../blog/documents/products/requestSharing.md). Read about provideSharing [here](../../blog/documents/products/provideSharing.md). Read about Tip2Fix [here](../../blog/documents/products/tip2fix.md)
+Read more about requestSharing [here](/company/blogs/blog/request-sharing). Read about provideSharing [here](/company/blogs/blog/provide-sharing). Read about Tip2Fix [here](/company/blogs/blog/tip-2-fix)
