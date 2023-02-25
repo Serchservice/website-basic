@@ -10,7 +10,7 @@ blockquote ol li a{
     border-bottom: 2px solid var(--serch-black-bg);
 }
 
-.cover p a, .link{
+.cover p a, .link, .container-for-post p a{
     position: relative;
     justify-content: space-between;
     align-items: center;
@@ -21,7 +21,7 @@ blockquote ol li a{
     border-bottom: 2px solid var(--serch-black-bg);
 }
 
-.cover p a::after, .link::after{
+.cover p a::after, .link::after, .container-for-post p a::after{
     content: '';
     position: absolute;
     left: 0;
@@ -32,7 +32,7 @@ blockquote ol li a{
     transition: all 1s;
 }
 
-.cover p a::after, .link::after{
+.cover p a::after, .link::after, .container-for-post p a::after{
     bottom: -2px;
     transform-origin: left;
 }
@@ -41,11 +41,11 @@ blockquote ol li a{
     transform: scaleX(1);
 }
 
-.cover p a:hover, .link:hover{
+.cover p a:hover, .link:hover, .container-for-post p a:hover{
     border-bottom: none;
 }
 
-.cover p a, .link{
+.cover p a, .link, .container-for-post p a{
     font-size: 1rem;
 }
 

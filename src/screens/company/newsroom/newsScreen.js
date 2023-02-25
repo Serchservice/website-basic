@@ -17,7 +17,14 @@ export const NewsScreenPost = () => {
     const [loading, setLoading] = useState(true);
     const [content, setContent] = useState("")
     const [error, setError] = useState(false)
-    const shortNews = News.slice(0, 4)
+    const sortedNews = News.sort((a, b) => {
+        const [dayA, monthA, yearA] = a.date.split(" ")[0].split("/");
+        const [dayB, monthB, yearB] = b.date.split(" ")[0].split("/");
+        return new Date(yearA, monthA - 1, dayA) - new Date(yearB, monthB - 1, dayB);
+    });
+    const newNews = sortedNews.sort((a, b) => new Date(a.date) - new Date(b.date)).filter((news) => news.id !== id);
+    const recentNews = newNews.slice(-4);
+
 
     useEffect(() => {
         setLoading(true)
@@ -85,7 +92,7 @@ export const NewsScreenPost = () => {
             <ContainerForLatestInformation
                 header={"Latest Serch News"}
                 props={
-                    shortNews.map((link, index) => {
+                    recentNews.map((link, index) => {
                         return <LatestInformationBox
                             image={link.img}
                             key={index}

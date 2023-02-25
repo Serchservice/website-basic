@@ -136,18 +136,11 @@ export const LatestInformationBox = ({imgAlt, image, topic, section, date, link,
     const latestInfoBox = {
         minHeight: "5rem",
         position: position ?? "relative",
-        display: "flex",
         // flexWrap: "wrap",
         padding: "0.5rem",
         margin: "1rem 0rem",
         backgroundColor: "#FFFFFF",
         boxShadow: "rgba(0, 0, 0, 0.16) 0px 2px 6px 0px",
-    }
-
-    const latestInfoImg = {
-        marginRight: "1rem",
-        width: "10rem",
-        height: "auto",
     }
 
     const latestInfoContent = {
@@ -156,7 +149,7 @@ export const LatestInformationBox = ({imgAlt, image, topic, section, date, link,
 
     return(
         <Link style={latestInfoBox} to={link} className="latest-info-box">
-            <img alt={imgAlt} src={ image } style={latestInfoImg}/>
+            <img alt={imgAlt} src={ image } />
             <div style={latestInfoContent}>
                 <p> {section} </p>
                 <h3> {topic} </h3>

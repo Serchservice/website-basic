@@ -216,7 +216,7 @@ export const Blogs = [{
 },{
     id: "serch-introduces-its-service-offering",
     topic: "Serch || Service Made Easy: Introduction to Serch Services",
-    date: "November 18, 2022 || Serch",
+    date: "January 1, 2023 || Serch",
     category: "Launch",
     img: BlogsImage.introduction,
     imgAlt: "Welcome to Serch",
@@ -225,7 +225,7 @@ export const Blogs = [{
 },{
     id: "serch-request-and-provide-sharing",
     topic: "Serch Sharing Options: Preference to comfortability",
-    date: "December 24, 2022 || Serch",
+    date: "January 17, 2023 || Serch",
     category: "Launch",
     img: BlogsImage.sharing,
     imgAlt: "Sharing in Serch",

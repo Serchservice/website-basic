@@ -97,9 +97,6 @@ export const BlogPost = () => {
 }
 
 export const MarkdownImage = (props) => {
-    // const image = require('../../../assets/blog/user-features-and-tips.jpg');
-    // console.log(props.src.split('../').slice(2).join("../"), props.alt, image)
-    console.log(props.src)
     return(
         <img alt={props.alt} src={props.src} style={{width: "100%"}}/>
     )
@@ -116,9 +113,9 @@ export const BlogPostIndex = () => {
         let blog = Blogs.find(blog => blog.id === id);
         if(blog != null && blog){
             fetch(blog.blog).then(res => res.text()).then(document => {
+                setContent(document)
                 setLoading(false)
                 setError(false)
-                setContent(document)
             }).catch(error => {
                 setContent(error)
                 setLoading(false)

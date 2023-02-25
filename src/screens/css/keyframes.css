@@ -1,9 +1,9 @@
 @import url(../../config/colors/colors.css);
 
-@keyframes reveal{
+/* @keyframes reveal{
     from { translate: 0 20px;}
     to { translate: none; opacity: 1;}
-}
+} */
 
 /* .redirectLinks a:hover{
     animation: reveal .5s forwards var(--delay);

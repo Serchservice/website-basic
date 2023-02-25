@@ -169,7 +169,6 @@ export const ContainerForPost = ({section, link, sectionRoom, publishDocument, p
         alignItems: "center",
         position: "relative",
         color: "#030001",
-        borderBottom: "2px solid #030001",
     }
 
     return(

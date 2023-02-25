@@ -16,53 +16,51 @@ import termsAndCondition from "./documents/termsAndCondition.md";
 import userGenerated from "./documents/userGenerated.md";
 import zeroTolerance from "./documents/zeroTolerance.md";
 
-export const LegalDocs = [
-    {
-        id: LegalLinks.communityGuidelines,
-        linkText: "Serch Community Guidelines",
-        doc: community
-    },{
-        id: LegalLinks.cookiePolicy,
-        linkText: "Sech Cookie Policy",
-        doc: cookie
-    },{
-        id: LegalLinks.feedbackPolicy,
-        linkText: "Serch Feedback Policy",
-        doc: feedback
-    },{
-        id: LegalLinks.advertPolicy,
-        linkText: "Serch Global Advertising Policy",
-        doc: globalAdvert
-    },{
-        id: LegalLinks.discriminationPolicy,
-        linkText: "Serch Non-Discrimination Policy",
-        doc: discrimination
-    },{
-        id: LegalLinks.privacyPolicy,
-        linkText: "Serch Privacy Policy",
-        doc: privacy
-    },{
-        id: LegalLinks.referralProgramme,
-        linkText: "Serch Referral Programme",
-        doc: referral
-    },{
-        id: LegalLinks.termsAndConditions,
-        linkText: "Serch Terms and Conditions",
-        doc: termsAndCondition
-    },{
-        id: LegalLinks.userContent,
-        linkText: "Serch User Generated Content",
-        doc: userGenerated
-    },{
-        id: LegalLinks.zeroPolicy,
-        linkText: "Serch Zero Tolerance Policy",
-        doc: zeroTolerance
-    },{
-        id: LegalLinks.accessibility,
-        linkText: "Serch Accessibility Policy",
-        doc: accessibility
-    }
-]
+export const LegalDocs = [{
+    id: LegalLinks.communityGuidelines,
+    linkText: "Serch Community Guidelines",
+    doc: community
+},{
+    id: LegalLinks.cookiePolicy,
+    linkText: "Sech Cookie Policy",
+    doc: cookie
+},{
+    id: LegalLinks.feedbackPolicy,
+    linkText: "Serch Feedback Policy",
+    doc: feedback
+},{
+    id: LegalLinks.advertPolicy,
+    linkText: "Serch Global Advertising Policy",
+    doc: globalAdvert
+},{
+    id: LegalLinks.discriminationPolicy,
+    linkText: "Serch Non-Discrimination Policy",
+    doc: discrimination
+},{
+    id: LegalLinks.privacyPolicy,
+    linkText: "Serch Privacy Policy",
+    doc: privacy
+},{
+    id: LegalLinks.referralProgramme,
+    linkText: "Serch Referral Programme",
+    doc: referral
+},{
+    id: LegalLinks.termsAndConditions,
+    linkText: "Serch Terms and Conditions",
+    doc: termsAndCondition
+},{
+    id: LegalLinks.userContent,
+    linkText: "Serch User Generated Content",
+    doc: userGenerated
+},{
+    id: LegalLinks.zeroPolicy,
+    linkText: "Serch Zero Tolerance Policy",
+    doc: zeroTolerance
+},{
+    id: LegalLinks.accessibility,
+    linkText: "Serch Accessibility Policy",
+    doc: accessibility
+}]
 
 export const LegalBody = () => {
     return <div className="cover">
@@ -82,7 +80,6 @@ export const LegalBodyIndex = () => {
         alignItems: "center",
         position: "relative",
         color: "#030001",
-        borderBottom: "2px solid #030001",
     }
 
     const bg = {
@@ -150,7 +147,6 @@ export const LegalBodyDocument = () => {
         alignItems: "center",
         position: "relative",
         color: "#030001",
-        borderBottom: "2px solid #030001",
     }
 
     if(loading){
