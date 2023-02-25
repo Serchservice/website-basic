@@ -361,10 +361,10 @@ export const SerchPlanBox = ({ data, imageAlt, image, title, category, strikeThr
             }}>{
                 data.map((value, index) => {
                     return <div key={index} style={{
-                        display: "flex", alignItems: "flex-start", justifyContent: "flex-start",
+                        display: "flex", alignItems: "flex-start", justifyContent: "flex-start", marginBottom: "0.2rem"
                     }}>
-                        <img alt="" src={Icons.checked} width={15} height={15} style={{marginRight: "0.5rem", marginTop: "0.2rem"}}/>
-                        <p style={{color: "#030001", marginBlockStart: "0em", marginBlockEnd: "0.2em",}}>{value}</p>
+                        <img alt="" src={Icons.checked} width={15} height={15} style={{marginRight: "0.5rem", marginTop: "0.25rem"}}/>
+                        <p style={{color: "#030001", marginBlockStart: "0em", marginBlockEnd: "0em",}}>{value}</p>
                     </div>
                 })
             }{

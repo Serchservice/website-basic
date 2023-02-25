@@ -9,9 +9,7 @@ import { Link } from 'react-router-dom';
 export const PayHeader = () => {
     const noteStyle = {
         backgroundColor: "#2c0f0c",
-        color: "#FAFAFA",
         padding: "2rem",
-        // borderRadius: "0.3rem",
         fontWeight: "normal",
     }
 
@@ -26,14 +24,16 @@ export const PayHeader = () => {
                 </>
             }
         />
-        <p style={noteStyle}>
-            We offer all our services to the users/clients free, which is why we have the "Serch Free" plan. So, we have categorized
-            each plan according to the categories/tiers we have in the <Link to={CompanyLinks.marketplace} className="link" style={{
-                color: "#FAFAFA", borderBottom: "2px solid #FAFAFA"
-            }}>
-                Serch MarketPlace
-            </Link>. We uphold easy made service requesting and promise to make all experiences, one you won't forget.
-        </p>
+        <div style={noteStyle}>
+            <p style={{color: "#FAFAFA",}}>
+                We offer all our services to the users/clients free, which is why we have the "Serch Free" plan. So, we have categorized
+                each plan according to the categories/tiers we have in the <Link to={CompanyLinks.marketplace} className="link" style={{
+                    color: "#FAFAFA", borderBottom: "2px solid #FAFAFA"
+                }}>
+                    Serch MarketPlace
+                </Link>. We uphold easy made service requesting and promise to make all experiences, one you won't forget.
+            </p>
+        </div>
     </>
 }
 
@@ -48,6 +48,7 @@ export const PayOptions = () => {
                 display: "flex",
                 marginTop: "2rem",
                 flexDirection: "row",
+                alignItems: "center",
                 flexWrap: "wrap",
             }} className="payment-boxes">{
                 PaymentMethods.map((item, index) => {

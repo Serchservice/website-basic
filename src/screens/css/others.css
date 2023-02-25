@@ -11,10 +11,20 @@
 
 @media screen and (max-width:768px) {
     .payment-boxes{
-        justify-content: space-between;
+        justify-content: center;
+    }
+
+    .payment-boxes div{
+        margin: 0.5rem;
     }
 
     .pay-options{
         padding: 1rem;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .payment-boxes{
+        justify-content: center;
     }
 }
