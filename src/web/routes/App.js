@@ -10,6 +10,7 @@ import { BlogCategory, BlogPost, BlogPostIndex } from "../../screens/company/blo
 import { NewsScreenPost } from "../../screens/company/newsroom/newsScreen";
 import { AssetDownloadPage, AssetsPage } from "../../screens/assets/assets";
 import ScrollToTop from './scrollToTop';
+import { LeaderboardPage } from "../../screens/leaderboard/leaderboard";
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
             <Route path={ CompanyLinks.careers } element={<Career />} />
             <Route path={ CompanyLinks.assets } element={<AssetsPage />} />
             <Route path={ CompanyLinks.assetsDownload } element={<AssetDownloadPage />} />
+            <Route path={ CompanyLinks.leadership } element={<LeaderboardPage />} />
 
             <Route path="/business" element={<Business />} />
             <Route path={ ProductLinks.business } element={<Business />} />

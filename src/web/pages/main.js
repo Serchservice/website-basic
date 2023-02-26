@@ -1,9 +1,8 @@
 import '../../screens/css/404.css';
-import { Title } from "../../config/custom/titleheader";
 import { Link } from 'react-router-dom';
 import { Features, Plans, Services, Time } from "../../screens/home/features";
 import { KeySupportBody, KeySupportEnd, KeySupportHead } from "../../screens/support/support/widgets";
-import { Header, Footer } from "../../widgets/pageWidget";
+import { Header, Footer, Title } from "../../widgets/pageWidget";
 import { CompanyLinks, InformationLinks, MainLinks, ProductLinks } from '../../config/custom/links';
 
 export const Home = () => {

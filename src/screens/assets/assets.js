@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { Title } from '../../config/custom/titleheader';
 import { Icons } from '../../config/images/icons';
 import Images from '../../config/images/images';
+import { Title } from '../../widgets/pageWidget';
 import { LogoAsset } from './assetLogo';
 import './assets.css';
 
@@ -76,14 +76,14 @@ export const AssetsPage = () => {
                     />
                 })
             } */}
-                <div style={{padding: "1rem",}}>{
+                <div style={{padding: "1rem", width: "100%"}}>{
                     LogoAsset.map((item, index) => {
                         return(
                             <div key={index}>
                                 <h3 style={{
-                                    padding: "0.4rem 1rem 0.4rem 0.2rem", backgroundColor: "#030001", color: "#FAFAFA"
+                                    padding: "0.4rem 1rem 0.4rem 0.2rem", backgroundColor: "#030001", color: "#FAFAFA", width: "100%", borderRadius: "0.2rem"
                                 }} className="asset-header">{item.title}</h3>
-                                <div style={{display: "flex", flexWrap: "wrap", justifyContent: "flex-start"}}>{
+                                <div style={{display: "flex", flexWrap: "wrap", justifyContent: "space-between"}}>{
                                     item.images.map((item, index) => {
                                         return(
                                             <div style={{

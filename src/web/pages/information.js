@@ -1,8 +1,7 @@
-import { Title } from "../../config/custom/titleheader";
 import { CountryBody, CountryHeader } from "../../screens/information/countries/widgets";
 import { PayHeader, PaymentFAQ, PayOptions,  PlanDemo, Pricing  } from "../../screens/information/payment/widgets";
 import { SafetyGuidelineBody, SafetyGuidelineEnd, SafetyGuidelineHeader } from "../../screens/information/safety_guidelines/widgets";
-import { Header, Footer } from "../../widgets/pageWidget";
+import { Header, Footer, Title } from "../../widgets/pageWidget";
 
 export const CountriesInSerch = () => {
     Title("Serch || Serch and Countries");

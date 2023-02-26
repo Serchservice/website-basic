@@ -1,4 +1,3 @@
-import { Title } from "../../config/custom/titleheader";
 import { AboutBody, AboutHeader, Statement } from "../../screens/company/about/widgets";
 import { BlogBody, BlogEnd, BlogHeader } from "../../screens/company/blog/widgets";
 import {
@@ -6,7 +5,7 @@ import {
 } from "../../screens/company/careers/widgets";
 import { MarketplaceBody, MarketplaceFooter, MarketplaceHeader } from "../../screens/company/marketplace/widgets";
 import { NewsroomBody, NewsroomFooter, NewsroomHeader } from "../../screens/company/newsroom/widgets";
-import { Header, Footer } from "../../widgets/pageWidget";
+import { Header, Footer, Title } from "../../widgets/pageWidget";
 
 export const About = () => {
     Title("Serch || About Us");

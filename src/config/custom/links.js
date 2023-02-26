@@ -51,6 +51,7 @@ export const CompanyLinks = {
     news: '/company/newsroom/news/:id/',
     assets: '/assets/',
     assetsDownload: '/assets/download/:link',
+    leadership: "/company/newsroom/news/serch-leadership-board-with-its-best-in-team",
     marketplace: '/marketplace/',
     careers: '/company/careers/'
 }

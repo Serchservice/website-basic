@@ -6,6 +6,10 @@ import {
 } from '../config/custom/links';
 import { FooterDocumentLinks, FooterLinks, SerchAppDownloadLinks, SocialMediaLinks } from './container/footerLinks';
 
+export const Title = (newTitle) => {
+    return document.title = newTitle;
+}
+
 export const Header = ({pagetitle, pagedescription}) => {
     return (
         <header style={{backgroundColor: "#030001", padding: pagetitle ? "0.8rem 0.9rem" : ""}} className="header-widget">

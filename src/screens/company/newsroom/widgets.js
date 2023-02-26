@@ -93,7 +93,7 @@ export const NewsroomBody = () => {
         imgAlt: "Serch Leadership Board",
         img: NewsImage.leaderboard,
         header: "Leadership Board",
-        link: "/company/newsroom/news/serch-leadership-board-with-its-best-in-team",
+        link: CompanyLinks.leadership,
         content: "Learn more about our best-in-class team"
     },{
         imgAlt: "Serch Company Info",

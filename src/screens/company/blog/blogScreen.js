@@ -2,12 +2,11 @@ import Markdown from "markdown-to-jsx";
 import { useEffect, useState } from "react";
 import { Link, Outlet, useParams } from "react-router-dom";
 import { CompanyLinks } from "../../../config/custom/links";
-import { Title } from "../../../config/custom/titleheader";
 import { Icons } from "../../../config/images/icons";
 import { CategoryBox, InformationBox, LatestInformationBox } from "../../../widgets/container/boxes";
 import { ContainerForLatestInformation, ContainerForPost } from "../../../widgets/container/containers";
 import { PostsShimmer, Shimmer } from "../../../widgets/container/shimmer";
-import { Footer, Header } from "../../../widgets/pageWidget";
+import { Header, Footer, Title } from "../../../widgets/pageWidget";
 import { BlogCategories, Blogs } from "./blogData";
 import { BlogEnd } from "./widgets";
 

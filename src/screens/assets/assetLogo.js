@@ -45,9 +45,9 @@ export const SerchWhiteLogoAssets = [{
 },]
 
 export const LogoAsset = [{
-    title: "Serch Black Logos",
+    title: "Serch Logos And Other Media Assets... (In Black Color)",
     images: SerchBlackLogoAssets
 },{
-    title: "Serch White Logos",
+    title: "Serch Logos And Other Media Assets... (In White Color)",
     images: SerchWhiteLogoAssets
 }]

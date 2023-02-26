@@ -1,11 +1,10 @@
 import { InformationLinks } from "../../config/custom/links";
-import { Title } from "../../config/custom/titleheader";
 import { BusinessBody, BusinessFooter, BusinessHeader } from "../../screens/products/business/widgets";
 import { ProvideBody, ProvideEnd, ProvideHeader } from "../../screens/products/provide/widgets";
 import { RequestBody } from "../../screens/products/request/body";
 import { ProductSafety, RequestApp, RequestFAQ, RequestHeader } from "../../screens/products/request/widgets";
 import { FAQBox } from "../../widgets/container/boxes";
-import { Header, Footer } from "../../widgets/pageWidget";
+import { Header, Footer, Title } from "../../widgets/pageWidget";
 
 export const Business = () => {
     Title("Serch || Business");
