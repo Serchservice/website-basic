@@ -4,7 +4,7 @@ import Images from '../config/images/images';
 import {
     AppLinks, MainLinks,
 } from '../config/custom/links';
-import { FooterDocumentLinks, FooterLinks, SerchAppDownloadLinks, SocialMediaLinks } from './container/footerLinks';
+import { FooterDocumentLinks, FooterLinks, SerchAppDownloadLinks, SocialMediaLinks } from './footerLinks';
 
 export const Title = (newTitle) => {
     return document.title = newTitle;
@@ -99,8 +99,8 @@ export const Footer = () => {
                 }</div>
                 <div style={{display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between"}}>{
                     SocialMediaLinks.map((item, index) => {
-                        return <a href={item.link} key={index} style={{padding: "0.2rem"}}>
-                            <img alt={item.imageAlt} src={item.image} className="external-links-social" />
+                        return <a href={item.link} key={index} style={{padding: "0.2rem"}} target="_blank" rel="noopener noreferrer">
+                            <img alt={item.imageAlt} src={item.image} className="external-links-social" style={{filter: "brightness(0) invert(1)"}} />
                         </a>
                     })
                 }</div>

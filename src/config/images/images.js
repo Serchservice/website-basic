@@ -9,11 +9,13 @@ const Images = {
     countryHeader: require('../../assets/country/world.png'),
 
     //SocialMedia
-    facebook: require('../../assets/socialmedia/FaceSocial.png'),
-    twitter: require('../../assets/socialmedia/TweetSocial.png'),
-    instagram: require('../../assets/socialmedia/InstaSocial.png'),
-    linkedIn: require('../../assets/socialmedia/LinkSocial.png'),
-    gmail: require('../../assets/socialmedia/Emailing.png'),
+    facebook: require('../../assets/socialmedia/facebook.png'),
+    twitter: require('../../assets/socialmedia/twitter.png'),
+    instagram: require('../../assets/socialmedia/instagram.png'),
+    linkedIn: require('../../assets/socialmedia/linkedin.png'),
+    gmail: require('../../assets/socialmedia/gmail.png'),
+    youtube: require('../../assets/socialmedia/youtube.png'),
+    tiktok: require('../../assets/socialmedia/tiktok.png'),
 
     //Google and Apple playStore
     playStore: require('../../assets/app/google.svg').default,

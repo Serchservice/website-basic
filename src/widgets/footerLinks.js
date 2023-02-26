@@ -1,6 +1,6 @@
-import { Emails } from "../../config/custom/emails";
-import { AppLinks, CompanyLinks, InformationLinks, ProductLinks, SocialLinks, SupportLinks } from "../../config/custom/links";
-import Images from "../../config/images/images";
+import { Emails } from "../config/custom/emails";
+import { AppLinks, CompanyLinks, InformationLinks, ProductLinks, SocialLinks, SupportLinks } from "../config/custom/links";
+import Images from "../config/images/images";
 
 export const CompanyLink = [{
     link: CompanyLinks.about,
@@ -86,11 +86,13 @@ export const SocialMediaLinks = [{
     image: Images.twitter,
     imageAlt: 'Serch Twitter Link',
     link: SocialLinks.twitter,
-},{
-    image: Images.facebook,
-    imageAlt: 'Serch Facebook Link',
-    link: SocialLinks.facebook,
-},{
+},
+// {
+//     image: Images.facebook,
+//     imageAlt: 'Serch Facebook Link',
+//     link: SocialLinks.facebook,
+// },
+{
     image: Images.gmail,
     imageAlt: 'Serch Email Link',
     link: Emails.help,
@@ -102,6 +104,14 @@ export const SocialMediaLinks = [{
     image: Images.linkedIn,
     imageAlt: 'Serch LinkedIn Link',
     link: SocialLinks.linkedIn,
+},{
+    image: Images.youtube,
+    imageAlt: 'Serch Youtube Link',
+    link: SocialLinks.youtube,
+},{
+    image: Images.tiktok,
+    imageAlt: 'Serch Tiktok Link',
+    link: SocialLinks.tiktok,
 }]
 
 export const FooterDocumentLinks = [{
