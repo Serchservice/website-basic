@@ -1,11 +1,16 @@
 import '../../screens/css/404.css';
+import '../../widgets/css/header.css';
+import '../../screens/css/login.css';
 import { Title } from "../../config/custom/titleheader";
 import { Link } from 'react-router-dom';
+import { LoginProvider, SignupProvider } from './login';
 import { Features, Plans, Services, Time } from "../../screens/home/widgets/features";
 import { KeySupportBody, KeySupportEnd, KeySupportHead } from "../../screens/key/support/widgets";
 import { Footer } from "../../widgets/footer";
 import { Header } from "../../widgets/header";
 import { CompanyLinks, InformationLinks, MainLinks, ProductLinks } from '../../config/custom/links';
+import Images from '../../config/images/images';
+
 
 export const Home = () => {
     Title("Serch || Welcome");
@@ -31,6 +36,42 @@ export const Support = () => {
             <KeySupportEnd />
             <Footer />
         </div>
+    );
+}
+export const Login = () => {
+    Title("Serch || Login Provider");
+    return (
+        <div className="serch">
+            <header className="headerlogin">
+                <div className="logo">
+                    <Link to={ MainLinks.home }> <img alt="" src={ Images.serchLogo } width={30} height={30} /> </Link>
+                </div>
+                <div className="" >
+                    <p className='servicemadeeasy'>service made easy</p>
+                </div>
+             </header>
+            <LoginProvider/>
+           
+        </div>
+    );
+}
+
+export const SignUp = ()=>{
+    Title("Serch || SignUp Provider");
+    return (
+     <div>
+        {/* <header className="headerlogin">
+                <div className="logo">
+                    <Link to={ MainLinks.home }> <img alt="" src={ Images.serchLogo } width={30} height={30} /> </Link>
+                </div>
+                <div className="" >
+                    <p className='servicemadeeasy'>service made easy</p>
+                </div>
+         </header> */}
+            <SignupProvider/>
+           
+
+     </div>
     );
 }
 

@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import '../../screens/css/keyframes.css';
 import { CompanyLinks, InformationLinks, LegalLinks, MainLinks, ProductLinks, SupportLinks } from "../../config/custom/links";
 import { CountriesInSerch, Documentation, PricingAndPayment, SafetyGuideline } from "../pages/information";
-import { Home, NoPage, Support } from "../pages/main";
+import { Home, Login, NoPage, SignUp, Support } from "../pages/main";
 import { LegalHub, SupportHub } from "../pages/support";
 import { Business, Provide, Request } from "../pages/product";
 import { About, Blog, Career, MarketPlace, Newsroom } from "../pages/company";
@@ -13,6 +13,7 @@ import { CookiePolicy, GlobalAdvertisingPolicy, UserGeneratedContentPolicy } fro
 import { PrivacyPolicy } from "../../screens/support/legalHub/docs/privacyPolicy";
 import { ReferralProgramme } from "../../screens/support/legalHub/docs/referral";
 import { TermsAndConditions } from "../../screens/support/legalHub/docs/termsConditions";
+import { LoginUser } from "../pages/login";
 
 function App() {
   return (
@@ -26,6 +27,11 @@ function App() {
         <Route path={ MainLinks.home } element={<Home />} />
         <Route path='/home' element={<Home />} />
         <Route path='/home/' element={<Home />} />
+
+        <Route path='/loginProvider' element={<Login />} />
+
+        <Route path='/signupProvider' element={<SignUp />} />
+
 
         <Route path="/company/about" element={<About />} />
         <Route path={ CompanyLinks.about } element={<About />} />
