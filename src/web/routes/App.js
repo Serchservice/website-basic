@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, createBrowserRouter, createRoutesFromElements } from "react-router-dom";
 import '../../screens/css/keyframes.css';
 import { CompanyLinks, InformationLinks, LegalLinks, MainLinks, ProductLinks, SupportLinks } from "../../config/custom/links";
 import { CountriesInSerch, Documentation, PricingAndPayment, SafetyGuideline } from "../pages/information";
@@ -14,6 +14,18 @@ import { PrivacyPolicy } from "../../screens/support/legalHub/docs/privacyPolicy
 import { ReferralProgramme } from "../../screens/support/legalHub/docs/referral";
 import { TermsAndConditions } from "../../screens/support/legalHub/docs/termsConditions";
 import { LoginUser } from "../pages/login";
+import { BasicInformation, EmailVerify, PersonalInformation } from "../pages/signup/loginSignup";
+// import { EmailVerify, PersonalInformation, ServiceOption } from "../pages/signup/loginSignup";
+// import SignUpProvider from "../pages/signup/SignUpProvider";
+
+
+
+
+// const router = createBrowserRouter(
+//   createRoutesFromElements(
+  
+//   )
+// )
 
 function App() {
   return (
@@ -29,10 +41,12 @@ function App() {
         <Route path='/home/' element={<Home />} />
 
         <Route path='/loginProvider' element={<Login />} />
-
-        <Route path='/signupProvider' element={<SignUp />} />
-
-
+        <Route path='/signupprovider' element={<SignUp/>} >
+            <Route path="/signupprovider" element={<EmailVerify/>}/>
+            <Route path="/signupprovider" element={<PersonalInformation/>}/>
+            <Route path="/signupprovider" element={<BasicInformation/>}/>
+       </Route>      
+        
         <Route path="/company/about" element={<About />} />
         <Route path={ CompanyLinks.about } element={<About />} />
         <Route path={"/company/blogs"} element={<Blog />} />
@@ -43,6 +57,7 @@ function App() {
         <Route path={ CompanyLinks.marketplace } element={<MarketPlace />} />
         <Route path={"/company/careers"} element={<Career />} />
         <Route path={ CompanyLinks.careers } element={<Career />} />
+
 
         <Route path="/business" element={<Business />} />
         <Route path={ ProductLinks.business } element={<Business />} />

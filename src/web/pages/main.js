@@ -10,6 +10,7 @@ import { Footer } from "../../widgets/footer";
 import { Header } from "../../widgets/header";
 import { CompanyLinks, InformationLinks, MainLinks, ProductLinks } from '../../config/custom/links';
 import Images from '../../config/images/images';
+// import SignUpProvider from './signup/SignUpProvider';
 
 
 export const Home = () => {

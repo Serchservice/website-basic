@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 import '../../config/colors/colors.css';
 import { AppLinks} from "../../config/custom/links";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import { EmailVerify,  PersonalInformation } from './loginSignup';
+import { BrowserRouter, Routes, Route, Link, Outlet } from "react-router-dom";
+import { BasicInformation, EmailVerify,  PersonalInformation, ServiceOption } from './signup/loginSignup';
 import '../../screens/css/login.css';
+// import SignUpProvider from './signup/SignUpProvider';
 
 
 
@@ -85,73 +86,74 @@ background-color: #3F0F36;
     );
 }
 
-export const SignupProvider = ({changeForm}) => {
+export const SignupProvider = () => {
     
 
 return (
-    <div className=''>
-        <div className='container'>
-          <div className='black'>
-              <div className='ui-wrapper'>
-                
-                <div>
-                    bar here
-                </div>
-                <div>
-                <p className='provider-title'>Your personal details</p>
-                <p className='provide-subtitle'>Please provide us with your and other information</p>
-                </div>
-              </div>
-              <div className='ui-wrapper'>
-                
-                <div>
-                    bar here
-                </div>
-                <div>
-                <p className='provider-title'>Verify your Email Address</p>
-                <p className='provide-subtitle'> We will send you a verification link and OTP for you to verify the email address you provided to Serch</p>
-                </div>
-              </div>
-              <div className='ui-wrapper'>
-                
-                <div>
-                    bar here
-                </div>
-                <div>
-                <p className='provider-title'>Pick a service</p>
-                <p className='provide-subtitle' >Please use this list of jobs below to help you begin the process</p>
-                </div>
-              </div>
-              <div className='ui-wrapper'>
-                
-                <div>
-                    bar here
-                </div>
-                <div>
-                <p className='provider-title'>Basic Information</p>
-                <p className='provide-subtitle' >In relation to your personal infprmation</p>
-                </div>
-              </div>
-              <div className='ui-wrapper'>
-                
-                <div>
-                    bar here
-                </div>
-                <div>
-                <p className='provider-title'>Subscribe to enjoy</p>
-                <p className='provide-subtitle'>Please select a plan that befits what you hope to get from Serch</p>
-                </div>
-              </div>
-  
-          </div>
-    
-            <div className='white'>
-            {changeForm ?  <EmailVerify/> :<PersonalInformation/> }
+    <div>
+       <div className='container'>
+    <div className='black'>
+          {/* <div className='ui-wrapper'>
+            
+            <div>
+                bar here
             </div>
-        </div>
-    </div>
-    // <LoginPage2/>
+            <div>
+            <p className='provider-title'>Your personal details</p>
+            <p className='provide-subtitle'>Please provide us with your and other information</p>
+            </div>
+          </div> */}
 
-    //put condition say after login1 is successful show login2
+         <div className="wrapper">
+            <ol className="c-stepper">
+                <li className="c-stepper__item">
+
+                <div className="c-stepper__content">
+                    <h3 className="c-stepper__title">Your personal details</h3>
+                    <p className="c-stepper__desc" style={{lineHeight: "1.0;"}}>Please provide us with your and other information.</p>
+                </div>
+                </li>
+                <li className="c-stepper__item">
+
+                <div className="c-stepper__content">
+                    <h3 className="c-stepper__title">Verify Email Address</h3>
+                    <p className="c-stepper__desc" style={{lineHeight: "1.0rem;"}}>We will send you a verification link and OTP for you to verify the email address you provide to Serch.</p>
+                </div>
+                </li>
+                <li className="c-stepper__item">
+
+                <div className="c-stepper__content">
+                    <h3 className="c-stepper__title">Pick a service </h3>
+                    <p className="c-stepper__desc" style={{lineHeight: "1;"}}>Please use this list of jobs below to help you begin the prcess</p>
+                </div>
+                </li>
+                <li className="c-stepper__item">
+
+                <div className="c-stepper__content">
+                    <h3 className="c-stepper__title">Basic Information </h3>
+                    <p className="c-stepper__desc">In relation to your personal data provide info</p>
+                </div>
+                </li>
+                <li className="c-stepper__item">
+
+                <div className="c-stepper__content">
+                    <h3 className="c-stepper__title">Subscribe to enjoy </h3>
+                    <p className="c-stepper__desc">Select a plan that befits what you want and what you hope to get from Serch.</p>
+                </div>
+                </li>
+            </ol>
+            </div>
+
+
+      </div>
+
+        <div className='white'>
+           <Outlet/>
+        </div>
+</div>
+{/* // <LoginPage2/>  <PersonalInformation/> <ServiceOption/> */}
+
+//put condition say after login1 is successful show login2
+    </div>
 )
 }

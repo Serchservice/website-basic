@@ -1,11 +1,14 @@
-import '../../config/colors/colors.css';
-import { AppLinks} from "../../config/custom/links";
-import { Link } from "react-router-dom";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import '../../screens/css/login.css';
+import '../../../config/colors/colors.css';
+// import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import '../../../screens/css/login.css';
 import styled from 'styled-components';
-import VerifyEmailComponents from '../../emailverify/VerifyEmailComponents';
+import VerifyEmailComponents from '../../../emailverify/VerifyEmailComponents';
+import electrician from '../../../assets/serviceoption/electrician.svg'
+import mechanic from '../../../assets/serviceoption/mechanic.svg'
+import plumber from '../../../assets/serviceoption/plumber.svg'
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 
 
 export const PersonalInformation = () =>{
@@ -95,5 +98,49 @@ export const EmailVerify = () =>{
           <VerifyEmailComponents/>
          
       </div>
+     )
+ }
+
+ export const ServiceOption = () =>{
+     return (
+          <div className='service-option' style={{marginBottom:"1rem"}}>
+               <div className='formheader'>
+                    <h2>Select the service you choose  to offer </h2>
+                    <p className='' style={{fontSize:"1.5rem", marginTop: "-20px"}}>Pick the field of service you do</p>
+             </div>
+
+            <div className='service-wrapper'>
+            <div className='service-item-1'>
+               <img src={electrician} alt="electrician"/>
+               <p style={{fontSize:"2.25rem"}}>Electrician</p>
+               <p style={{fontSize:"1.4rem"}}>Enjoy more jobs on the go with your electrical skills</p>
+             </div>
+             <div className='service-item-2'>
+               <img src={plumber} alt="plumber"/>
+               <p style={{fontSize:"2.25rem"}}>Plumber</p>
+               <p style={{fontSize:"1.4rem"}}>Enjoy 2 more jobs on the go with your plumbering skills</p>
+             </div>
+             <div className='service-item-3'>
+               <img src={mechanic} alt="mechanic"/>
+               <p style={{fontSize:"2.25rem"}}>Mechanic</p>
+               <p style={{fontSize:"1.4rem"}}>Enjoy 3more jobs on the go with your mechanic skills</p>
+             </div>
+            </div>
+
+            <div className='continue'>
+                <Link>
+                   <button >Continue</button>
+                </Link>
+           </div>
+
+
+          </div>
+     )
+ }
+ export const BasicInformation = () =>{
+     return(
+          <div>
+               Basic info
+          </div>
      )
  }

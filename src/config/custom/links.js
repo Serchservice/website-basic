@@ -11,7 +11,7 @@ export const AppLinks = {
     appleStore: '/',
     providerPlayStore: '/',
     providerAppleStore: '/',
-    signupProvider: '/SignupProvider',
+    signupProvider: '/SignUpProvider',
     loginProvider: '/LoginProvider',
     signupUser: '/',
     loginUser: '/'
