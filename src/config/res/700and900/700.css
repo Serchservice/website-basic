@@ -2,4 +2,19 @@
     .productHeadText{
         max-width: 25rem;
     }
+    .container{
+        display: flex;
+        flex-direction: row;
+    }
+    .formbox{
+   
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
+    .formcontainer{
+        padding-right: 1rem;
+       padding-top: 0.9rem;
+       background-color: red;
+
+    }
 }

@@ -1,7 +1,8 @@
 // import Outline from "./Outline";
 import PinInput from "./PinInput";
-import '../screens/css/login.css';
+import '../../screens/css/login.css';
 import styled from 'styled-components';
+import { Link } from "react-router-dom";
 
 
 function VerifyEmailComponents() {
@@ -56,7 +57,11 @@ function VerifyEmailComponents() {
           <br/>
           <br/>
           <div  style={{display:"flex", justifyContent:"center"}}>
-          <Button >Finish</Button>
+                               
+                                    <Button >Finish</Button>
+
+                                
+                              
 
           </div>
       </div>

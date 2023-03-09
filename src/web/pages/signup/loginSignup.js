@@ -2,91 +2,24 @@ import '../../../config/colors/colors.css';
 // import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import '../../../screens/css/login.css';
 import styled from 'styled-components';
-import VerifyEmailComponents from '../../../emailverify/VerifyEmailComponents';
+import VerifyEmailComponents from '../../../component/emailverify/VerifyEmailComponents';
 import electrician from '../../../assets/serviceoption/electrician.svg'
 import mechanic from '../../../assets/serviceoption/mechanic.svg'
 import plumber from '../../../assets/serviceoption/plumber.svg'
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Input from '../../../component/input/Input';
+import SignUp from '../../../component/input/SignUp';
+import SubscribeCard from '../../../component/suscribecard/SubscribeCard';
+import { CardContainer } from '../../../component/suscribecard/Card.style';
 
 
 
 export const PersonalInformation = () =>{
-     const Button = styled.button`
-    padding: 1rem 3rem;
-  position: relative;
-  margin-top: 1rem;
-  font-size: 14px;
-  border-radius: 0.5rem;
-  font-weight: 600;
-  cursor: pointer;
-  color: var(--serch-white-bg);
-  transition: all .5s;
-  background-color: #3F0F36;
-`;
-const [changeForm, setChangeForm] = useState(true);
-
-function continueForm (){
-     setChangeForm(false);
-}
-
-
-
-    return (
+     return (
         <div>
+        <SignUp/>
         
-        <div className=''>
-             <div className='formheader'>
-             <h2>Create your Serch account</h2>
-             <p className='' style={{fontSize:"1.5rem", marginTop: "-20px"}}>Your personal details</p>
-             </div>
- 
-             <div>
-                 <form className='formboxsignup'>
-                     <div className='forminnerbox'>
-                          <label className="label">First Name</label>
-                          <inputsignup className="inputsignup" type="email" placeholder="john"/>
- 
-                     </div>
-                     <div className='forminnerbox'>
-                          <label className="label">Last Name</label>
-                          <inputsignup className="inputsignup" type="email" placeholder="Doe"/>
- 
-                     </div>
-                     <div className='forminnerbox'>
-                          <label className="label">Email Address</label>
-                          <inputsignup className="inputsignup" type="email" placeholder="joe"/>
- 
-                     </div>
-                     <div className='forminnerbox'>
-                          <label className="label">Phone Number</label>
-                          <inputsignup className="inputsignup" type="email" placeholder="984 908 345"/>
- 
-                     </div>
-                     <div className='forminnerbox'>
-                          <label className="label">Gender</label>
-                          <inputsignup className="inputsignup" type="email" placeholder="joe"/>
- 
-                     </div>
-                     <div className='forminnerbox'>
-                          <label className="label">Create Password</label>
-                          <inputsignup className="inputsignup" type="email" placeholder="joe"/>
- 
-                     </div>
-                     <div className='forminnerbox'>
-                          <label className="label">Confirm Password</label>
-                          <inputsignup className="inputsignup" type="email" placeholder="joe"/>
- 
-                     </div>
-                       <div className='continue'>
-                              <Button onclick={continueForm}>Continue</Button>
-                       </div>
- 
- 
-                 </form>
-             </div>
- 
-        </div>
      </div>
     )
 }
@@ -128,9 +61,12 @@ export const EmailVerify = () =>{
             </div>
 
             <div className='continue'>
-                <Link>
-                   <button >Continue</button>
-                </Link>
+               
+                                <Link path="/basicinformation">
+                                   <button className='button-signup'>Continue</button>
+                                  </Link>
+                              
+                
            </div>
 
 
@@ -138,9 +74,97 @@ export const EmailVerify = () =>{
      )
  }
  export const BasicInformation = () =>{
+
+     const handleSignUp = e => {
+          e.preventDefault();
+     };
      return(
+           <div>
+                <div className='even-column create-accountbasic-information  formboxsignup' style={{marginBottom:"1rem"}}>
+        <h1>You are almost done! Let’s cross together</h1>
+        <p className="subtitle">Basic Information</p>
+
+        <form onSubmit={handleSignUp}>
+        <div style={{display:"flex", justifyContent:"space-between", gap:"20px"}}>
+          <Input style={{width:"50%"}} label="Street Number *" placeholder="14" id="streetnumber" name="streetnumber" />
+          <Input label="Street Name *" placeholder="Oshodi" id="streetname" />
+        </div>
+          <Input label="LGA(Optional)" placeholder="ifo" id="lga" />
+
+          <div style={{display:"flex", justifyContent:"space-between", gap:"20px"}}>
+          <Input style={{width:"50%"}} label="State of Origin *" placeholder="Oyo" id="stateoforigin" name="stateoforigin" />
+          <Input label="Residential Country *" placeholder="Oshodi" id="residential" name="residential" />
+         </div>
+          <p className='' style={{fontSize:"1.3rem", color:"black"}}>Email Address and Phone Number</p>
+          <Input label="Email Address" placehLolder="alternative@gmail.com" id="emailaddress" />
+          <Input label="Alternative Email" placeholder="johndoe@gmail.com" id="lga" />
+          <Input label="Phone Number" placeholder="+234 434 567 890" id="phonenumber" />
+
+
+          <div className="continue">
+          <button type="submit">Finish</button>
+          </div>
+          </form>
+          </div>
+
+          </div>
+     )
+ }
+
+ export const Subscribe = () =>{
+     return (
           <div>
-               Basic info
+                <div className='Subcribe  formboxsignup' style={{marginBottom:"2rem"}}>
+                   
+                         <h2>Best plans, best offers </h2>
+                         <p className='' style={{fontSize:"1.5rem", marginTop: "-20px"}}>We have curated a list of plans suitable for you at
+any time.</p>
+                         <p className="before-subscribe">NOTE: Before subscribing to a plan or activating your free plan, it is important to check if Serch has launched in your city, state or country.
+If you want to be sure, click here to know more</p>
+                  
+                    
+                  <div className='suscriber-card-wrapper'>
+
+                  <SubscribeCard  variant ="outline"
+                   freetrial="free-trial"
+                   subscribeName="Free Trial"
+                   item1="Profile check"
+                   item2="Tip2fix"
+                   item3= "RequestShare"
+                   item4="SWM security"
+                   item5="Service schedulling"
+                   fees="No fees, no charge"
+                   trials="14 days trial"
+                   />
+                    <SubscribeCard 
+                   freetrial="trial"
+                   subscribeName="All-trial"
+                   item1="Profile check"
+                   item2="Tip2fix"
+                   item3= "RequestShare"
+                   item4="SWM security"
+                   item5="Service schedulling"
+                   fees="No fees, no charge"
+                   trials="14 days trial"
+                   />
+                     <SubscribeCard 
+                   freetrial="trial"
+                   subscribeName="All-trial"
+                   item1="Profile check"
+                   item2="Tip2fix"
+                   item3= "RequestShare"
+                   item4="SWM security"
+                   item5="Service schedulling"
+                   fees="No fees, no charge"
+                   trials="14 days trial"
+                   />
+                  
+                 
+
+                   </div>
+
+               </div>
+
           </div>
      )
  }

@@ -1,5 +1,5 @@
 import React from "react";
-import '../screens/css/login.css';
+import '../../screens/css/login.css';
 
 function PinInput({ firstInput }) {
   return (

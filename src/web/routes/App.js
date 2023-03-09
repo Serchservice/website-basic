@@ -14,7 +14,7 @@ import { PrivacyPolicy } from "../../screens/support/legalHub/docs/privacyPolicy
 import { ReferralProgramme } from "../../screens/support/legalHub/docs/referral";
 import { TermsAndConditions } from "../../screens/support/legalHub/docs/termsConditions";
 import { LoginUser } from "../pages/login";
-import { BasicInformation, EmailVerify, PersonalInformation } from "../pages/signup/loginSignup";
+import { BasicInformation, EmailVerify, PersonalInformation, ServiceOption, Subscribe } from "../pages/signup/loginSignup";
 // import { EmailVerify, PersonalInformation, ServiceOption } from "../pages/signup/loginSignup";
 // import SignUpProvider from "../pages/signup/SignUpProvider";
 
@@ -42,9 +42,14 @@ function App() {
 
         <Route path='/loginProvider' element={<Login />} />
         <Route path='/signupprovider' element={<SignUp/>} >
-            <Route path="/signupprovider" element={<EmailVerify/>}/>
+           <Route path="/signupprovider" element={<EmailVerify/>}/>
+
+            <Route path="/signupprovider" element={<Subscribe/>}/>
+           <Route path="/signupprovider" element={<BasicInformation/>}/>
             <Route path="/signupprovider" element={<PersonalInformation/>}/>
-            <Route path="/signupprovider" element={<BasicInformation/>}/>
+           <Route path="/signupprovider" element={<ServiceOption/>}/>
+            
+
        </Route>      
         
         <Route path="/company/about" element={<About />} />

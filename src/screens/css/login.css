@@ -1,4 +1,6 @@
 @import url(../../config/colors/colors.css);
+@import url(./responsivelogin.css);
+
 
 .headerlogin{
     background-color: var(--serch-bg-color);
@@ -86,24 +88,45 @@ font-size: 24px;
 font-weight: 400;
 line-height: 29px;
 letter-spacing: 0em;
+margin-bottom: 15px;
+
+padding-bottom: 15px;
+
+
 
 
 }
-.input{
-box-sizing: border-box;
+.form-input-box{
+/* box-sizing: border-box; */
 width: 100%;
 height: 70px;
 padding-left: 20px;
-font-size: 1.5rem;
+padding-right: 20px;
+margin-bottom: 15px;
+display: flex;
+align-items: center;
+margin-top: 15px;
 
 /* Dark Purple */
-
+/* background-color: red; */
 border: 2px solid #3B043B;
 border-radius: 10px;
+}
+.input{
+    /* background-color: blue; */
+    height: 60px;
+    width: 100%;
+    font-size: 1.5rem;
+
 }
 .input::placeholder{
     font-size: 1.5rem;
     padding-left: 5px;
+
+}
+.option-gender{
+    font-size: 1rem;
+
 }
 .forgotpassword, .createaccount{
     color: var(--serch-purple-deeper);
@@ -116,10 +139,13 @@ border-radius: 10px;
 .container{
     display:flex;
     /* flex-direction: column; */
+    height: 200vh;
+    /* background-color: red; */
 }
+
 .black{
     flex: 1;
-    /* height: 100vh; */
+    /* height: ; */
     /* color: white; */
     background-color: black;
     /* margin */
@@ -128,7 +154,7 @@ border-radius: 10px;
 .white{
     flex: 1;
     /* height: 100vh; */
-    background-color: white;
+    /* background-color: white; */
 
 }
 .formheader{
@@ -152,18 +178,7 @@ border-radius: 10px;
     flex-direction: column;
     gap: 15px;
 }
-.inputsignup{
-    box-sizing: border-box;
-    width: 100%;
-    height: 70px;
-    padding-left: 20px;
-    font-size: 1.5rem;
-    
-    /* Dark Purple */
-    
-    border: 2px solid #3B043B;
-    border-radius: 10px;
-    }
+/*  */
     .continue{
         display: flex;
         justify-content: center;
@@ -335,4 +350,103 @@ grid-row: 2 / 3;
     /* flex-wrap: wrap; */
     padding-left: 3rem;
     padding-right: 3rem;
+}
+.suscriber-card-wrapper{
+    width: 577px;
+    height: 333px;
+    /* display: flex; */
+   margin: 0 auto;
+   justify-content: center;
+   
+   
+}
+/* .subscribe-box{
+    display: flex;
+    flex-direction: column;
+    background-color: #B80000;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  
+
+
+} */
+.item{
+    font-size: 16px;
+    line-height: 10px;
+    color: white;
+}
+.subscribe-name-box  h2{
+    color: white;
+
+}
+.subscribe-name-box{
+    margin-left: 20px;
+}
+.fees{
+    margin-left: auto;
+    margin-top: 28px;
+    color: white;
+}
+.subscribe-item{
+    display: flex;
+    /* background-color: blue; */
+    /* /* justify-content: center; */
+    /* align-items: center; */
+}
+.subscribe-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.subscribe-footer:last-child{
+    color: white;
+}
+.free-trial{
+    background-color: #B80000;
+    
+
+ }
+ .premium-trial{
+    
+        
+
+ }
+    
+
+.subscribe-wrapper{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    padding-top: 0.9rem;
+    padding-bottom: 0.9rem;
+} 
+.button-signup{
+    padding: 1rem 3rem;
+    position: relative;
+    margin-top: 1rem;
+    font-size: 14px;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--serch-white-bg);
+    transition: all .5s;
+    background-color: #3F0F36;
+}
+.subscribe-image{
+    height: 5.875rem;
+    width:5.875rem;
+}
+.before-subscribe{
+    font-size:1rem; 
+    margin-top: -20px;
+    color: black;
+    line-height: 15px;
+    background-color: #B3B3B3;
+    padding: 5px;
+    border-radius: 6px;
 }

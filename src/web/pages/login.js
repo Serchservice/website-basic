@@ -1,9 +1,12 @@
 import styled from 'styled-components';
 import '../../config/colors/colors.css';
-import { AppLinks} from "../../config/custom/links";
+import '../../css/index.css';
+import { AppLinks, MainLinks} from "../../config/custom/links";
 import { BrowserRouter, Routes, Route, Link, Outlet } from "react-router-dom";
 import { BasicInformation, EmailVerify,  PersonalInformation, ServiceOption } from './signup/loginSignup';
 import '../../screens/css/login.css';
+import Images from '../../config/images/images';
+import Input from '../../component/input/Input';
 // import SignUpProvider from './signup/SignUpProvider';
 
 
@@ -33,7 +36,9 @@ color: var(--serch-white-bg);
 transition: all .5s;
 background-color: #3F0F36;
 `;
-
+const handleSignUp = e => {
+    e.preventDefault();
+};
     return (
        <div className="serchlogin">
                  <div className="login">
@@ -41,15 +46,12 @@ background-color: #3F0F36;
                     <h1 className="greeting">Hi there! </h1>
                     <p className='' style={{marginTop:"-20px"}}>Good to have you back</p>
                     </div>
-                    <div className="formcontainer">
-                        <form className="formbox">
-                         <label className="label">Email Address</label>
-                         <inputsignup className="inputsignup" type="email" placeholder="joe@email.com"/>
-
-                         <label className="label">Password</label>
-                         <inputsignup className="inputsignup" type="password" placeholder="***********"/>
-
-                         <div style={{display: 'flex', justifyContent:"space-between", fontSize:"1.5rem"}}>
+                    <form onSubmit={handleSignUp}>
+                          
+                            <Input label="Email Address" placehLolder="alternative@gmail.com" id="emailaddress" />
+                            <Input label="Password" password type="password" placeholder="Create your strong password" id="password"/>
+          
+                              <div style={{display: 'flex', justifyContent:"space-between", fontSize:"1.5rem"}}>
                             <div style={{display:"flex"}}>
                                <div>
                                 <inputsignup type="checkbox" id="vehicle1" name="vehicle1" value="Bike"/>
@@ -79,9 +81,13 @@ background-color: #3F0F36;
                                         
                             </div>
                          </div>
-                        </form>
+                    </form>
+                        
+
+                       
+                       
                     </div>
-        </div>
+       
        </div>
     );
 }
@@ -93,6 +99,15 @@ return (
     <div>
        <div className='container'>
     <div className='black'>
+        <header className="header">
+            <div className="logo">
+                <Link to={ MainLinks.home }> <img alt="" src={ Images.serchLogo } width={30} height={30} /> </Link>
+            </div>
+            {/* <div className="headerlinks">
+                <Link to={ AppLinks.loginUser }>Login</Link>
+                <Link to={ AppLinks.signupUser }>Signup</Link>
+            </div> */}
+        </header>
           {/* <div className='ui-wrapper'>
             
             <div>
@@ -153,7 +168,7 @@ return (
 </div>
 {/* // <LoginPage2/>  <PersonalInformation/> <ServiceOption/> */}
 
-//put condition say after login1 is successful show login2
+{/* //put condition say after login1 is successful show login2 */}
     </div>
 )
 }

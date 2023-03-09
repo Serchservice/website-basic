@@ -1,0 +1,36 @@
+@media( 768px >= width){
+    .black{
+        display: none;
+      
+    }
+         
+}
+
+@media  (768px <= width <= 900px) {
+    .formheader{
+        padding-left: 6rem;
+        padding-right: 6rem;  
+        background: red;
+
+}
+    .formboxsignup{
+         padding-left: 0rem;
+        padding-right: 0rem;
+        padding-top: 0.9rem;
+        padding-bottom: 0.9rem;
+         background: blue;
+
+}
+.formbox{
+    padding-left: 0rem;
+   padding-right: 0rem;
+   padding-top: 0.9rem;
+   padding-bottom: 0.9rem;
+    background: green;
+
+}
+
+    
+}
+
+    
