@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { RiArrowDropDownLine} from "react-icons/ri";
+import "../../screens/css/responsivelogin.css";
 
 function Input({ label, placeholder, id, type = "text", gender, password }) {
   const [showPassword, setShowPassword] = useState(false);

@@ -59,6 +59,13 @@ export const LegalLinks = {
     zeroPolicy: '/legal/document/zero-tolerance-policy/',
     accessibility: '/legal/document/accessibility-policy/'
 }
+export const ProfileLinks ={
+    profiledashboard:"/profile/profiledashboard",
+    profilechat:"/profile/profilechat",
+    profilecall:"/profile/profilecall",
+    profilesetting:"/profile/profilesetting",
+    profilehome:"/profile/profilehome"
+}
 
 export const HelpLinks = {}
 

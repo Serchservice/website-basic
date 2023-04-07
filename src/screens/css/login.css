@@ -1,5 +1,6 @@
 @import url(../../config/colors/colors.css);
 @import url(./responsivelogin.css);
+@import url(../../css/index.css);
 
 
 .headerlogin{
@@ -133,13 +134,22 @@ border-radius: 10px;
 }
 .newaccount{
     color: var(--serch-light-textThree);
+    font-size: 1.75rem;
 
 
+}
+.createaccount{
+    font-size:1.5rem;
+}
+.account{
+    display: flex;
+     align-items:center;
+     gap:20px;
 }
 .container{
     display:flex;
     /* flex-direction: column; */
-    height: 200vh;
+    height: 100%;
     /* background-color: red; */
 }
 
@@ -149,6 +159,7 @@ border-radius: 10px;
     /* color: white; */
     background-color: black;
     /* margin */
+    position: relative;
 
 }
 .white{
@@ -182,6 +193,9 @@ border-radius: 10px;
     .continue{
         display: flex;
         justify-content: center;
+    }
+    .verify-email-page{
+        padding: 3rem;
     }
     .verify-input{
         width: 70px;
@@ -219,33 +233,66 @@ border-radius: 10px;
 }
 
 
-  
   .c-stepper__item {
     position: relative;
     display: flex;
     gap: 1rem;
-    padding-bottom: 1rem;
+    /* background-color: red; */
+    margin-bottom: -6rem;
   }
-  
-    .c-stepper__item:before {
+   .c-stepper__item:before {
       content: "";
       flex: 0 0 var(--circle-size);
       height: var(--circle-size);
       border-radius: 50%;
-      border: 3px solid lightgrey;
-      background-color: black;
+      border: 2px solid white;
+  
     }
-    /* .c-stepper__item:last-child:after {
+    .c-stepper__item:after {
         content: "";
         position: absolute;
-        left: 4%;
-        flex: 0 0 var(--circle-size);
-        height: var(--circle-size);
+        z-index:10000;
+        right: 608px;
+        top:25px;
+        transform:translate(-50%, -50%);
+        height: var( --circle-small);
+        width: 20px;
+        background-color: red;
         border-radius: 50%;
-        border: 3px solid lightgrey;
-    } */
+       background: white;
+    }
+    .current_item .c-stepper__item:after,
+   .current_item ~.c-stepper__item:after{
+       
+    }
+    .current_item .c-stepper__item:before,
+    .current_item  ~.c-stepper__item:before{
+        flex: 0 1 var(--circle-smaller);
+        height: var(--circle-smaller);
+        position: relative;
+        background: white;
+        z-index:100000;
+        left:1.5%;
+        top:20%;
+        visibility: hidden;
+      
+    }
 
-    .c-stepper__item:not(:last-child)::after {
+    .current_item.c-stepper__item:before {
+       
+        background-color: purple;
+        z-index:1000;
+        left:1.5%;
+        top:20%;
+        border:none;
+    }
+    .current_item.c-stepper__item:after{
+        /* display: ; */
+        
+    }
+
+
+    .c-stepper__content:before {
        
             content: "";
             position: absolute;
@@ -258,6 +305,14 @@ border-radius: 10px;
             background-color: #e0e0e0;
 
 
+  }
+  .green_item.c-stepper__item:before{
+     
+      background: green;
+      border:none;
+      
+      /* visibility: hidden; */
+    
   }
   
 
@@ -284,6 +339,7 @@ border-radius: 10px;
   .wrapper {
     max-width: 700px;
     margin: 6rem auto 0;
+    
   }
  
   *,
@@ -295,12 +351,13 @@ border-radius: 10px;
   :root{
     
     --circle-size: clamp(1.5rem, 5vw, 3rem);
+    --circle-smaller: clamp(1.0rem, 5vw, 2rem);
     --spacing: clamp(0.25rem, 2vw, 0.5rem);
-    --circle-small: clamp(1.0rem, 3vw, 2rem);
+    --circle-small: clamp(1.3rem, 1vw, 1.3rem);
 }
 
 .service-item-3{
-width: 337px;
+width: 287px;
 height: 380px;
 background: #000870;
 padding: 1rem 1rem;
@@ -314,7 +371,7 @@ grid-row: 2 / 3;
 }
 
 .service-item-1{
-    width: 337px;
+    width: 287px;
     height: 380px;
     background: #000870;
     padding: 1rem 1rem;
@@ -327,7 +384,7 @@ grid-row: 2 / 3;
     
     }
     .service-item-2{
-        width: 337px;
+        width: 287px;
         height: 380px;
         background: #000870;
         padding: 1rem 1rem;
@@ -342,7 +399,7 @@ grid-row: 2 / 3;
 
 
             
-.service-wrapper{
+.service-rapper{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -353,7 +410,7 @@ grid-row: 2 / 3;
 }
 .suscriber-card-wrapper{
     width: 577px;
-    height: 333px;
+    height: auto;
     /* display: flex; */
    margin: 0 auto;
    justify-content: center;
@@ -449,4 +506,36 @@ grid-row: 2 / 3;
     background-color: #B3B3B3;
     padding: 5px;
     border-radius: 6px;
+}
+.alternative-login{
+    padding-left: 6rem;
+    padding-right: 6rem;
+    display: flex;
+    gap: 40px;
+}
+.alternative-login > h2{
+    color: white;
+
+}
+ .login-alt{
+    color:#740274;
+}
+.footer-stepper{
+    position: absolute;
+    bottom: 0;
+}
+.footer-title{
+    padding-left: 6rem;
+    padding-right: 6rem;
+    display: flex;
+    width: 100%;
+    /* background-color: red; */
+    
+    
+    justify-content: space-between;
+}
+.footer-title > p{
+    font-size: 1rem;
+    color:#B3B3B3;
+    
 }

@@ -2,6 +2,9 @@ import Input from "./Input";
 import '../../screens/css/login.css'
 // import Outline from "./Outline";
 import PhoneInputField from "./PhoneInput";
+import { Link } from "react-router-dom";
+import { Button } from "../button";
+import '../../screens/css/responsivelogin.css';
 
 function SignUp() {
   const handleSignUp = e => {
@@ -12,7 +15,7 @@ function SignUp() {
       {/* <Outline /> */}
       <div className="even-column create-account formboxsignup">
         <h1>Create your Serch Account</h1>
-        <p className="subtitle">Your personal details</p>
+        <p className="subtitle"style={{marginTop:"-20px"}}>Your personal details</p>
 
         <form onSubmit={handleSignUp}>
           <Input label="First Name" placeholder="John" id="firstName" />
@@ -38,10 +41,12 @@ function SignUp() {
             placeholder="Confirm your strong password"
             id="confirmPassword"
           />
-
-          <div className="continue">
-          <button type="submit">Finish</button>
+       
+           <div className="continue">
+              <Button >Finish</Button>
           </div>
+            
+          
         </form>
       </div>
     </div>

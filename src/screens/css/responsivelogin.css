@@ -1,36 +1,98 @@
-@media( 768px >= width){
+@import "../../css/index.css";
+
+@media( 768px >= width ){
     .black{
         display: none;
-      
+    }
+    
+    .serchlogin{
+        /* background-color: red; */
+         padding: 1rem;
+
+       }
+
+       div > h1{
+
+        font-size: 1.5rem;
+        
+        } 
+         div > p{
+            
+        font-size: 1.3rem;
+        
+        } 
+        .label{
+            font-size: 1.3rem;
+        }
+
+        ::placeholder{
+            font-size: 1rem;
+        }
+        .remember, .forgotpassword{
+            font-size: 1rem;
+        }
+        .newaccount, .createaccount{
+            font-size: 1rem;
+        }
+        .account{
+            display: flex;
+             align-items:center;
+             gap:5px;
+        }
+        .input{
+            font-size: 1.5rem;
+        }
+        ::placeholder{
+            font-size: 1rem;
+        }
+
+        .formboxsignup{
+            
+            padding: 1rem;
+            
+    
+    }
+    .service-rapper{
+    display: flex;
+    flex-direction: column;
     }
          
 }
+@media(  769px <= width <= 999px ){
+    .serchlogin{
+        /* background-color: red; */
+         padding: 1rem;
+       
 
-@media  (768px <= width <= 900px) {
-    .formheader{
-        padding-left: 6rem;
-        padding-right: 6rem;  
-        background: red;
-
-}
+    }
+    
     .formboxsignup{
-         padding-left: 0rem;
-        padding-right: 0rem;
-        padding-top: 0.9rem;
-        padding-bottom: 0.9rem;
-         background: blue;
-
-}
-.formbox{
-    padding-left: 0rem;
-   padding-right: 0rem;
-   padding-top: 0.9rem;
-   padding-bottom: 0.9rem;
-    background: green;
-
-}
-
+            
+        padding: 1rem;
     
 }
 
+
+.verify-email-page{
+    padding: 1rem;
+}
     
+.c-stepper__title {
+    
+    font-size: clamp(0.75rem, 4vw, 1rem);
+    margin-bottom: clamp(0.85rem, 2vmax, 1rem);
+  }
+  
+  .c-stepper__desc {
+  
+    font-size: clamp(0.85rem, 2vmax, 0.75rem);
+    line-height: 24px;
+  }
+  .wrapper {
+    /* background-color: red;; */
+    margin-top: 6rem;
+    margin-left: -2rem;
+    
+  }
+         
+}

@@ -3,15 +3,14 @@ import '../../../config/colors/colors.css';
 import '../../../screens/css/login.css';
 import styled from 'styled-components';
 import VerifyEmailComponents from '../../../component/emailverify/VerifyEmailComponents';
-import electrician from '../../../assets/serviceoption/electrician.svg'
-import mechanic from '../../../assets/serviceoption/mechanic.svg'
-import plumber from '../../../assets/serviceoption/plumber.svg'
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Input from '../../../component/input/Input';
 import SignUp from '../../../component/input/SignUp';
 import SubscribeCard from '../../../component/suscribecard/SubscribeCard';
 import { CardContainer } from '../../../component/suscribecard/Card.style';
+import ServiceCard from '../../../component/service/ServiceCard';
+import { Button } from '../../../component/button';
 
 
 
@@ -42,32 +41,11 @@ export const EmailVerify = () =>{
                     <p className='' style={{fontSize:"1.5rem", marginTop: "-20px"}}>Pick the field of service you do</p>
              </div>
 
-            <div className='service-wrapper'>
-            <div className='service-item-1'>
-               <img src={electrician} alt="electrician"/>
-               <p style={{fontSize:"2.25rem"}}>Electrician</p>
-               <p style={{fontSize:"1.4rem"}}>Enjoy more jobs on the go with your electrical skills</p>
-             </div>
-             <div className='service-item-2'>
-               <img src={plumber} alt="plumber"/>
-               <p style={{fontSize:"2.25rem"}}>Plumber</p>
-               <p style={{fontSize:"1.4rem"}}>Enjoy 2 more jobs on the go with your plumbering skills</p>
-             </div>
-             <div className='service-item-3'>
-               <img src={mechanic} alt="mechanic"/>
-               <p style={{fontSize:"2.25rem"}}>Mechanic</p>
-               <p style={{fontSize:"1.4rem"}}>Enjoy 3more jobs on the go with your mechanic skills</p>
-             </div>
-            </div>
-
-            <div className='continue'>
-               
-                                <Link path="/basicinformation">
-                                   <button className='button-signup'>Continue</button>
-                                  </Link>
+           <ServiceCard/>
+                                
                               
                 
-           </div>
+      
 
 
           </div>
@@ -78,6 +56,9 @@ export const EmailVerify = () =>{
      const handleSignUp = e => {
           e.preventDefault();
      };
+     const handleClick = () => {
+
+     }
      return(
            <div>
                 <div className='even-column create-accountbasic-information  formboxsignup' style={{marginBottom:"1rem"}}>
@@ -87,13 +68,13 @@ export const EmailVerify = () =>{
         <form onSubmit={handleSignUp}>
         <div style={{display:"flex", justifyContent:"space-between", gap:"20px"}}>
           <Input style={{width:"50%"}} label="Street Number *" placeholder="14" id="streetnumber" name="streetnumber" />
-          <Input label="Street Name *" placeholder="Oshodi" id="streetname" />
+          <Input label="Street Name " placeholder="Oshodi" id="streetname" required/>
         </div>
           <Input label="LGA(Optional)" placeholder="ifo" id="lga" />
 
           <div style={{display:"flex", justifyContent:"space-between", gap:"20px"}}>
           <Input style={{width:"50%"}} label="State of Origin *" placeholder="Oyo" id="stateoforigin" name="stateoforigin" />
-          <Input label="Residential Country *" placeholder="Oshodi" id="residential" name="residential" />
+          <Input label="Residential Country " placeholder="Oshodi" id="residential" name="residential"  required />
          </div>
           <p className='' style={{fontSize:"1.3rem", color:"black"}}>Email Address and Phone Number</p>
           <Input label="Email Address" placehLolder="alternative@gmail.com" id="emailaddress" />
@@ -102,7 +83,7 @@ export const EmailVerify = () =>{
 
 
           <div className="continue">
-          <button type="submit">Finish</button>
+              <Button type='submit' onClick={handleClick}>Finish</Button>
           </div>
           </form>
           </div>
@@ -162,6 +143,10 @@ If you want to be sure, click here to know more</p>
                  
 
                    </div>
+
+                  <Link to='/signupprovider/emailverify'>
+                  suscriber-card-wrapper
+                  </Link>
 
                </div>
 

@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, createBrowserRouter, createRoutesFromElements } from "react-router-dom";
 import '../../screens/css/keyframes.css';
-import { CompanyLinks, InformationLinks, LegalLinks, MainLinks, ProductLinks, SupportLinks } from "../../config/custom/links";
+import { CompanyLinks, InformationLinks, LegalLinks, MainLinks, ProductLinks, ProfileLinks, SupportLinks } from "../../config/custom/links";
 import { CountriesInSerch, Documentation, PricingAndPayment, SafetyGuideline } from "../pages/information";
 import { Home, Login, NoPage, SignUp, Support } from "../pages/main";
 import { LegalHub, SupportHub } from "../pages/support";
@@ -15,6 +15,8 @@ import { ReferralProgramme } from "../../screens/support/legalHub/docs/referral"
 import { TermsAndConditions } from "../../screens/support/legalHub/docs/termsConditions";
 import { LoginUser } from "../pages/login";
 import { BasicInformation, EmailVerify, PersonalInformation, ServiceOption, Subscribe } from "../pages/signup/loginSignup";
+import Profile from "../pages/profilepage/Profile";
+import { ProfileCall, ProfileChat, ProfileDashboard, ProfileHome, ProfileSetting } from "../pages/profilepage/ProflePage";
 // import { EmailVerify, PersonalInformation, ServiceOption } from "../pages/signup/loginSignup";
 // import SignUpProvider from "../pages/signup/SignUpProvider";
 
@@ -42,15 +44,22 @@ function App() {
 
         <Route path='/loginProvider' element={<Login />} />
         <Route path='/signupprovider' element={<SignUp/>} >
-           <Route path="/signupprovider" element={<EmailVerify/>}/>
-
-            <Route path="/signupprovider" element={<Subscribe/>}/>
-           <Route path="/signupprovider" element={<BasicInformation/>}/>
             <Route path="/signupprovider" element={<PersonalInformation/>}/>
-           <Route path="/signupprovider" element={<ServiceOption/>}/>
-            
+           <Route path="/signupprovider/emailverify" element={<EmailVerify/>}/>
+           <Route path="/signupprovider/serviceoption" element={<ServiceOption/>}/>
+           <Route path="/signupprovider/basicinformation" element={<BasicInformation/>}/>
+           <Route path="/signupprovider/subscribe" element={<Subscribe/>}/>
+        
+       </Route>    
 
-       </Route>      
+
+       <Route path="/profile" element={<Profile/>}>
+           <Route path={ProfileLinks.profiledashboard} element={<ProfileDashboard/>}/>
+           <Route path={ProfileLinks.profilechat} element={<ProfileChat/>}/>
+           <Route path={ProfileLinks.profilecall} element={<ProfileCall/>}/>
+           <Route path={ProfileLinks.profilesetting} element={<ProfileSetting/>}/>
+           <Route path={ProfileLinks.profilehome} element={<ProfileHome/>}/>
+       </Route>  
         
         <Route path="/company/about" element={<About />} />
         <Route path={ CompanyLinks.about } element={<About />} />

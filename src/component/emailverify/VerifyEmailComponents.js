@@ -3,23 +3,13 @@ import PinInput from "./PinInput";
 import '../../screens/css/login.css';
 import styled from 'styled-components';
 import { Link } from "react-router-dom";
+import { Button } from "../button";
 
 
 function VerifyEmailComponents() {
-  const Button = styled.button`
-    padding: 1rem 3rem;
-  position: relative;
-  margin-top: 1rem;
-  font-size: 14px;
-  border-radius: 0.5rem;
-  font-weight: 600;
-  cursor: pointer;
-  color: var(--serch-white-bg);
-  transition: all .5s;
-  background-color: #3F0F36;
-`
+
   return (
-    <div className="column verify-email-page " style={{padding: "3rem 3rem"}}>
+    <div className="column verify-email-page">
       {/* <Outline/> */}
 
       <div className="verify-email">
@@ -56,14 +46,17 @@ function VerifyEmailComponents() {
         <br/>
           <br/>
           <br/>
+          <Link to="/signupprovider/serviceoption">
           <div  style={{display:"flex", justifyContent:"center"}}>
                                
-                                    <Button >Finish</Button>
+                                    <Button>Finish</Button>
 
                                 
                               
 
           </div>
+          </Link>
+          
       </div>
     </div>
   );
