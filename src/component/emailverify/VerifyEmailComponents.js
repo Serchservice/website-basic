@@ -2,11 +2,17 @@
 import PinInput from "./PinInput";
 import '../../screens/css/login.css';
 import styled from 'styled-components';
-import { Link } from "react-router-dom";
+import { Link,  useNavigate } from "react-router-dom";
 import { Button } from "../button";
 
 
 function VerifyEmailComponents() {
+  const history = useNavigate();
+
+  const handleSignUp = (e)=> {
+    e.preventDefault();
+    history('/SignUpProvider/serviceoption');
+  };
 
   return (
     <div className="column verify-email-page">
@@ -19,7 +25,7 @@ function VerifyEmailComponents() {
           account
         </p>
         <span style={{textAlign:"center"}}>Either use the link provided in your email address or get the pin sent to you</span>
-
+        <form onSubmit={handleSignUp}>
         <fieldset class="form-group" >
           <legend style={{textAlign:"center", margin:"2rem 0rem"}}>Enter your six-digit pin</legend>
           <div className="cc-inputs horizontal-input-stack" style={{display: "flex", justifyContent:"space-between"}}>
@@ -46,17 +52,12 @@ function VerifyEmailComponents() {
         <br/>
           <br/>
           <br/>
-          <Link to="/signupprovider/serviceoption">
           <div  style={{display:"flex", justifyContent:"center"}}>
                                
-                                    <Button>Finish</Button>
-
-                                
-                              
-
+              <Button>Finish</Button>
           </div>
-          </Link>
-          
+       
+        </form>
       </div>
     </div>
   );

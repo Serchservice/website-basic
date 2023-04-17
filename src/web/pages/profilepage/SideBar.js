@@ -16,7 +16,7 @@ export const SideBar = [
       
     {
         title:"Chat",
-        path:"/profile/profiledashboard",
+        path:"/profile",
         // icon:<BsChatDotsFill/>,
         icon:<img className="profile-icons" src={profile}/>,
 

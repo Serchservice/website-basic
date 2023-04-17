@@ -88,18 +88,18 @@ return (
            </div>
             
            <div className='footer-stepper'>
-           <div className='alternative-login'>
-                <h2 >Already have an account?</h2>
-                <Link to="/LoginProvider">
-                     <h2 className='login-alt'>Log me in</h2>
-                </Link>
-            </div>
+                <div className='alternative-login'>
+                        <h2 >Already have an account?</h2>
+                        <Link to="/LoginProvider">
+                            <h2 className='login-alt'>Log me in</h2>
+                        </Link>
+                    </div>
 
-            <div className='footer-title'>
-                <p>Private Policy </p>
-                <p>Accessibility Policy </p>
-                <p>Terms and Conditions</p>
-            </div>
+                    <div className='footer-title'>
+                        <p>Private Policy </p>
+                        <p>Accessibility Policy </p>
+                        <p>Terms and Conditions</p>
+                    </div>
            </div>
 
 

@@ -60,7 +60,7 @@ export const LegalLinks = {
     accessibility: '/legal/document/accessibility-policy/'
 }
 export const ProfileLinks ={
-    profiledashboard:"/profile/profiledashboard",
+    profiledashboard:"/profile",
     profilechat:"/profile/profilechat",
     profilecall:"/profile/profilecall",
     profilesetting:"/profile/profilesetting",

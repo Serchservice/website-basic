@@ -6,7 +6,7 @@
     /* background-color: red;; */
     
 }
-.profile-nav{
+/* .profile-nav{
     flex:0.1;
     height: 70%;
     margin-top: -200px;
@@ -14,14 +14,13 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    /* padding-top: 25px; */
 
 
 }
 .profile-nav-item{
-    /* background-color: white; */
+  
     padding-top: 25px;
-}
+} */
 .profile-nav-container{
     display: flex;
     flex-direction: column;
@@ -34,10 +33,10 @@
     padding: 20px;
     /* background: red; */
 }
-.profile-item{
-   
+/* .profile-item{
+  
     display: flex;
-}
+} */
 .profile-icons{
     width: 30px;
     color: black;
@@ -45,7 +44,10 @@
 span{
     display: none;
 }
+/* this part id the round white circle that needs to be worked on */
 
+/* if it is not active the color of the icon shud be black
+if it active the color shud be black if */
 .active_item{
     background-color: white;
     width: 50px;
@@ -53,10 +55,13 @@ span{
     padding: 10px 10px;
     border-radius: 50%;
 }
-.active-icon{
-    color:black;
-
+#icon-padding{
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    padding-top:20px;
 }
+
 .profile_photo{
     position: relative;
     width: 300px;

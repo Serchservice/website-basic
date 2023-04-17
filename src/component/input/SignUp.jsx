@@ -4,11 +4,16 @@ import '../../screens/css/login.css'
 import PhoneInputField from "./PhoneInput";
 import { Link } from "react-router-dom";
 import { Button } from "../button";
+import { useNavigate } from 'react-router-dom';
 import '../../screens/css/responsivelogin.css';
+import { useState } from "react";
 
 function SignUp() {
-  const handleSignUp = e => {
+  const history = useNavigate();
+
+  const handleSignUp = (e)=> {
     e.preventDefault();
+    history('/SignUpProvider/emailverify');
   };
   return (
     <div >

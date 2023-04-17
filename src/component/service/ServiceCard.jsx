@@ -3,15 +3,22 @@ import '../../screens/css/login.css';
 import electrician from '../../assets/serviceoption/electrician.svg'
 import mechanic from '../../assets/serviceoption/mechanic.svg'
 import plumber from '../../assets/serviceoption/plumber.svg'
-import { Link } from 'react-router-dom';
+import { Link,  useNavigate } from "react-router-dom";
 import { Button } from '../button';
 
 
 export default function ServiceCard() {
-  return (
-    <div>
 
-<div className='service-rapper'>
+  const history = useNavigate();
+
+  const handleSignUp = (e)=> {
+    e.preventDefault();
+    history('/SignUpProvider/basicinformation');
+  };
+  return (
+    <div className='service'>
+       <form onSubmit={handleSignUp}>
+          <div className='service-rapper'>
             <div className='service-item-1'>
                <img src={electrician} alt="electrician"/>
                <p style={{fontSize:"2.25rem"}}>Electrician</p>
@@ -30,14 +37,12 @@ export default function ServiceCard() {
             </div>
 
         
-               
-                                
-                                <div  className='continue'>
-                                <Link to="/signupprovider/basicinformation">
-                                   <Button>Continue</Button>
-                                   </Link> 
-                                   </div>
-      
-    </div>
+            <div  className='continue' style={{float:"right"}}>
+                               
+                <Button>Continue</Button>
+             </div>
+                
+             </form>
+         </div>
   )
 }

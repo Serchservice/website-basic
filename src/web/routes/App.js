@@ -43,18 +43,18 @@ function App() {
         <Route path='/home/' element={<Home />} />
 
         <Route path='/loginProvider' element={<Login />} />
-        <Route path='/signupprovider' element={<SignUp/>} >
-            <Route path="/signupprovider" element={<PersonalInformation/>}/>
-           <Route path="/signupprovider/emailverify" element={<EmailVerify/>}/>
-           <Route path="/signupprovider/serviceoption" element={<ServiceOption/>}/>
-           <Route path="/signupprovider/basicinformation" element={<BasicInformation/>}/>
-           <Route path="/signupprovider/subscribe" element={<Subscribe/>}/>
+        <Route path='/SignUpProvider' element={<SignUp/>} >
+            <Route path="/SignUpProvider" element={<PersonalInformation/>}/>
+           <Route path="/SignUpProvider/emailverify" element={<EmailVerify/>}/>
+           <Route path="/SignUpProvider/serviceoption" element={<ServiceOption/>}/>
+           <Route path="/SignUpProvider/basicinformation" element={<BasicInformation/>}/>
+           <Route path="/SignUpProvider/subscribe" element={<Subscribe/>}/>
         
        </Route>    
 
 
        <Route path="/profile" element={<Profile/>}>
-           <Route path={ProfileLinks.profiledashboard} element={<ProfileDashboard/>}/>
+           <Route path="/profile" element={<ProfileDashboard/>}/>
            <Route path={ProfileLinks.profilechat} element={<ProfileChat/>}/>
            <Route path={ProfileLinks.profilecall} element={<ProfileCall/>}/>
            <Route path={ProfileLinks.profilesetting} element={<ProfileSetting/>}/>

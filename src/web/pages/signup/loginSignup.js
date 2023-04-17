@@ -4,13 +4,14 @@ import '../../../screens/css/login.css';
 import styled from 'styled-components';
 import VerifyEmailComponents from '../../../component/emailverify/VerifyEmailComponents';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import Input from '../../../component/input/Input';
 import SignUp from '../../../component/input/SignUp';
 import SubscribeCard from '../../../component/suscribecard/SubscribeCard';
 import { CardContainer } from '../../../component/suscribecard/Card.style';
 import ServiceCard from '../../../component/service/ServiceCard';
 import { Button } from '../../../component/button';
+import { Link,  useNavigate } from "react-router-dom";
+
 
 
 
@@ -43,22 +44,18 @@ export const EmailVerify = () =>{
 
            <ServiceCard/>
                                 
-                              
-                
-      
-
 
           </div>
      )
  }
  export const BasicInformation = () =>{
 
-     const handleSignUp = e => {
-          e.preventDefault();
-     };
-     const handleClick = () => {
+     const history = useNavigate();
 
-     }
+  const handleSignUp = (e)=> {
+    e.preventDefault();
+    history('/SignUpProvider/subscribe');
+  };
      return(
            <div>
                 <div className='even-column create-accountbasic-information  formboxsignup' style={{marginBottom:"1rem"}}>
@@ -83,7 +80,7 @@ export const EmailVerify = () =>{
 
 
           <div className="continue">
-              <Button type='submit' onClick={handleClick}>Finish</Button>
+              <Button >Finish</Button>
           </div>
           </form>
           </div>
@@ -93,10 +90,17 @@ export const EmailVerify = () =>{
  }
 
  export const Subscribe = () =>{
+  
+      const history = useNavigate();
+
+      const handleSignUp = (e)=> {
+        e.preventDefault();
+        history('/profile');
+      };
      return (
           <div>
                 <div className='Subcribe  formboxsignup' style={{marginBottom:"2rem"}}>
-                   
+                   <form onSubmit ={handleSignUp}>
                          <h2>Best plans, best offers </h2>
                          <p className='' style={{fontSize:"1.5rem", marginTop: "-20px"}}>We have curated a list of plans suitable for you at
 any time.</p>
@@ -140,13 +144,14 @@ If you want to be sure, click here to know more</p>
                    trials="14 days trial"
                    />
                   
-                 
-
                    </div>
 
-                  <Link to='/signupprovider/emailverify'>
-                  suscriber-card-wrapper
-                  </Link>
+                   <div  className='continue'>
+                               
+                         <Button>Continue</Button>
+                    </div>
+
+                    </form>
 
                </div>
 

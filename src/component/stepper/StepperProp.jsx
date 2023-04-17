@@ -1,21 +1,19 @@
 import React from 'react'
 import '../../screens/css/login.css';
+import { StepItemStyles } from './step.styles';
 
 
-export default function StepperProp({step}) {
+export default function StepperProp({step, stepBg}) {
   return (
     <div className='wrapper'>
-
-                
-      <ol class="c-stepper" >
-          <li class="c-stepper__item " >
-              <div class="c-stepper__content">
+       <StepItemStyles stepBg = {stepBg}>
+       <div class="c-stepper__content">
                   <h3 class="c-stepper__title">{step.title}</h3>
                   <p className='c-stepper__desc'>{step.desc}</p>
-              </div>
-          </li>
+        </div>
+      </StepItemStyles>
           {/* <!-- Other steps --> */}
-    </ol> 
+   
     </div>
 
   )
