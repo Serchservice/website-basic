@@ -23,7 +23,7 @@ const handleSignUp = e => {
                     
                     <form className='login_form' onSubmit={handleSignUp}>
                           
-                            <Input className="thick" label="Email Address" placehLolder="alternative@gmail.com" id="emailaddress" />
+                            <Input label="Email Address" placehLolder="alternative@gmail.com" id="emailaddress" />
                             <Input label="Password" password type="password" placeholder="Create your strong password" id="password"/>
           
                               <div style={{display: 'flex', justifyContent:"space-between", fontSize:"1.5rem"}}>
@@ -75,12 +75,7 @@ return (
     <div>
        <div className='container'>
     <div className='black'>
-        <header className="header">
-            <div className="logo">
-                <Link to={ MainLinks.home }> <img alt="" src={ Images.serchLogo } width={30} height={30} /> </Link>
-            </div>
-           
-        </header>
+        
          
            <div>
 

@@ -88,9 +88,15 @@
     margin-top: -10px;
     line-height: 20px;
 }
-         
+.header_signup{
+    display: block;
+}
+      
 }
 @media(  769px <= width <= 999px ){
+
+    
+       
     .serchlogin{
         /* background-color: red; */
          padding: 1rem;

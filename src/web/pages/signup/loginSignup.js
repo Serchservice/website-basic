@@ -11,6 +11,9 @@ import { CardContainer } from '../../../component/suscribecard/Card.style';
 import ServiceCard from '../../../component/service/ServiceCard';
 import { Button } from '../../../component/styled';
 import { Link,  useNavigate } from "react-router-dom";
+import { MainLinks } from '../../../config/custom/links';
+import Images from '../../../config/images/images';
+import HeaderSignup from './HeaderSignup';
 
 
 
@@ -18,6 +21,7 @@ import { Link,  useNavigate } from "react-router-dom";
 export const PersonalInformation = () =>{
      return (
         <div>
+        <HeaderSignup/>
         <SignUp/>
         
      </div>
@@ -28,6 +32,7 @@ export const EmailVerify = () =>{
 
      return (
      <div >
+          <HeaderSignup/>
           <VerifyEmailComponents/>
          
       </div>
@@ -37,12 +42,10 @@ export const EmailVerify = () =>{
  export const ServiceOption = () =>{
      return (
           <div className='service-option' style={{marginBottom:"1rem"}}>
-               <div className='formheader'>
-                    <h2>Select the service you choose  to offer </h2>
-                    <p className='' style={{fontSize:"1.5rem", marginTop: "-20px"}}>Pick the field of service you do</p>
-             </div>
+                <HeaderSignup/>
+              
 
-           <ServiceCard/>
+                <ServiceCard/>
                                 
 
           </div>
@@ -58,7 +61,10 @@ export const EmailVerify = () =>{
   };
      return(
            <div>
+               <HeaderSignup/>
                 <div className='even-column create-accountbasic-information  formboxsignup' style={{marginBottom:"1rem"}}>
+                
+            
         <h1>You are almost done! Let’s cross together</h1>
         <p className="subtitle">Basic Information</p>
 
@@ -100,6 +106,14 @@ export const EmailVerify = () =>{
      return (
           <div>
                 <div className='Subcribe  formboxsignup' style={{marginBottom:"2rem"}}>
+                <header className="headerlogin_signup">
+                <div className="logo">
+                    <Link to={ MainLinks.home }> <img alt="" src={ Images.serchLogo } width={30} height={30} /> </Link>
+                </div>
+                <div className="" >
+                    <p className='servicemadeeasy'>service made easy</p>
+                </div>
+             </header>
                    <form onSubmit ={handleSignUp}>
                          <h2>Best plans, best offers </h2>
                          <p className='' style={{fontSize:"1.5rem", marginTop: "-20px"}}>We have curated a list of plans suitable for you at
