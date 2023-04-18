@@ -3,7 +3,7 @@ import PinInput from "./PinInput";
 import '../../screens/css/login.css';
 import styled from 'styled-components';
 import { Link,  useNavigate } from "react-router-dom";
-import { Button } from "../button";
+import { Button } from "../styled";
 
 
 function VerifyEmailComponents() {
@@ -24,10 +24,11 @@ function VerifyEmailComponents() {
           We have sent you an email to the address you provided us when you created this Serch
           account
         </p>
+
         <span style={{textAlign:"center"}}>Either use the link provided in your email address or get the pin sent to you</span>
         <form onSubmit={handleSignUp}>
         <fieldset class="form-group" >
-          <legend style={{textAlign:"center", margin:"2rem 0rem"}}>Enter your six-digit pin</legend>
+          <legend className="legend" style={{textAlign:"center", margin:"2rem 0rem"}}>Enter your six-digit pin</legend>
           <div className="cc-inputs horizontal-input-stack" style={{display: "flex", justifyContent:"space-between"}}>
             <PinInput firstInput />
             <PinInput/>
@@ -42,12 +43,12 @@ function VerifyEmailComponents() {
           <br/>
           <br/>
 
-          <span>
+          <div className="fw-semi-bold">
             Didn't get an email?
-            <a href="" className="fw-semi-bold" style={{marginLeft:"1rem"}}>
+            <a href="" className="wf-semi-bold" style={{marginLeft:"1rem"}}>
               Resend email
             </a>
-          </span>
+          </div>
         </div>
         <br/>
           <br/>

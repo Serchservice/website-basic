@@ -6,7 +6,7 @@ import '../../screens/css/login.css';
 import Images from '../../config/images/images';
 import Input from '../../component/input/Input';
 import Stepper from '../../component/stepper/StepList';
-import { Button } from '../../component/button';
+import { Button } from '../../component/styled';
 import "../../screens/css/responsivelogin.css";
 
 export const LoginProvider = () => {
@@ -19,11 +19,11 @@ const handleSignUp = e => {
                  <div className="login">
                    
                     <h1 >Hi there! </h1>
-                    <p className='' style={{marginTop:"-20px"}}>Good to have you back</p>
+                    <p style={{marginTop:"-20px"}}>Good to have you back</p>
                     
-                    <form onSubmit={handleSignUp}>
+                    <form className='login_form' onSubmit={handleSignUp}>
                           
-                            <Input label="Email Address" placehLolder="alternative@gmail.com" id="emailaddress" />
+                            <Input className="thick" label="Email Address" placehLolder="alternative@gmail.com" id="emailaddress" />
                             <Input label="Password" password type="password" placeholder="Create your strong password" id="password"/>
           
                               <div style={{display: 'flex', justifyContent:"space-between", fontSize:"1.5rem"}}>
@@ -32,6 +32,7 @@ const handleSignUp = e => {
                                 <inputsignup type="checkbox" id="vehicle1" name="vehicle1" value="Bike"/>
                                </div>
                                <div className='remember'>
+                               <input  type='checkbox' id="" />
                                Remember me
                                </div>
                             </div>

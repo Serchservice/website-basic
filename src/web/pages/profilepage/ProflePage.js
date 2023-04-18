@@ -1,4 +1,4 @@
-import { Button } from "../../../component/button";
+import { Button } from "../../../component/styled";
 import { Title } from "../../../config/custom/titleheader";
 // import profilephoto from "../../../assets/profilepage/profilephoto.svg";
 

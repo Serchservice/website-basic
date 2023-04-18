@@ -41,9 +41,7 @@
     width: 30px;
     color: black;
 }
-span{
-    display: none;
-}
+
 /* this part id the round white circle that needs to be worked on */
 
 /* if it is not active the color of the icon shud be black
@@ -61,6 +59,16 @@ if it active the color shud be black if */
     align-items: center;
     padding-top:20px;
 }
+
+.icon {
+    filter: brightness(0) invert(1);
+  -webkit-filter: brightness(0) invert(1);
+  }
+  
+  .icon.active {
+    filter: invert(100%);
+  -webkit-filter: invert(100%);
+  }
 
 .profile_photo{
     position: relative;

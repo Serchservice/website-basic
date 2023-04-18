@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { RiArrowDropDownLine} from "react-icons/ri";
 import "../../screens/css/responsivelogin.css";
+import { Label } from "../styled";
 
 function Input({ label, placeholder, id, type = "text", gender, password }) {
   const [showPassword, setShowPassword] = useState(false);
@@ -20,7 +21,7 @@ function Input({ label, placeholder, id, type = "text", gender, password }) {
 
   return (
     <div className="form-group">
-      <label className="label" htmlFor={id}>{label}</label>
+      <Label className="label" htmlFor={id}>{label}</Label>
       <div className="form-input-box">
           
       {!gender ? (

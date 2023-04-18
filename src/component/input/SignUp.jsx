@@ -3,7 +3,7 @@ import '../../screens/css/login.css'
 // import Outline from "./Outline";
 import PhoneInputField from "./PhoneInput";
 import { Link } from "react-router-dom";
-import { Button } from "../button";
+import { Button } from "../styled";
 import { useNavigate } from 'react-router-dom';
 import '../../screens/css/responsivelogin.css';
 import { useState } from "react";

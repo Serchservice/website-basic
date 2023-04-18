@@ -4,7 +4,7 @@ import electrician from '../../assets/serviceoption/electrician.svg'
 import mechanic from '../../assets/serviceoption/mechanic.svg'
 import plumber from '../../assets/serviceoption/plumber.svg'
 import { Link,  useNavigate } from "react-router-dom";
-import { Button } from '../button';
+import { Button } from '../styled';
 
 
 export default function ServiceCard() {

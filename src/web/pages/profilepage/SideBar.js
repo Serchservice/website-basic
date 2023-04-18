@@ -6,7 +6,7 @@ import { CgProfile} from "react-icons/cg"
 import "./profile.css";
 import profile from "../../../assets/profilepage/profile.svg";
 import profilecall from "../../../assets/profilepage/profilecall.svg";
-import profilechat from "../../../assets/profilepage/profilechat.svg";
+import profilechat from "../../../assets/profilepage/profilechat.png";
 import profilesetting from "../../../assets/profilepage/profilesetting.svg";
 import profilehome from "../../../assets/profilepage/profilehome.svg";
 

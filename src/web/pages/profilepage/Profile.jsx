@@ -10,18 +10,15 @@ import profilephoto2 from "../../../assets/profilepage/profilephoto2.svg";
 import arrow from "../../../assets/profilepage/arrow.svg";
 import { ProfileWrapper } from './ProfileWrapper';
 // import Images from '../config/images/images';
-
+import classnames from 'classnames';
 
 export default function Profile({selected}) {
 
     const  [activeIndex, setActiveIndex] = useState(0);
-   
 
- 
-  
 
     const handleItemClick = (index) => {
-        setActiveIndex(index);
+        setActiveIndex(index === activeIndex ? null : index);
       }
 
     return (
@@ -39,7 +36,7 @@ export default function Profile({selected}) {
                 return (
                 <div key={index}  onClick = {()=> handleItemClick(index)}  className={index == activeIndex? 'active_item' : ''} id="icon-padding">
                    <Link to={item.path}>
-                   {item.icon}
+                    <div className={classnames('icon', { active: index === activeIndex })}> {item.icon}</div>
                    </Link>
 
                 </div>

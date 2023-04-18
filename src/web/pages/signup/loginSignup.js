@@ -9,7 +9,7 @@ import SignUp from '../../../component/input/SignUp';
 import SubscribeCard from '../../../component/suscribecard/SubscribeCard';
 import { CardContainer } from '../../../component/suscribecard/Card.style';
 import ServiceCard from '../../../component/service/ServiceCard';
-import { Button } from '../../../component/button';
+import { Button } from '../../../component/styled';
 import { Link,  useNavigate } from "react-router-dom";
 
 
