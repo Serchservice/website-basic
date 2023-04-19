@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route, createBrowserRouter, createRoutesFromElem
 import '../../screens/css/keyframes.css';
 import { CompanyLinks, InformationLinks, LegalLinks, MainLinks, ProductLinks, ProfileLinks, SupportLinks } from "../../config/custom/links";
 import { CountriesInSerch, Documentation, PricingAndPayment, SafetyGuideline } from "../pages/information";
-import { Home, Login, NoPage, SignUp, Support } from "../pages/main";
+import { Home, Login, NoPage, ProfileHome, SignUp, Support } from "../pages/main";
 import { LegalHub, SupportHub } from "../pages/support";
 import { Business, Provide, Request } from "../pages/product";
 import { About, Blog, Career, MarketPlace, Newsroom } from "../pages/company";
@@ -16,7 +16,7 @@ import { TermsAndConditions } from "../../screens/support/legalHub/docs/termsCon
 import { LoginUser } from "../pages/login";
 import { BasicInformation, EmailVerify, PersonalInformation, ServiceOption, Subscribe } from "../pages/signup/loginSignup";
 import Profile from "../pages/profilepage/Profile";
-import { ProfileCall, ProfileChat, ProfileDashboard, ProfileHome, ProfileSetting } from "../pages/profilepage/ProflePage";
+import { ProfileCall, ProfileChat, ProfileDashboard, ProfileSetting, ProfileProfile } from "../pages/profilepage/ProflePage";
 // import { EmailVerify, PersonalInformation, ServiceOption } from "../pages/signup/loginSignup";
 // import SignUpProvider from "../pages/signup/SignUpProvider";
 
@@ -53,12 +53,12 @@ function App() {
        </Route>    
 
 
-       <Route path="/profile" element={<Profile/>}>
+       <Route path="/profile" element={<ProfileHome/>}>
            <Route path="/profile" element={<ProfileDashboard/>}/>
            <Route path={ProfileLinks.profilechat} element={<ProfileChat/>}/>
            <Route path={ProfileLinks.profilecall} element={<ProfileCall/>}/>
            <Route path={ProfileLinks.profilesetting} element={<ProfileSetting/>}/>
-           <Route path={ProfileLinks.profilehome} element={<ProfileHome/>}/>
+           <Route path={ProfileLinks.profilehome} element={<ProfileProfile/>}/>
        </Route>  
         
         <Route path="/company/about" element={<About />} />

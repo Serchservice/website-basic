@@ -90,13 +90,54 @@
 }
 .header_signup{
     display: block;
+ 
 }
-      
+.formboxsignup{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+    padding: 1rem 0.9rem;
+  
+   
+} 
+.before-subscribe,.before-verify{
+    font-size:0.8rem; 
+    /* margin-top: -20px; */
+    color: black;
+    line-height: 15px;
+    background-color: #B3B3B3;
+    padding: 5px;
+    border-radius: 6px;
+}
+.suscriber-card-wrapper{
+    /* background-color: blue; */
+    width: 344px;
+    height: auto;
+    /* display: flex; */
+   margin: 0 auto;
+   justify-content: center;
+   
+   
+}
+    
+}
+
+@media screen and (max-width: 768px){
+
+    .profile-nav-container{
+        display:none;
+    }
+    .nav_icon{
+        display: block;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+       
+    }
+
 }
 @media(  769px <= width <= 999px ){
-
-    
-       
+   
     .serchlogin{
         /* background-color: red; */
          padding: 1rem;
@@ -113,7 +154,7 @@
     
     .formboxsignup{
             
-        padding: 1rem;
+        /* padding: 1rem; */
     
 }
 

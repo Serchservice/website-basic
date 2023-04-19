@@ -14,7 +14,7 @@ export const Button= styled.button`
   @media screen and (max-width: 768px){
 
     font-size:12px;
-    padding: 0.8rem 2.5rem;
+    padding: 0.8rem 2rem;
 
   }
 `;
@@ -29,7 +29,7 @@ padding-bottom: 15px;
 
 @media screen and (max-width: 768px){
 
-  font-size:18px;
+  font-size:16px;
  
 
 

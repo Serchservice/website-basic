@@ -1,7 +1,9 @@
-import React from 'react'
+import React from 'react';
+import styled from 'styled-components';
 import '../../screens/css/login.css';
-import freetrial from '../../assets/subscribe/freetrial.svg'
+import freetrial from '../../assets/subscribe/freetrial.png'
 import { CardContainer } from './Card.style';
+import { Button } from '../../component/styled';
 
 
 
@@ -12,8 +14,8 @@ export default function SubscribeCard({item1, item2, item3, item4, fees,item5, t
                          <CardContainer >
 
                          <div className='subscribe-item ' style={{}}>
-                              <div className='suscribe-image'>
-                                   <img src={freetrial} alt="free tiral"/>
+                              <div >
+                                   <img className='suscribe-image' src={freetrial} alt="free tiral"/>
 
                               </div>
                              
@@ -40,10 +42,12 @@ export default function SubscribeCard({item1, item2, item3, item4, fees,item5, t
                               
                          </div>
                          <div className='subscribe-footer'>
-                             <div>
-                             <button className='button-signup'>Get free trial</button>
-                             </div>
-                             <div>
+                           
+                             <div  className='continue'>
+                                        
+                                   <Button>Get free trial</Button>
+                              </div>
+                                        <div>
                               {trials}
                              </div>
                          </div>

@@ -25,7 +25,7 @@ function VerifyEmailComponents() {
           account
         </p>
 
-        <span style={{textAlign:"center"}}>Either use the link provided in your email address or get the pin sent to you</span>
+        <span className="before-verify" style={{textAlign:"center"}}>Either use the link provided in your email address or get the pin sent to you</span>
         <form onSubmit={handleSignUp}>
         <fieldset class="form-group" >
           <legend className="legend" style={{textAlign:"center", margin:"2rem 0rem"}}>Enter your six-digit pin</legend>

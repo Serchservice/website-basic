@@ -1,7 +1,7 @@
 import { Button } from "../../../component/styled";
 import { Title } from "../../../config/custom/titleheader";
-// import profilephoto from "../../../assets/profilepage/profilephoto.svg";
 
+// import profilephoto from "../../../assets/profilepage/profilephoto.svg";
 
 export const ProfileDashboard = ()=>{
     Title("Serch || Profile Home");
@@ -16,8 +16,8 @@ export const ProfileDashboard = ()=>{
                  </div>
                 </div>
                 <div className="profile_button">
-              <Button type='submit'>Edit</Button>
-          </div>
+                    <Button type='submit'>Edit</Button>
+                  </div>
             </div>
         
     )
@@ -50,7 +50,7 @@ export const ProfileSetting = ()=>{
     )
     
 };
-export const ProfileHome= ()=>{
+export const ProfileProfile= ()=>{
     Title("Serch || Profile page");
     return(
         <div>

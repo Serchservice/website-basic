@@ -11,6 +11,8 @@ import arrow from "../../../assets/profilepage/arrow.svg";
 import { ProfileWrapper } from './ProfileWrapper';
 // import Images from '../config/images/images';
 import classnames from 'classnames';
+import ProfileIcons from './ProfileIcons';
+
 
 export default function Profile({selected}) {
 
@@ -23,41 +25,33 @@ export default function Profile({selected}) {
 
     return (
         <div className="profile">
+            
          <div className='profile-nav-container'>
-         <header className="header">
+        
+            <header className="header header_icons">
             <div className="logo">
                 <Link to={ MainLinks.home }> <img alt="" src={ Images.serchLogo } width={30} height={30} /> </Link>
             </div>
             
-        </header>
+             </header>
         
-            <ProfileWrapper>
-            {SideBar.map((item, index) =>{
-                return (
-                <div key={index}  onClick = {()=> handleItemClick(index)}  className={index == activeIndex? 'active_item' : ''} id="icon-padding">
-                   <Link to={item.path}>
-                    <div className={classnames('icon', { active: index === activeIndex })}> {item.icon}</div>
-                   </Link>
-
-                </div>
-             )
-            })}
-            </ProfileWrapper>
+            <ProfileIcons/>
 
    
-         <div className="header" style={{display:"flex", flexDirection:"column", gap:"15px"}}>
-            <div className="logo">
+         <div className="header footer_icons" style={{marginTop: "-50%", paddingTop: "-50%",display:"flex", flexDirection:"column", gap:"15px"}}>
+            <div className="logo footer_icon">
             <img src={profilephoto2} width={50} height={50} alt="profilephoto"/>
             </div>
-            <div className="logo">
+            <div className="logo footer_icon">
             <img src={arrow} alt="arrow"/>
                
             </div>
            
         </div>
          </div>
+         
          <div className='profile-display'>
-           
+        
             <Outlet/>
          </div>
 

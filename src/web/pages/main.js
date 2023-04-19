@@ -10,6 +10,9 @@ import { Footer } from "../../widgets/footer";
 import { Header } from "../../widgets/header";
 import { CompanyLinks, InformationLinks, MainLinks, ProductLinks } from '../../config/custom/links';
 import Images from '../../config/images/images';
+import Profile from './profilepage/Profile';
+import HeaderSignup from './signup/HeaderSignup';
+import ProfileIcons from './profilepage/ProfileIcons';
 // import SignUpProvider from './signup/SignUpProvider';
 
 
@@ -61,20 +64,29 @@ export const SignUp = ()=>{
     Title("Serch || SignUp Provider");
     return (
      <div>
-        {/* <header className="headerlogin">
-                <div className="logo">
-                    <Link to={ MainLinks.home }> <img alt="" src={ Images.serchLogo } width={30} height={30} /> </Link>
-                </div>
-                <div className="" >
-                    <p className='servicemadeeasy'>service made easy</p>
-                </div>
-         </header> */}
+      
             <SignupProvider/>
            
 
      </div>
     );
 }
+export const ProfileHome = ()=>{
+    Title("Serch || Profile Home");
+    return(
+       
+            <div className="profileHome">
+                <HeaderSignup/>
+                <Profile/>
+                <div className='nav_icon'style={{width: "100%"}}>
+                    <ProfileIcons column/>
+                </div>
+            </div>
+        
+    )
+    
+};
+
 
 export const NoPage = () => {
     Title("Serch || Expecting you back");

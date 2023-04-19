@@ -5,11 +5,20 @@ export const ProfileWrapper =  styled.ol`
 padding:20px;
 flex:0.1;
 height: 70%;
-margin-top: -200px;
+margin-top: -100px;
 display: flex;
-flex-direction: column;
+flex-direction: ${props => !props.column ? "column" : 'row'};
 justify-content: space-around;
 align-items: center;
-// background-color:red;
+background-color:black;
+
+@media screen and (max-width: 768px){
+   
+     
+
+}
+
+
+
 
 `;

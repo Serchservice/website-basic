@@ -20,7 +20,7 @@ export default function ServiceCard() {
 
         <div style={{paddingLeft:"2rem"}}>
          <h2>Select the service you choose  to offer </h2>
-         <p className='' style={{fontSize:"1.5rem", marginTop: "-20px"}}>Pick the field of service you do</p>
+         <p className='subtitle' style={{fontSize:"", marginTop: "-10px"}}>Pick the field of service you do</p>
          </div>   
        <form onSubmit={handleSignUp}>
           <div className='service-rapper'>
