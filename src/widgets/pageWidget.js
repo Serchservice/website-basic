@@ -1,9 +1,7 @@
 import './pageWidget.css';
 import { Link } from "react-router-dom";
 import Images from '../config/images/images';
-import {
-    AppLinks, MainLinks,
-} from '../config/custom/links';
+import {AppLinks, MainLinks} from '../config/custom/links';
 import { FooterDocumentLinks, FooterLinks, SerchAppDownloadLinks, SocialMediaLinks } from './footerLinks';
 
 export const Title = (newTitle) => {
