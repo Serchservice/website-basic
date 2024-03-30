@@ -34,32 +34,32 @@ const App = () => {
             <ScrollToTop>
                 <Routes>
                     <Route element={ <Home /> } exact path={ Links.home } />
-                    <Route element={ <AboutUs /> } exact path={ Links.aboutUs } />
-                    {/* <Route element={ <AboutUs /> } exact path={ Links.blogs } /> */}
+                    <Route element={ <AboutUs /> } path={ Links.aboutUs } />
+                    {/* <Route element={ <AboutUs /> } path={ Links.blogs } /> */}
                     {/* <Route element={ <Home /> } path={ Links.blog } /> */}
-                    <Route element={ <Business /> } exact path={ Links.business } />
-                    <Route element={ <Careers /> } exact path={ Links.careers } />
-                    <Route element={ <CountriesInSerch /> } exact path={ Links.countries } />
-                    <Route element={ <Error /> } path="/*" />
-                    <Route element={ <Guest /> } exact path={ Links.guest } />
-                    <Route element={ <Leadership /> } exact path={ Links.leadership } />
+                    <Route element={ <Business /> } path={ Links.business } />
+                    <Route element={ <Careers /> } path={ Links.careers } />
+                    <Route element={ <CountriesInSerch /> } path={ Links.countries } />
+                    <Route element={ <Error /> } path="*" />
+                    <Route element={ <Guest /> } path={ Links.guest } />
+                    <Route element={ <Leadership /> } path={ Links.leadership } />
                     {/* <Route element={ <Home /> } path={ Links.legal } /> */}
-                    {/* <Route element={ <Home /> } exact path={ Links.legalView } /> */}
-                    <Route element={ <MarketPlace /> } exact path={ Links.marketplace } />
-                    <Route element={ <MediaAndAssets /> } exact path={ Links.mediaAndAssets } />
-                    {/* <Route element={ <Home /> } exact path={ Links.news } /> */}
-                    {/* <Route element={ <Home /> } exact path={ Links.newsroom } /> */}
-                    <Route element={ <Provide /> } exact path={ Links.provide } />
-                    <Route element={ <ProvideSharing /> } exact path={ Links.provideSharing } />
-                    <Route element={ <Providing /> } exact path={ Links.providing } />
-                    <Route element={ <Request /> } exact path={ Links.request } />
-                    <Route element={ <Requesting /> } exact path={ Links.requesting } />
-                    <Route element={ <RequestSharing /> } exact path={ Links.requestSharing } />
-                    <Route element={ <Reserve /> } exact path={ Links.schedule } />
-                    <Route element={ <SafetyGuidelines /> } exact path={ Links.safety } />
-                    <Route element={ <SupportHub /> } exact path={ Links.support } />
-                    {/* <Route element={ <Tip2Fix /> } exact path={ Links.tip2fix } /> */}
-                    <Route element={ <Verification /> } exact path={ Links.verification } />
+                    {/* <Route element={ <Home /> } path={ Links.legalView } /> */}
+                    <Route element={ <MarketPlace /> } path={ Links.marketplace } />
+                    <Route element={ <MediaAndAssets /> } path={ Links.mediaAndAssets } />
+                    {/* <Route element={ <Home /> } path={ Links.news } /> */}
+                    {/* <Route element={ <Home /> } path={ Links.newsroom } /> */}
+                    <Route element={ <Provide /> } path={ Links.provide } />
+                    <Route element={ <ProvideSharing /> } path={ Links.provideSharing } />
+                    <Route element={ <Providing /> } path={ Links.providing } />
+                    <Route element={ <Request /> } path={ Links.request } />
+                    <Route element={ <Requesting /> } path={ Links.requesting } />
+                    <Route element={ <RequestSharing /> } path={ Links.requestSharing } />
+                    <Route element={ <Reserve /> } path={ Links.schedule } />
+                    <Route element={ <SafetyGuidelines /> } path={ Links.safety } />
+                    <Route element={ <SupportHub /> } path={ Links.support } />
+                    {/* <Route element={ <Tip2Fix /> } path={ Links.tip2fix } /> */}
+                    <Route element={ <Verification /> } path={ Links.verification } />
                     {/* <Route element={ <Search /> } path={ Links.search } />
                     <Route path={ Links.category } element={ <CategoryPage /> }>
                         <Route index element={ <Category /> }/>
