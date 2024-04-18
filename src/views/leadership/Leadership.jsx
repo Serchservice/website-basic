@@ -8,7 +8,7 @@ import Assets from '../../assets/Assets'
 const Leadership = () => {
     const leaders = [
         {
-            "image": "https://fwnjtqieqvuowbuschhs.supabase.co/storage/v1/object/public/team/executive/Founder.jpg",
+            "image": "https://wyvcjsumdfoamsmdzsna.supabase.co/storage/v1/object/public/team/Evaristus.jpg",
             "name": "Evaristus Adimonyemma",
             "position": "Chief Executive Officer",
             "link": "https://linkedin.com/in/iamevaristus",
